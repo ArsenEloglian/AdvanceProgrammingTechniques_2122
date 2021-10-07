@@ -4,7 +4,7 @@ import java.lang.*;
 public class Main
 {
 	public static void main (String[] args) throws java.lang.Exception {
-
+        
 		Scanner sc= new Scanner(System.in);
         System.out.print("Enter a string: ");
         String str= sc.nextLine(); 
