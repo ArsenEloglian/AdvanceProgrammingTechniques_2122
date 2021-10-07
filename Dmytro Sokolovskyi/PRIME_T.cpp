@@ -11,7 +11,6 @@ bool isPrime(int number) {
 }
 
 int main() {
-
     int n;
     cin >> n;
     if (n > 100000 || n < 1) return -1;
@@ -20,7 +19,6 @@ int main() {
         cin >> arr[i];
         if (arr[i] > 10000 || arr[i] < 1) return -1;
     }
-
     for (int i = 0; i < n; i++) {
         if (isPrime(arr[i])) cout << "TAK" << endl;
         else cout << "NIE" << endl;
