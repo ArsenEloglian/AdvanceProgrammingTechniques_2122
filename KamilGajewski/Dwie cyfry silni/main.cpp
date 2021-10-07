@@ -4,7 +4,6 @@ using namespace std;
 
 int main()
 {
-
     int q=0;
     bool again = false;
     do{
@@ -20,10 +19,9 @@ int main()
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 again=true;
             }
-
         }while(again);
-        string arr[x];
-
+        int ten[x];
+        int unity[x];
         int y;
         cout << "\nInput:\n";
         for(int i=0; i<x;i++){
@@ -36,25 +34,40 @@ int main()
                     cin.ignore(numeric_limits<streamsize>::max(), '\n');
                     again=true;
                 }
+                else if(y>20){
+                    cout << "Value too high! Try again\n";
+                    again=true;
+                }
+                else if(y<0){
+                    cout << "Value too low! Try again\n";
+                    again=true;
+                }
             }while(again);
-            if(y<=1){
-                arr[i]="NO";
+            if(y==100){
+                ten[i]=0;
+                unity[i]=1;
             }
-            else
-            {
-                for(int j=2; j<y;j++){
-                    if(y%j==0 && arr[i]==""){
-                        arr[i]="NO";
-                    }
+            else if(y==200){
+                ten[i]=0;
+                unity[i]=2;
+            }
+            else{
+                long long z=1;
+                for(int j=1;j<=y;j++){
+                    z=z*j;
                 }
-                if(arr[i]==""){
-                    arr[i]="YES";
+                if(z%100<10){
+                    ten[i]=0;
                 }
+                else{
+                    ten[i]=(z%100)/10;
+                }
+                unity[i]=z%10;
             }
         }
         cout << "\nOutput:\n";
         for(int i=0;i<x;i++){
-            cout << arr[i] << '\n';
+            cout << ten[i] << " " << unity[i] << '\n';
         }
         cout << "\nDo you wanna check other numbers? 1-Yes, 0-No\n";
         cin >> q;
