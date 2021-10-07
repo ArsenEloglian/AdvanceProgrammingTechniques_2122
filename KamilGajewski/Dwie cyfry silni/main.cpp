@@ -43,27 +43,17 @@ int main()
                     again=true;
                 }
             }while(again);
-            if(y==100){
-                ten[i]=0;
-                unity[i]=1;
+            long long z=1;
+            for(int j=1;j<=y;j++){
+                z=z*j;
             }
-            else if(y==200){
+            if(z%100<10){
                 ten[i]=0;
-                unity[i]=2;
             }
             else{
-                long long z=1;
-                for(int j=1;j<=y;j++){
-                    z=z*j;
-                }
-                if(z%100<10){
-                    ten[i]=0;
-                }
-                else{
-                    ten[i]=(z%100)/10;
-                }
-                unity[i]=z%10;
+                ten[i]=(z%100)/10;
             }
+            unity[i]=z%10;
         }
         cout << "\nOutput:\n";
         for(int i=0;i<x;i++){
