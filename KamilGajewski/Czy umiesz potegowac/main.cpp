@@ -58,7 +58,7 @@ int main()
         for(int i=0;i<x;i++){
             cout << lastNumbers[i] << '\n';
         }
-        cout << "\nDo you wanna check other numbers? 1-Yes, 0-No\n";
+        cout << "\nDo you wanna calculate other numbers? 1-Yes, 0-No\n";
         cin >> q;
         cout << '\n';
     }while(q==1);
