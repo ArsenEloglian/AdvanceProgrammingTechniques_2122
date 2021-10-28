@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1634220788 source:c:\users\kamil\desktop\zaawansowane techniki programowania\kamilgajewski\czy umiesz potegowac\main.cpp
+	<iostream>
+	<limits>
+	<cmath>
+
