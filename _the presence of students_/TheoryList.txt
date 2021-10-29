@@ -1,4 +1,4 @@
-Group 1
+﻿Group 1
 {
 	{Name Surname1, Name Surname2, Name Surname3, Name Surname4}
 	28.10.2021 -
@@ -20,6 +20,6 @@ Group 3
 
 Group 4
 {
-	28.10.2021 -
+	28.10.2021 - Wątki Java, Wyrażenia Lambda Java
 	04.11.2021 - 
 }
