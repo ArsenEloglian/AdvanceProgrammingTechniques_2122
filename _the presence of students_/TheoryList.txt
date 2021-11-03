@@ -1,4 +1,4 @@
-Group 1
+﻿Group 1
 {
 	{Name Surname1, Name Surname2, Name Surname3, Name Surname4}
 	28.10.2021 -
@@ -7,8 +7,9 @@ Group 1
 
 Group 2
 {
-	28.10.2021 -
-	04.11.2021 - 
+	{Daria Hyrenko, Weronika Demich, Artur Oliferuk, Kamil Gajewski}
+	28.10.2021 - Wskaźniki C++
+	04.11.2021 - Biblioteka Ranges w C++
 }
 
 Group 3
@@ -19,6 +20,6 @@ Group 3
 
 Group 4
 {
-	28.10.2021 -
+	28.10.2021 - Wątki Java, Wyrażenia Lambda Java
 	04.11.2021 - 
 }
