@@ -1,0 +1,35 @@
+fun Pesel(){
+    var a:Int = readLine()!!.toInt()
+
+    var listPesel = mutableListOf<String>()
+
+    for(i in 0 until a) {
+        listPesel.add(readLine()!!.toString())
+    }
+    for(i in 0 until a) {
+
+        var odp: Int =
+            listPesel[i][0].toInt() +
+                    listPesel[i][1].toInt() * 3 +
+                    listPesel[i][2].toInt() * 7 +
+                    listPesel[i][3].toInt() * 9 +
+                    listPesel[i][4].toInt() +
+                    listPesel[i][5].toInt() * 3 +
+                    listPesel[i][6].toInt() * 7 +
+                    listPesel[i][7].toInt() * 9 +
+                    listPesel[i][8].toInt() +
+                    listPesel[i][9].toInt() * 3 +
+                    listPesel[i][10].toInt()
+
+        var d = odp.toString()
+        var s = d[d.length - 1]
+
+
+
+        if (s == '0') {
+            println("D")
+        } else {
+            println("N")
+        }
+    }
+}
