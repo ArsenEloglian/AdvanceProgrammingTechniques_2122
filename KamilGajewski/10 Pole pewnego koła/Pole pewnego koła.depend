@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1635977990 source:c:\users\kamil\desktop\pole pewnego ko³a\main.cpp
+	<iostream>
+	<cmath>
+	<limits>
+	<iomanip>
+
