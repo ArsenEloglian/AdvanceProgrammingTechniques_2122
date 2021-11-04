@@ -1,0 +1,5 @@
+﻿  Podzbiory.cpp
+C:\Users\Ja\Desktop\21_22-Advanced-Programming-Techniques\WeronikaDemich\Podzbiory\Podzbiory.cpp(8,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Ja\Desktop\21_22-Advanced-Programming-Techniques\WeronikaDemich\Podzbiory\Podzbiory.cpp(13,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Ja\Desktop\21_22-Advanced-Programming-Techniques\WeronikaDemich\Podzbiory\Podzbiory.cpp(15,27): warning C4018: '<': signed/unsigned mismatch
+  Podzbiory.vcxproj -> C:\Users\Ja\Desktop\21_22-Advanced-Programming-Techniques\WeronikaDemich\Podzbiory\Debug\Podzbiory.exe
