@@ -25,6 +25,7 @@ Dominik Lesniewski
 	14.10.2021
 	21.10.2021
 	28.10.2021
+	04.11.2021
 }
 
 Kamil Gajewski
