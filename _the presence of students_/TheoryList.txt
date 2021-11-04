@@ -9,7 +9,7 @@ Group 2
 {
 	{Daria Hyrenko, Weronika Demich, Artur Oliferuk, Kamil Gajewski}
 	28.10.2021 - Wskaźniki C++
-	04.11.2021 - 
+	04.11.2021 - Biblioteka Ranges w C++
 }
 
 Group 3
