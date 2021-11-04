@@ -24,6 +24,7 @@ Dominik Lesniewski
 	07.10.2021
 	14.10.2021
 	21.10.2021
+	28.10.2021
 }
 
 Kamil Gajewski
@@ -68,6 +69,7 @@ Michal Swiac
 	07.10.2021
 	14.10.2021
 	21.10.2021
+	28.10.2021
 }
 
 Michal Plewa
