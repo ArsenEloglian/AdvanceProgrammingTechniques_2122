@@ -14,8 +14,8 @@ Group 2
 
 Group 3
 {
-	28.10.2021 -
-	04.11.2021 - 
+	28.10.2021 - Wprowadzenie do Java Spring
+	04.11.2021 - Podstawy Git
 }
 
 Group 4
