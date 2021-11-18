@@ -16,7 +16,7 @@ public class Main {
         for (int i=0;i<n;i++) {
             System.out.println(tab[i]);
         }
-
+        scan.close();
     }
     static int nwd(int a, int b) {
         while (a != b)
