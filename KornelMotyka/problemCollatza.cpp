@@ -6,7 +6,7 @@ int main()
 {
     int counter, a, b;
     cin>>counter;
-    for(int i=0;i<=counter;i++)
+    for(int i=0;i<counter;i++)
     {
         cin>>a;
         b=0;
