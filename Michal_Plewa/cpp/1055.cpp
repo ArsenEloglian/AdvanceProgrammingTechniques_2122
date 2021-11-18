@@ -11,7 +11,7 @@ int main()
     while(t--)
     {
         cin>>q;
-        for(i=0; i<=q; ++i)
+        for(i=1; i<=q; ++i)
         {
             cin>>input[i];
         }
@@ -31,5 +31,4 @@ int main()
         }
         cout<<endl;
     }
-    return 0;
 }
