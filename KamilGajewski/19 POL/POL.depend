@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1637232329 source:c:\users\kamil\desktop\spoj\pol\main.cpp
+	<iostream>
+	<limits>
+

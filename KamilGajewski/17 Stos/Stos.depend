@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1637229966 source:c:\users\kamil\desktop\spoj\stos\main.cpp
+	<iostream>
+	<limits>
+
