@@ -31,22 +31,14 @@ int main()
     generujPierwsze(start, koniec);
 
     int iloscCiagow;
-
-    //cout << "Podaj ilosc ciagow: ";
     cin >> iloscCiagow;
-    if (iloscCiagow >= 25)
-        return 0;
 
     for (int i = 0; i < iloscCiagow; i++)
     {
         int dlugoscCiagu;
-        //cout << "Podaj dlugosc ciagu " << i+1 << ": ";
         cin >> dlugoscCiagu;
-        if (dlugoscCiagu >= 25)
-            return 0;
-        
+
         vector<int> ciag;
-        //cout << "Podaj wyrazy ciagu: ";
         for (int j = 0; j < dlugoscCiagu; j++)
         {
             int wyraz;
@@ -81,7 +73,8 @@ int main()
         if(haslo.empty())
             cout << "NIECZYTELNE";
 
-        cout << endl;
+        if(i < ciagi.size() - 1)
+            cout << endl;
     }
 
     return 0;

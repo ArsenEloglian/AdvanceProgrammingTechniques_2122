@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace LiczbyZnaczace
 {
-    class Program
+    class LiczbyZnaczace
     {
         static void Main(string[] args)
         {
