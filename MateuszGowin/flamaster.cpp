@@ -1,56 +1,32 @@
 #include <iostream>
-#include <string>
+
 using namespace std;
+
 int main()
 {
-    int c;
-    cin>>c;
-    if(c<0 || c>50)
-        return 0;
-    string tab[c];
-    string s;
-    for(int i=0;i<c;i++){
-        cin>>s;
-        if(s.size()>200)
-            return 0;
-        else
-        {
-            for(int j=0;j<s.size();j++)
-            {
-                if(s[j]<'A' || s[j]>'Z')
-                    return 0;
-            }
-        }
-        tab[i]=s;
-    }
-
-    for(int z=0; z<c; z++)
+    int C;
+    string ciag;
+    cin>>C;
+    for(int i=0; i<C; i++)
     {
-        int wsk=0;
-        int i=0;
-        int licznik=0;
-        while(i<tab[z].size())
+        cin>>ciag;
+        int suma=1;
+        for(int j=0; j<ciag.length(); j++)
         {
-            wsk=i+2;
-            licznik=2;
-            while(wsk<tab[z].size() && tab[z][i]==tab[z][wsk])
-            {
-                licznik++;
-                wsk++;
-            }
-            if(licznik>2)
-            {
-                cout<<tab[z][i]<<licznik;
-                i=wsk;
-            }
+            if(ciag[j]==ciag[j+1])
+                suma++;
             else
             {
-                cout<<tab[z][i];
-                i++;
+                if(suma<2)
+                    cout<<ciag[j];
+                else if(suma==2)
+                    cout<<ciag[j-1]<<ciag[j];
+                else
+                    cout<<ciag[j]<<suma;
+                suma=1;
             }
         }
-        if(z+1!=c)
-        cout<<endl;
+        cout << endl;
     }
     return 0;
 }

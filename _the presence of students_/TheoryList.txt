@@ -1,8 +1,10 @@
 ﻿Group 1
 {
 	{Name Surname1, Name Surname2, Name Surname3, Name Surname4}
-	28.10.2021 -
-	04.11.2021 - 
+	28.10.2021 - new/delete/malloc/relloc c/c++
+	04.11.2021 - Maps in c++ Git
+	18.11.2021 - Overloading in c++ GitLab/GitHub
+	24.11.2021 - Lambda Expretion in Java
 }
 
 Group 2
@@ -10,16 +12,22 @@ Group 2
 	{Daria Hyrenko, Weronika Demich, Artur Oliferuk, Kamil Gajewski}
 	28.10.2021 - Wskaźniki C++
 	04.11.2021 - Biblioteka Ranges w C++
+	18.11.2021 - C#
 }
 
 Group 3
 {
+	{Dmytro Sokolovskyi, Kamil Olejarz, Jan Walendziak, Bartosz Gołąbczak}
 	28.10.2021 - Wprowadzenie do Java Spring
 	04.11.2021 - Podstawy Git
+	18.11.2021 - Czym jest JavaScript
+	25.11.2021 - Wprowadzenie do języka Python
 }
 
 Group 4
 {
+	{Mateusz Gowin, Kuba Kern, Dominik Leśniewski, Kornel Motyka, Michał Plewa}
 	28.10.2021 - Wątki Java, Wyrażenia Lambda Java
-	04.11.2021 - 
+	04.11.2021 - HTML/CSS
+	18.11.2021 - SpringBoot
 }
