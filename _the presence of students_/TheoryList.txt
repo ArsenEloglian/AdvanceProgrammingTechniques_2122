@@ -10,16 +10,19 @@ Group 2
 	{Daria Hyrenko, Weronika Demich, Artur Oliferuk, Kamil Gajewski}
 	28.10.2021 - Wskaźniki C++
 	04.11.2021 - Biblioteka Ranges w C++
+	18.11.2021 - C#
 }
 
 Group 3
 {
-	28.10.2021 -
-	04.11.2021 - 
+	28.10.2021 - Wprowadzenie do Java Spring
+	04.11.2021 - Podstawy Git
 }
 
 Group 4
 {
+	{Mateusz Gowin, Kuba Kern, Dominik Leśniewski, Kornel Motyka, Michał Plewa}
 	28.10.2021 - Wątki Java, Wyrażenia Lambda Java
-	04.11.2021 - 
+	04.11.2021 - HTML/CSS
+	18.11.2021 - SpringBoot
 }

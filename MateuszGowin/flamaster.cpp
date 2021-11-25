@@ -1,33 +1,32 @@
 #include <iostream>
-#include <string>
-using namespace std;
-int main(){
-    int c;
-    cin>>c;
-    if(c<0 || c>50)
-        return 0;
-    string s;
-    cin>>s;
-    if(s.size()>200)
-        return 0;
-    int wsk=0;
-    int i=0;
-    int licznik=0;
-    while(i<s.size()){
-        wsk=i+2;
-        licznik=2;
-        while(wsk<s.size() && s[i]==s[wsk]){
-            //cout<<"s["<<i<<"]:"<<s[i]<<" s["<<wsk<<"]:"<<s[wsk]<<endl;
-            licznik++;
-            wsk++;
 
+using namespace std;
+
+int main()
+{
+    int C;
+    string ciag;
+    cin>>C;
+    for(int i=0; i<C; i++)
+    {
+        cin>>ciag;
+        int suma=1;
+        for(int j=0; j<ciag.length(); j++)
+        {
+            if(ciag[j]==ciag[j+1])
+                suma++;
+            else
+            {
+                if(suma<2)
+                    cout<<ciag[j];
+                else if(suma==2)
+                    cout<<ciag[j-1]<<ciag[j];
+                else
+                    cout<<ciag[j]<<suma;
+                suma=1;
+            }
         }
-        if(licznik>2){
-            cout<<s[i]<<licznik<<endl;
-            i=wsk;
-        }else{
-            i++;
-        }
+        cout << endl;
     }
     return 0;
 }
