@@ -14,7 +14,6 @@ int main()
         cin >> c >> d;
         cout << nwd(c,d) << '\n';
     }
-    return 0;
 }
 
 int nwd(int a, int b)

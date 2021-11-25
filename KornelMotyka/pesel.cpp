@@ -14,5 +14,4 @@ int main()
       }
       cout<<"DN"[suma%10>0]<<endl;
      }
-   return 0;
   }
