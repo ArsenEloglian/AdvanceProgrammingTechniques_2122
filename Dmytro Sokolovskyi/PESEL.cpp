@@ -22,5 +22,4 @@ int main()
         }
         else puts("N");
     }
-    return 0;
 }
