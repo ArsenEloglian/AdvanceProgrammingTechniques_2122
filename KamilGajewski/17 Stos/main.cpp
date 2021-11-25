@@ -76,5 +76,4 @@ int main()
     for(int i=0; i<licznikWynik; i++){
         cout << tabWynik[i] << '\n';
     }
-    return 0;
 }
