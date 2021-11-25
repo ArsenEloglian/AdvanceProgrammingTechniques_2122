@@ -20,5 +20,4 @@ int main()
     else
         cout<<"NIE"<<endl;
     }
-    return 0;
 }
