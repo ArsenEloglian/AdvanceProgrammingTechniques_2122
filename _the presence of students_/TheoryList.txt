@@ -13,6 +13,7 @@ Group 2
 	28.10.2021 - Wskaźniki C++
 	04.11.2021 - Biblioteka Ranges w C++
 	18.11.2021 - C#
+	25.11.2021 - Podstawy Swifta
 }
 
 Group 3
