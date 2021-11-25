@@ -9,19 +9,20 @@ int main()
     int tab[10];
     while(cin >> znak >> a >> b)
     {
-        if(znak=='z')
-            tab[a]=b;
-        else if(znak=='+')
-            cout<<tab[a]+tab[b];
-        else if(znak=='-')
-            cout<<tab[a]-tab[b];
-        else if(znak=='*')
-            cout<<tab[a]*tab[b];
-        else if(znak=='/')
-            cout<<tab[a]/tab[b];
-        else if(znak=='%')
-            cout<<tab[a]%tab[b];
+        switch(znak) {
+            case 'z':
+                tab[a] = b; break;
+            case '+':
+                cout << tab[a] + tab[b]; break;
+            case '-':
+                cout << tab[a] - tab[b]; break;
+            case '*':
+                cout << tab[a] * tab[b]; break;
+            case '/':
+                cout << tab[a] / tab[b]; break;
+            case '%':
+                cout << tab[a] % tab[b]; break;
+        }
         cout<<endl;
     }
-    return 0;
 }
