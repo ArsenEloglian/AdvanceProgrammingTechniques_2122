@@ -1,8 +1,10 @@
 ﻿Group 1
 {
 	{Name Surname1, Name Surname2, Name Surname3, Name Surname4}
-	28.10.2021 -
-	04.11.2021 - 
+	28.10.2021 - new/delete/malloc/relloc c/c++
+	04.11.2021 - Maps in c++ Git
+	18.11.2021 - Overloading in c++ GitLab/GitHub
+	24.11.2021 - Lambda Expretion in Java
 }
 
 Group 2
