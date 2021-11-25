@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +16,6 @@ namespace ReprezentacjaLiczbTypuFloat
                 printfloat(float.Parse(Console.ReadLine()));
             }
         }
-
         static void printfloat(float p)
         {
             string result = BitConverter.ToString(BitConverter.GetBytes(p));
@@ -38,7 +37,6 @@ namespace ReprezentacjaLiczbTypuFloat
                     result += " ";
                 }
             }
-
             Console.WriteLine(result);
         }
     }

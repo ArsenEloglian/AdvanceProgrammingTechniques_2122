@@ -31,5 +31,4 @@ int main()
         cout<<tab[i]<<endl;
     }
     delete[] tab;
-    return 0;
 }

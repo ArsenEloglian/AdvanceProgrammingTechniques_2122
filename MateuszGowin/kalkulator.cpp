@@ -8,27 +8,23 @@ int main()
     int a,b;
     while(cin >> znak >> a >> b)
     {
-    if(znak=='+')
-    {
-       cout << a+b;
+        switch(znak) {
+            case '+':
+                cout << a+b;
+                break;
+            case '-':
+                cout << a-b;
+                break;
+            case '*':
+                cout << a*b;
+                break;
+            case '/':
+                cout << a/b;
+                break;
+            case '%':
+                cout << a%b;
+                break;
+        }
+        cout << endl;
     }
-    else if(znak=='-')
-    {
-       cout << a-b;
-    }
-    else if(znak=='*')
-    {
-       cout << a*b;
-    }
-    else if(znak=='/')
-    {
-       cout << a/b;
-    }
-    else if(znak=='%')
-    {
-       cout << a%b;
-    }
-    cout<<endl;
-    }
-    return 0;
 }

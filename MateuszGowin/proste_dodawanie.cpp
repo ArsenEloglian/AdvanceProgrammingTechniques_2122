@@ -22,5 +22,4 @@ int main(){
     }
     for(int i=0;i<t;i++)
         cout<<wyniki[i]<<endl;
-    return 0;
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,8 +27,7 @@ namespace Sort_1
                     Console.WriteLine("{0} {1} {2}", item.Name, item.X, item.Y);
                 }
                 Console.ReadLine();
-            }
-            
+            }            
         }
     }
     public class Point: IComparable<Point> 
