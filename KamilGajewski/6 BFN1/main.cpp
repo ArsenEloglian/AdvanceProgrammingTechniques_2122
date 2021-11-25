@@ -71,5 +71,4 @@ int main()
         cout << '\n';
     }while(q==1);
     cout << "Goodbye";
-    return 0;
 }

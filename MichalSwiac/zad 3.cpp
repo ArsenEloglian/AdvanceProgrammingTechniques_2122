@@ -1,12 +1,8 @@
-
 //FZI_STEF - Stefan
-
 
 #include <iostream>
 
 using namespace std;
-
-
 
 int main()
 {
@@ -30,16 +26,4 @@ int main()
         }
     }
     cout<< maxSuma;
-
-
-
-
-
-
-
-
-
-
-    return 0;
-
 }
