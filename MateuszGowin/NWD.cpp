@@ -20,5 +20,4 @@ int main()
         cin>>a>>b;
         cout<< NWD(a,b)<<endl;
     }
-    return 0;
 }
