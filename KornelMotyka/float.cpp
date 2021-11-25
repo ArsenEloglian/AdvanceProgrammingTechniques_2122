@@ -20,7 +20,6 @@ int main(){
 
   t--;
   }
-  return 0;
 }
 
 void printfloat(float x){

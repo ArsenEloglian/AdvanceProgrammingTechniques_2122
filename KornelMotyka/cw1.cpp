@@ -18,6 +18,4 @@ int main() {
         string s2 = s.substr(0,(s.length())/2);
         cout<<s2<<endl;
 	}
-
-	return 0;
 }

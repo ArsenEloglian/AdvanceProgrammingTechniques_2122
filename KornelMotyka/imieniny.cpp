@@ -12,5 +12,4 @@ int main()
         else if (C%(L-1)!=0) cout<<"TAK"<<endl;
         else cout<<"NIE"<<endl;
     }
-    return 0;
 }
