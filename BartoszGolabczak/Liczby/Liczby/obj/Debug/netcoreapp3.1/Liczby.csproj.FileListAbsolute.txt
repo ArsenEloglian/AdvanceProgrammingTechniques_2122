@@ -1,0 +1,14 @@
+C:\Users\lenovo\Desktop\Zadania\Liczby\Liczby\bin\Debug\netcoreapp3.1\Liczby.exe
+C:\Users\lenovo\Desktop\Zadania\Liczby\Liczby\bin\Debug\netcoreapp3.1\Liczby.deps.json
+C:\Users\lenovo\Desktop\Zadania\Liczby\Liczby\bin\Debug\netcoreapp3.1\Liczby.runtimeconfig.json
+C:\Users\lenovo\Desktop\Zadania\Liczby\Liczby\bin\Debug\netcoreapp3.1\Liczby.runtimeconfig.dev.json
+C:\Users\lenovo\Desktop\Zadania\Liczby\Liczby\bin\Debug\netcoreapp3.1\Liczby.dll
+C:\Users\lenovo\Desktop\Zadania\Liczby\Liczby\bin\Debug\netcoreapp3.1\Liczby.pdb
+C:\Users\lenovo\Desktop\Zadania\Liczby\Liczby\obj\Debug\netcoreapp3.1\Liczby.csproj.AssemblyReference.cache
+C:\Users\lenovo\Desktop\Zadania\Liczby\Liczby\obj\Debug\netcoreapp3.1\Liczby.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lenovo\Desktop\Zadania\Liczby\Liczby\obj\Debug\netcoreapp3.1\Liczby.AssemblyInfoInputs.cache
+C:\Users\lenovo\Desktop\Zadania\Liczby\Liczby\obj\Debug\netcoreapp3.1\Liczby.AssemblyInfo.cs
+C:\Users\lenovo\Desktop\Zadania\Liczby\Liczby\obj\Debug\netcoreapp3.1\Liczby.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Desktop\Zadania\Liczby\Liczby\obj\Debug\netcoreapp3.1\Liczby.dll
+C:\Users\lenovo\Desktop\Zadania\Liczby\Liczby\obj\Debug\netcoreapp3.1\Liczby.pdb
+C:\Users\lenovo\Desktop\Zadania\Liczby\Liczby\obj\Debug\netcoreapp3.1\Liczby.genruntimeconfig.cache

@@ -1,0 +1,1032 @@
+At Trans Tech Publications we are publishing many new book titles
+every year. The total number of books published since the beginning of
+our publishing house now runs in the thousands. These books are
+read by many and we use many different ways to globally distribute
+these. And thus provide access and significant exposure of this
+content to the broader scientific community.
+We, as Publisher, are very proud of our contribution to academic
+knowledge and research by bringing to life these books which have
+been read and demanded by scholars, researchers, students and
+other members of the scientific society all over the world. The value of
+the book rises with the growing demand for it, proving the
+importance and the relevance of topics highlighted or problems
+elaborated therein.
+For your ease and comfort, we gathered a top 100 into this
+catalogue. This list will also be available in the following Section on our
+website.
+Trans Tech Publications Ltd. is founded in 1967 and endorses the latest trends in
+academic publishing. The editorial and publishing processes are supported by our
+online management and publishing system which is integrated into the Scientific.Net
+website.
+The trademark Scientific.Net is designed by us and is the name of our website
+providing a resource of high-demand content focused on science and
+engineering published in academic journals, book series, conference proceedings
+and monographs.
+The publishing scope covers the hard sciences such as Materials Science &
+Engineering (incl. manufacturing, processing & application), sustainable engineering,
+green technologies (incl. energy storage, 3D printing/additive manufacturing).
+To process the manuscripts our company-owned editorial and publishing workflows
+allow Open Access models and funder requirements. Alongside systems, we feel a
+personal touch throughout the process is essential and our Customer Care foresees in
+this need.
+The visibility and outreach of our content are ensured through on the one hand the
+indexing with the major and niche partners, and the other the distribution via
+internationally recognised parties that make our content available at the paper, book
+and/or journal level.
+Our customers are top-rated higher educational, research institutions, R&D
+departments and Universities Libraries as well as (nationwide) consortia.
+Our business models are traditional subscription-based model, Open Access,
+Read & Publish, pay-per-view and token licences enabling the reading on most
+mobile devices.
+Since the first development of lithium-ion batteries in the early 1990 s, there have been tremendous advances in the science and
+technology of these electrochemical energy sources. At present, lithium batteries dominate the field of advanced power sources
+and have almost entirely replaced their bulkier and less energetic counterparts such as nickel-cadmium and nickel-metalhydride
+batteries; especially in portable electronic devices. But lithium batteries are still the object of continuing intense research aimed
+at making further improvements in performance and safety, at lower cost, so as to make them suitable for higher-power and
+more demanding applications such as electric vehicles. The research and development of new electrode materials, particularly
+for cathodes, having an improved electrochemical performance has always been a matter of changing focus. Thus, olivine,
+lithium iron phosphate, has attracted considerable attention in recent years as a safe, environmentally friendly, extremely stable
+and very promising cathode material.It is well-known that fossil fuels are being rapidly depleted, and that atomic power is rejected by many people. As a consequence,
+there is a strong trend towards alternative sources such as wind, photovoltaics, solar heat and biomass. Strangely enough, quite
+another power source is generally neglected: namely, the thermoelectric generator (a device which converts heat, i.e. thermal
+energy, directly into electrical energy). The reason for this neglect is probably the low conversion efficiency, which is of the
+order of a few percent at most. However, there are two arguments in favor of the thermoelectric generator. Firstly, we might in
+effect be at the same point as we were in the early stages of photovoltaics use (it was only in 1954 that the first attractive solar
+cells, with efficiencies of around 4% were produced). Today, even large modules attain 20%. Secondly, the potential applications
+of thermoelectric generators are very tempting. Wherever heat is generated, it is amenable to electrical conversion. Energy
+harvesting via a thermoelectric generator may be accompanied by a further benefit: The use of a solar module inevitably leads to
+a drastic temperature rise. A thermoelectric generator reduces the temperature rise and therefore offers a double benefit.
+The electronic properties of solids have become of increasing importance in the age of information technology. The study of
+solids and materials, while having originated from the disciplines of physics and chemistry, has evolved independently over the
+past few decades. The classical treatment of solid-state physics, which emphasized classifications, theories and fundamental
+physical principles, is no longer able to bridge the gap between materials advances and applications. In particular, the more
+recent developments in device physics and technology have not necessarily been driven by new concepts in physics or new
+materials, but rather by the ability of engineers to control crystal structures and properties better via advances in crystal growth
+and patterning techniques. In many cases, new applications simply arise from the adaption of conventional ideas to
+interdisciplinary areas. One example is that of recent advances which rely heavily upon the availability of the sub-micron
+technology developed by the semiconductor industry. Another example is the emergence of nanotechnology.
+This monograph deals with a physico-chemical approach to the problem of the solid-state growth of chemical compound layers
+and reaction-diffusion in binary heterogeneous systems formed by two solids; as well as a solid with a liquid or a gas. It is
+explained why the number of compound layers growing at the interface between the original phases is usually much lower than
+the number of chemical compounds in the phase diagram of a given binary system. For example, of the eight intermetallic
+compounds which exist in the aluminium-zirconium binary system, only ZrAl3 was found to grow as a separate layer at the
+Al Zr interface under isothermal conditions. The physico-chemical approach predicts that, in most cases, the number of
+compound layers should not exceed two; with the main factor, resulting in the appearance of additional layers, being crack
+formation due to thermal expansion and volume effects.
+The aim of this book is to develop, in the reader, the necessary skills required for designing materials, components and
+structures so as to resist fracture and failure in engineering applications. In order to achieve this objective, the authors have
+adopted a combined materials science-fracture mechanics-design approach. Although the material covered is designed for an
+advanced undergraduate course in metallurgy/materials engineering, students coming from mechanical, civil or aerospace
+engineering backgrounds will also be able to use this text as a course/reference book. In addition to students, practising
+engineers and production mangers will also find this book very useful; particular with regard to designing components and
+machine elements so as to resist fracture and failure in critical applications.
+The present volume comprises a collection of peer-reviewed papers covering manufacture and production, engineering
+materials, CAD/CAM/CAE, robotics, automation and control, environment-friendly design and manufacture, web/internet
+technologies, artificial intelligence and smart computing in design and manufacture, enterprise, management, and other related
+topics.Composite materials are increasingly finding use in diverse applications requiring a wide range of property and performance
+requirements. Low density, high specific strength and stiffness are the main features that make composite materials most
+suitable for structural applications. The field covers the concurrent manipulation of the material’s composition and of the
+internal architecture of the composite in order to obtain the desired properties. The ability to tailor composite materials
+precisely is of great importance in structural applications. A systematic approach to the optimum tailoring of composite
+materials is a challenging design problem. The focus should be on the practical design aspects, and that is what is addressed in
+this special-topic volume.The electronic properties of solids have become of increasing importance in the age of information technology. The study of
+solids and materials, while having originated from the disciplines of physics and chemistry, has evolved independently over the
+past few decades. The classical treatment of solid-state physics, which emphasized classifications, theories and fundamental
+physical principles, is no longer able to bridge the gap between materials advances and applications. In particular, the more
+recent developments in device physics and technology have not necessarily been driven by new concepts in physics or new
+materials, but rather by the ability of engineers to control crystal structures and properties better via advances in crystal growth
+and patterning techniques. In many cases, new applications simply arise from the adaption of conventional ideas to
+interdisciplinary areas. One example is that of recent advances which rely heavily upon the availability of the sub-micron
+technology developed by the semiconductor industry. Another example is the emergence of nanotechnology.This monograph deals with a physico-chemical approach to the problem of the solid-state growth of chemical compound layers
+and reaction-diffusion in binary heterogeneous systems formed by two solids; as well as a solid with a liquid or a gas. It is
+explained why the number of compound layers growing at the interface between the original phases is usually much lower than
+the number of chemical compounds in the phase diagram of a given binary system. For example, of the eight intermetallic
+compounds which exist in the aluminium-zirconium binary system, only ZrAl3 was found to grow as a separate layer at the
+Al–Zr interface under isothermal conditions. The physico-chemical approach predicts that, in most cases, the number of
+compound layers should not exceed two; with the main factor, resulting in the appearance of additional layers, being crack
+formation due to thermal expansion and volume effects.The aim of this book is to develop, in the reader, the necessary skills required for designing materials, components and
+structures so as to resist fracture and failure in engineering applications. In order to achieve this objective, the authors have
+adopted a combined materials science-fracture mechanics-design approach. Although the material covered is designed for an
+advanced undergraduate course in metallurgy/materials engineering, students coming from mechanical, civil or aerospace
+engineering backgrounds will also be able to use this text as a course/reference book. In addition to students, practising
+engineers and production mangers will also find this book very useful; particular with regard to designing components and
+machine elements so as to resist fracture and failure in critical applications.The present volume comprises a collection of peer-reviewed papers covering manufacture and production, engineering
+materials, CAD/CAM/CAE, robotics, automation and control, environment-friendly design and manufacture, web/internet
+technologies, artificial intelligence and smart computing in design and manufacture, enterprise, management, and other related
+topics.This work comprises eight contributions from leading experts on the topic of the mechanical behaviour of materials. The
+research themes described in this special volume range from surface forces, surface energies and adhesion to the indentation
+and nano-indentation of solids and fracture waves in glasses to spectroscopic studies of biological cells.The field of “polymers in concrete” is rather well consolidated within the construction industry, and its future will be one of
+benefiting fully from the synergy between the organic and mineral materials. Concrete-polymer composites (C-PC) exhibit
+excellent adhesion strength and durability in aggressive environments and the good performance of these materials makes
+innovative applications possible; including new technologies for restoring and renovating buildings.
+The purpose of this book is to present the current state of knowledge in the field of energy harvesting using piezoelectric and
+pyroelectric materials. The book is addressed to students and academics engaged in research in the fields of energy harvesting,
+material sciences and engineering. Scientists and engineers who are working in the area of energy conservation and renewable
+energy resources should find it useful as well. Explanations of fundamental physical properties such as piezoelectricity and
+pyroelectricity are included to aid the understanding of the non-specialist. Specific technologies and particular applications are
+also presented. This book is divided into two parts, each subdivided into chapters. Part I concerns fundamentals. Chapter 1
+reports the discoveries, standard issues and various materials involved with energy harvesting. Chapter 2 presents
+electromechanical models enabling an understanding of how energy harvesting systems behave. The vibration theory and
+designs for various piezoelectric energy harvesting structures are addressed in Chapter 3. Chapter 4 describes the analytical
+expressions for the energy flow in piezoelectric energy harvesting systems, in particular, with cymbal and flexible transducers. A
+description of the conversion enhancement for powering low-energy consumption devices is presented in Chapter 5. Part II
+concerns Applications and Case Studies. It begins with Chapter 6, in which the principles and applications of piezoelectric
+nanogenerators are reported. Chapter 7 describes the utilization of energy harvesting from low-frequency energy sources. There
+are more ways to use vibrational energy than waste heat. However, Chapter 8 presents the fundamentals of an important
+application of heat conversion with a copolymer. Finally, commercial energy harvesting products and a technological forecast
+are provided in Chapter 9.A major goal of this special collection of 47 peer-reviewed papers was to gather together the current knowledge of academic
+scientists, engineers and industrial researchers and have them share their experiences and research results concerning every
+aspect of green building technologies and materials, and discuss the practical challenges encountered and the solutions adopted.
+An interesting guide to this increasingly relevant subject.The goal of this special collection of peer-reviewed papers was to provide an unique opportunity to exchange information, to
+present the latest results and to review relevant issues in contemporary diffusion research. The result is a work which will
+provide valuable insights into this subject.This collection of peer-reviewed papers, on new research results in green building materials and energy-saving construction,
+brings together industrial and academic researchers, developers and users from around the world to - in effect - share their
+state-of-the-art results, to explore new areas of research and development and to discuss the emerging issues facing green
+building materials and energy-saving construction.EDFGC is an international conference series covering research and development in the fields of textile dyeing/finishing and
+green chemistry. With its theme of “Innovation, Eco-Textile and Sustainability”, the 2011 conference provided a platform for the
+presentation of research findings, the exchange of innovative ideas and the seeking-out of opportunities for collaboration, in the
+above fields, among both academics and industrialists all over the world. The proceedings of EDFGC 2011 include Eco-Dyeing &
+Finishing, Functional Textiles, Green Chemistry and Functional Chemicals, Pollution Control and Energy Conservation,
+Fundamental Research and Test & Characterization.Powder metallurgy is one of the leading processes used for forming engineering components. The technology, as developed at
+the beginning of the 20th century, has since advanced significantly from both the materials and energy-conservation points of
+view. Novel, and automated, equipment has played a significant role in enhancing the growth of the powder metallurgy industry.
+The present work includes, in addition to the editor’s introductory paper, eleven invited papers from organizations of
+international repute. In brief, the book presents expert assessments from the major metal-powder and powder-metallurgy
+equipment-makers in the world. This distinguishes it from other works, which are contributed mainly by academics. The book
+concentrates on particular topics of interest and does not attempt to be comprehensive.
+The objective of this volume is to show case studies and research on novel and interesting ways of achieving sustainable
+construction practices via the use of new building materials and technologies. The papers originate from both academia and
+industry and treat the topics of: traditional construction materials, advanced construction materials, green building materials,
+architectural design and its theory, urban planning and design, landscape planning and design, building energy saving
+technology and ecological architecture.This special issue of Trends in Automotive Research contains papers contributed to the Regional Conference on Automotive
+Research (ReCAR) , held on the 14 and 15th December, 2011, in Kuala Lumpur, Malaysia.
+The conference was organised by the Centre for Automotive Research (CAR), Faculty of Engineering and the Built Environment,
+Universiti Kebangsaan Malaysia.The uniqueness of the title of this book, Materials Science and Design for Engineers, already indicates that the authors -
+professionals having over 30 years of experience in the fields of materials science and engineering - are here tackling the rarelydiscussed topic of the science of materials as directly related to the domain of design in engineering applications. This
+comprehensive textbook has now filled that gap in the engineering literature.The subjects covered by this special collection include the fatigue life of elements of structures, research on low- and high-cycle
+fatigue, fatigue under conditions of complex states of stress and strain, analysis of fatigue loads, design taking fatigue into
+consideration, analysis of random fatigue loads, experimental methods in the mechanics of cracking, application of fracture
+mechanics to engineering issues, the impact of structural, technological and functional factors upon the fatigue of elements of
+structures, research methods and equipment. This coverage makes the work a veritable handbook guide to the subject matter.These are the proceedings of the 2012 International Conference on Civil Engineering and Material Engineering (CEME2012),
+August 25-26, Wuhan, China. The 90 peer reviewed paper are grouped as follows: Chapter 1: Material Application and Structure
+in Civil Engineering; Chapter 2: Mechanics Research in Civil Engineering and Material Engineering; Chapter 3: Environmental
+Material and Civil Engineering; Chapter 4: Material Engineering and its Application Technology.
+These proceedings of the 2012 International Conference of Green Building Materials and Energy-Saving Construction (GBMEC
+2012), held on August 18th 2012 in Harbin (China) comprise 30 peer- reviewed papers.The aim of the special collection of peer reviewed papers was to present the latest research results from scientist such as
+professors, students, PhD. students and engineers related to robotics and manufacturing systems. This Special Topic Volume comprises selected peer-reviewed papers from the international scientific community on the topic of
+“Bone and biomaterials for bone tissue engineering”. The volume covers some relevant aspects spanning from bone tissue
+mechanics to scaffolding for bone tissue engineering in terms of microstructure, biological evaluation, fabrication technologies,
+surface modifications and coatings. The aim of this collection was to provide an interdisciplinary panorama on this emerging and
+promising biomedical field.Metals, because of their inherent properties, have been in service to mankind from the Early Periods. Metal craft started turning
+into metal science in the 19th Century and got matured in 20th century. The present book, to the best of author’s memory, is the
+first attempt to present the history of metal science in one volume, covering both extractive and physical metallurgy. The book is
+aimed as a supplementary text book for students in metallurgy and materials science and also selectively for general readers.
+After a brief introduction (Chapter 1), the second and third chapters are devoted to extractive metallurgy. The chapters related
+to physical metallurgy (4th to 6th) are written in a sequence such that the description of structures is given first, before
+highlighting the properties of metals and alloys. The final chapter ‘Future Trends’ highlights various topics in contemporary
+metal science.Collection of selected, peer reviewed papers from the 1st International "NEW METROPOLITAN PERSPECTIVES. The Integrated
+Approach of Urban Sustainable Development through the Implementation of Horizon/Europe2020" (ISTH2020), May 6-9, 2014,
+Reggio Calabria, Italy. Challenges, Identity, Ii. The Integrated Approach of Sustainable Urban Development, III. Metropolitan City: Issues,
+Iv. Urban Regeneration: Community Involvement, Marginal Areas in Local Economic Development Strategies, PPP,
+Urban, V. Urban/Rural - the Role of Urban/Rural Regeneration in Regional Context, Valuation Tools, Vi. Heritage,
+VII. Economic-Estimative Dynamics.Damages, Diagnostics of Structures, Durability, Dynamic Analysis of Structures, Experimental Analysis, Failure,
+Material Optimization of Structures, Mathematical Applications, Numerical Methods, Reconstructions of
+Structures, Reliability of Structures, Resistance, Seismic, Shape, Simulations, Stability Problems of Building
+Structures, Static, Static - Design.Advanced Construction Materials Research, Architectural Design, Building Planning, Building Science, City, Design,
+Ecological Architecture, Environmental Architecture Research, Landscape Planning, Technology, Traditional
+Construction Materials Research, Urban Planning.The word luminescence was first used by a German physicist, Eilhardt Wiedemann, in 1888. He also classified luminescence into
+six kinds according to the method of excitation. No better basis of classification is available today. He recognized
+photoluminescence, thermoluminescence, electroluminescence, crystalloluminescence, triboluminescence, and
+chemiluminescence. The designations are obvious, characterized by the prefix. This Volume consists of 9 Chapters, including 8
+Review Papers and one Case Study.This special issue of Key Engineering Materials journal is to communicate the latest progress and research of new theory,
+technology, method, equipment in materials processing and manufacturing automation technology field, and to grasp the
+forefront technological and research trends worldwide, which will drive international communication and cooperation of
+production, education and research in this field. The major topics covered by the special issue include Experience and Paper of
+Education in Special Machining Technology, Process Monitoring and Quality Control of Manufacturing Systems, Industrial Robot
+Technology, Agile Manufacturing, Intelligent Manufacturing, Green Manufacturing, Virtual Manufacturing, Networked
+Manufacturing, Computer Integrated Manufacturing System and Contemporary Integrated Manufacturing System, Product
+Lifecycle Management, Computerized Numerical Control System and Flexible Manufacturing System, Precision Machining
+Technology, CAD/CAE/CAPP/CAM and Application of Product Data Management, Logistics Engineering and Equipment and
+Other Related Topics and so on. The guest editors would like to thank the contributors of papers, the reviewers and the Key
+Engineering Materials journal for helping put together this special issue.This special topic volume tends to present leading publications dealing with the Environmental and Safety Aspects of Renewable
+Materials and Energy Sources.Electrical Engineering, Energy Engineering, Integrated Circuits, Manufacturing, Materials Engineering,
+Measurement Technologies, Mechanical Engineering, Mechatronics, Power, Robotics.Collection of selected, peer reviewed papers from the 6th International Scientific Conference on Dynamic of Civil Engineering
+and Transport Structures and Wind Engineering (DYN-WIND 2014), May 25-29, 2014, Donovaly, Slovak Republic.Advanced Construction Materials, Air Conditioning Works, Applied Mechanics, Architectural Design, Building
+Technology Science, Cartography, Civil, Coastal Engineering, Computational Mechanics, Construction Industry
+Management, Construction Technology, Design, Disaster Prevention, Ecological Building, Energy Saving Building,
+Engineering Education, Engineering Management, Gas, Gas Supply, Geographic Information Systems, Geological
+Engineering, Geotechnical, Heating, Infrastructure Demand, Its Theory, Landscape Planning, Low-Carbon Building,
+Mineral Resources Exploitation, Mitigation, Oil, Project Management, Renewable Energy, Rural Planning, Seismic
+Engineering, Structural Engineering, Subway, Supply, Surveying Engineering, Traditional Construction Materials,
+Tunnel, Underground Facilities, Urban, Ventilation.Advanced Materials, Bonding, Coatings, Drawing, Extrusion, Forging, Formability, Hydro Forming, Incremental
+Forming, Joining, Magnesium Forming, Numerical Modelling, Optimisation, Powder, Rolling , Shearing, Sheet
+Metal Forming, Surfaces, Titanium Forming, Tube.These are the proceedings of “Special concrete and composites 2014” conference, which is the most powerful meeting for
+experts in the field of concrete and composite research in the Czech Republic. The venue celebrated its 22th anniversary this
+year. The conference is international focused with over 60 experts from Czech Republic, Slovakia, Poland and United States of
+America. The 50 peer reviewed paper cover the current knowledge in the field of concrete..
+Algorithms for Engineering Research, Applied Material Science, Applied Nanotechnologies, Architecture, Biology,
+Biomedical Engineering, Biotechnologies, Business Management, Chemical Engineering, Computational Methods,
+Design, Designing, Environmental Engineering, Industrial Engineering, Manufacturing Processes, Materials in
+Construction, Nanomaterials, Research in General Mechanical Engineering, Sustainable Development,
+Technologies, Waste Recycling.The need of today is to have energy efficient buildings materials and construction technologies that cater to this rising need.
+Hence, selecting construction and finishing materials that have low embodied energy and haveless operational and maintenance
+cost is the most powerful tool for the architects, designers and the constructors to achieve high energy efficiency in buildings.
+This special volume on ‘Materials and Technologies for Green Construction’ contains Ten chapters which address a wide range
+of issues pertaining to building materials and technologies with reference to energy efficiency. This volume demonstrates that
+alternatives to modern building materials are available and that today it is possible to produce building materials and select raw
+materials from an ecological perspective.The present volume “Nanomaterials: Basic Concepts and Applications”, as the title suggests, deals with basic concepts and
+applications of anomaterials, a buzz word in the modern world of Science and Technology. Because of advanced characterization
+and new fabrication techniques, nanomaterials are now central to multiple disciplines, including materials science, chemistry,
+physics, engineering and medicine. This special volume under Solid State Phenomena series will present an overview of recent
+research developments, including synthesis, characterization, and applications, in Nanoelectronics, Luminescence, Drug
+Delivery, Memristors, Solar Cells and Semiconductors.Automation, Development, ECT, Electric, Electric Vehicles, Electrical Theory, Energy Chemical Engineering, Energy
+Materials, Energy-Saving, Energy-Storage Technology, Fuel Cell, High Voltage, Insulation Technology, Motor, New
+Energy Vehicles, Nuclear Energy, Other Energy, Power Drives, Power Electronics, Power System, Power Systems
+Management, Smart Grid Technology, Utilization of Biomass Energy, Utilization of Solar Energy, Utilization of
+Wind Energy.Assessment, Biology, Control, Disaster Prevention, Drainage, ECT, Environmental Analysis, Environmental
+Chemistry, Environmental Materials, Environmental Planning, Environmental Restoration Engineering,
+Environmental Safety, Health, HYDROLOGY, Mitigation, Monitoring, Noise Analysis, Pollution Control Engineering,
+Processing Technology, Recycling, Vibration, Waste Disposal, Water Resources Engineering, Water Supply.Analysis, Applied Mechanics, Automation, Biotechnologies, Chemical Processes, Communications, Construction,
+Control, Detection Technologies, Electric, Electronics, Embedded, Energy, Equipment, General Mechanical
+Engineering, Instrumentation, Integrated Systems, Magnetic Systems, Manufacturing, Materials, Materials Science,
+Measurements, Mechatronics, Microelectronics, Monitoring, Power, Processing Technologies, Robotics, Signal
+Processing, Structural Engineering, Technologies, Testing.
+At Trans Tech Publications we are publishing many new book titles
+every year. The total number of books published since the beginning of
+our publishing house now runs in the thousands. These books are
+read by many and we use many different ways to globally distribute
+these. And thus provide access and significant exposure of this
+content to the broader scientific community.
+We, as Publisher, are very proud of our contribution to academic
+knowledge and research by bringing to life these books which have
+been read and demanded by scholars, researchers, students and
+other members of the scientific society all over the world. The value of
+the book rises with the growing demand for it, proving the
+importance and the relevance of topics highlighted or problems
+elaborated therein.
+For your ease and comfort, we gathered a top 100 into this
+catalogue. This list will also be available in the following Section on our
+website.
+Trans Tech Publications Ltd. is founded in 1967 and endorses the latest trends in
+academic publishing. The editorial and publishing processes are supported by our
+online management and publishing system which is integrated into the Scientific.Net
+website.
+The trademark Scientific.Net is designed by us and is the name of our website
+providing a resource of high-demand content focused on science and
+engineering published in academic journals, book series, conference proceedings
+and monographs.
+The publishing scope covers the hard sciences such as Materials Science &
+Engineering (incl. manufacturing, processing & application), sustainable engineering,
+green technologies (incl. energy storage, 3D printing/additive manufacturing).
+To process the manuscripts our company-owned editorial and publishing workflows
+allow Open Access models and funder requirements. Alongside systems, we feel a
+personal touch throughout the process is essential and our Customer Care foresees in
+this need.
+The visibility and outreach of our content are ensured through on the one hand the
+indexing with the major and niche partners, and the other the distribution via
+internationally recognised parties that make our content available at the paper, book
+and/or journal level.
+Our customers are top-rated higher educational, research institutions, R&D
+departments and Universities Libraries as well as (nationwide) consortia.
+Our business models are traditional subscription-based model, Open Access,
+Read & Publish, pay-per-view and token licences enabling the reading on most
+mobile devices.
+Since the first development of lithium-ion batteries in the early 1990 s, there have been tremendous advances in the science and
+technology of these electrochemical energy sources. At present, lithium batteries dominate the field of advanced power sources
+and have almost entirely replaced their bulkier and less energetic counterparts such as nickel-cadmium and nickel-metalhydride
+batteries; especially in portable electronic devices. But lithium batteries are still the object of continuing intense research aimed
+at making further improvements in performance and safety, at lower cost, so as to make them suitable for higher-power and
+more demanding applications such as electric vehicles. The research and development of new electrode materials, particularly
+for cathodes, having an improved electrochemical performance has always been a matter of changing focus. Thus, olivine,
+lithium iron phosphate, has attracted considerable attention in recent years as a safe, environmentally friendly, extremely stable
+and very promising cathode material.It is well-known that fossil fuels are being rapidly depleted, and that atomic power is rejected by many people. As a consequence,
+there is a strong trend towards alternative sources such as wind, photovoltaics, solar heat and biomass. Strangely enough, quite
+another power source is generally neglected: namely, the thermoelectric generator (a device which converts heat, i.e. thermal
+energy, directly into electrical energy). The reason for this neglect is probably the low conversion efficiency, which is of the
+order of a few percent at most. However, there are two arguments in favor of the thermoelectric generator. Firstly, we might in
+effect be at the same point as we were in the early stages of photovoltaics use (it was only in 1954 that the first attractive solar
+cells, with efficiencies of around 4% were produced). Today, even large modules attain 20%. Secondly, the potential applications
+of thermoelectric generators are very tempting. Wherever heat is generated, it is amenable to electrical conversion. Energy
+harvesting via a thermoelectric generator may be accompanied by a further benefit: The use of a solar module inevitably leads to
+a drastic temperature rise. A thermoelectric generator reduces the temperature rise and therefore offers a double benefit.
+The electronic properties of solids have become of increasing importance in the age of information technology. The study of
+solids and materials, while having originated from the disciplines of physics and chemistry, has evolved independently over the
+past few decades. The classical treatment of solid-state physics, which emphasized classifications, theories and fundamental
+physical principles, is no longer able to bridge the gap between materials advances and applications. In particular, the more
+recent developments in device physics and technology have not necessarily been driven by new concepts in physics or new
+materials, but rather by the ability of engineers to control crystal structures and properties better via advances in crystal growth
+and patterning techniques. In many cases, new applications simply arise from the adaption of conventional ideas to
+interdisciplinary areas. One example is that of recent advances which rely heavily upon the availability of the sub-micron
+technology developed by the semiconductor industry. Another example is the emergence of nanotechnology.
+This monograph deals with a physico-chemical approach to the problem of the solid-state growth of chemical compound layers
+and reaction-diffusion in binary heterogeneous systems formed by two solids; as well as a solid with a liquid or a gas. It is
+explained why the number of compound layers growing at the interface between the original phases is usually much lower than
+the number of chemical compounds in the phase diagram of a given binary system. For example, of the eight intermetallic
+compounds which exist in the aluminium-zirconium binary system, only ZrAl3 was found to grow as a separate layer at the
+Al Zr interface under isothermal conditions. The physico-chemical approach predicts that, in most cases, the number of
+compound layers should not exceed two; with the main factor, resulting in the appearance of additional layers, being crack
+formation due to thermal expansion and volume effects.
+The aim of this book is to develop, in the reader, the necessary skills required for designing materials, components and
+structures so as to resist fracture and failure in engineering applications. In order to achieve this objective, the authors have
+adopted a combined materials science-fracture mechanics-design approach. Although the material covered is designed for an
+advanced undergraduate course in metallurgy/materials engineering, students coming from mechanical, civil or aerospace
+engineering backgrounds will also be able to use this text as a course/reference book. In addition to students, practising
+engineers and production mangers will also find this book very useful; particular with regard to designing components and
+machine elements so as to resist fracture and failure in critical applications.
+The present volume comprises a collection of peer-reviewed papers covering manufacture and production, engineering
+materials, CAD/CAM/CAE, robotics, automation and control, environment-friendly design and manufacture, web/internet
+technologies, artificial intelligence and smart computing in design and manufacture, enterprise, management, and other related
+topics.Composite materials are increasingly finding use in diverse applications requiring a wide range of property and performance
+requirements. Low density, high specific strength and stiffness are the main features that make composite materials most
+suitable for structural applications. The field covers the concurrent manipulation of the material’s composition and of the
+internal architecture of the composite in order to obtain the desired properties. The ability to tailor composite materials
+precisely is of great importance in structural applications. A systematic approach to the optimum tailoring of composite
+materials is a challenging design problem. The focus should be on the practical design aspects, and that is what is addressed in
+this special-topic volume.The electronic properties of solids have become of increasing importance in the age of information technology. The study of
+solids and materials, while having originated from the disciplines of physics and chemistry, has evolved independently over the
+past few decades. The classical treatment of solid-state physics, which emphasized classifications, theories and fundamental
+physical principles, is no longer able to bridge the gap between materials advances and applications. In particular, the more
+recent developments in device physics and technology have not necessarily been driven by new concepts in physics or new
+materials, but rather by the ability of engineers to control crystal structures and properties better via advances in crystal growth
+and patterning techniques. In many cases, new applications simply arise from the adaption of conventional ideas to
+interdisciplinary areas. One example is that of recent advances which rely heavily upon the availability of the sub-micron
+technology developed by the semiconductor industry. Another example is the emergence of nanotechnology.This monograph deals with a physico-chemical approach to the problem of the solid-state growth of chemical compound layers
+and reaction-diffusion in binary heterogeneous systems formed by two solids; as well as a solid with a liquid or a gas. It is
+explained why the number of compound layers growing at the interface between the original phases is usually much lower than
+the number of chemical compounds in the phase diagram of a given binary system. For example, of the eight intermetallic
+compounds which exist in the aluminium-zirconium binary system, only ZrAl3 was found to grow as a separate layer at the
+Al–Zr interface under isothermal conditions. The physico-chemical approach predicts that, in most cases, the number of
+compound layers should not exceed two; with the main factor, resulting in the appearance of additional layers, being crack
+formation due to thermal expansion and volume effects.The aim of this book is to develop, in the reader, the necessary skills required for designing materials, components and
+structures so as to resist fracture and failure in engineering applications. In order to achieve this objective, the authors have
+adopted a combined materials science-fracture mechanics-design approach. Although the material covered is designed for an
+advanced undergraduate course in metallurgy/materials engineering, students coming from mechanical, civil or aerospace
+engineering backgrounds will also be able to use this text as a course/reference book. In addition to students, practising
+engineers and production mangers will also find this book very useful; particular with regard to designing components and
+machine elements so as to resist fracture and failure in critical applications.The present volume comprises a collection of peer-reviewed papers covering manufacture and production, engineering
+materials, CAD/CAM/CAE, robotics, automation and control, environment-friendly design and manufacture, web/internet
+technologies, artificial intelligence and smart computing in design and manufacture, enterprise, management, and other related
+topics.This work comprises eight contributions from leading experts on the topic of the mechanical behaviour of materials. The
+research themes described in this special volume range from surface forces, surface energies and adhesion to the indentation
+and nano-indentation of solids and fracture waves in glasses to spectroscopic studies of biological cells.The field of “polymers in concrete” is rather well consolidated within the construction industry, and its future will be one of
+benefiting fully from the synergy between the organic and mineral materials. Concrete-polymer composites (C-PC) exhibit
+excellent adhesion strength and durability in aggressive environments and the good performance of these materials makes
+innovative applications possible; including new technologies for restoring and renovating buildings.
+The purpose of this book is to present the current state of knowledge in the field of energy harvesting using piezoelectric and
+pyroelectric materials. The book is addressed to students and academics engaged in research in the fields of energy harvesting,
+material sciences and engineering. Scientists and engineers who are working in the area of energy conservation and renewable
+energy resources should find it useful as well. Explanations of fundamental physical properties such as piezoelectricity and
+pyroelectricity are included to aid the understanding of the non-specialist. Specific technologies and particular applications are
+also presented. This book is divided into two parts, each subdivided into chapters. Part I concerns fundamentals. Chapter 1
+reports the discoveries, standard issues and various materials involved with energy harvesting. Chapter 2 presents
+electromechanical models enabling an understanding of how energy harvesting systems behave. The vibration theory and
+designs for various piezoelectric energy harvesting structures are addressed in Chapter 3. Chapter 4 describes the analytical
+expressions for the energy flow in piezoelectric energy harvesting systems, in particular, with cymbal and flexible transducers. A
+description of the conversion enhancement for powering low-energy consumption devices is presented in Chapter 5. Part II
+concerns Applications and Case Studies. It begins with Chapter 6, in which the principles and applications of piezoelectric
+nanogenerators are reported. Chapter 7 describes the utilization of energy harvesting from low-frequency energy sources. There
+are more ways to use vibrational energy than waste heat. However, Chapter 8 presents the fundamentals of an important
+application of heat conversion with a copolymer. Finally, commercial energy harvesting products and a technological forecast
+are provided in Chapter 9.A major goal of this special collection of 47 peer-reviewed papers was to gather together the current knowledge of academic
+scientists, engineers and industrial researchers and have them share their experiences and research results concerning every
+aspect of green building technologies and materials, and discuss the practical challenges encountered and the solutions adopted.
+An interesting guide to this increasingly relevant subject.The goal of this special collection of peer-reviewed papers was to provide an unique opportunity to exchange information, to
+present the latest results and to review relevant issues in contemporary diffusion research. The result is a work which will
+provide valuable insights into this subject.This collection of peer-reviewed papers, on new research results in green building materials and energy-saving construction,
+brings together industrial and academic researchers, developers and users from around the world to - in effect - share their
+state-of-the-art results, to explore new areas of research and development and to discuss the emerging issues facing green
+building materials and energy-saving construction.EDFGC is an international conference series covering research and development in the fields of textile dyeing/finishing and
+green chemistry. With its theme of “Innovation, Eco-Textile and Sustainability”, the 2011 conference provided a platform for the
+presentation of research findings, the exchange of innovative ideas and the seeking-out of opportunities for collaboration, in the
+above fields, among both academics and industrialists all over the world. The proceedings of EDFGC 2011 include Eco-Dyeing &
+Finishing, Functional Textiles, Green Chemistry and Functional Chemicals, Pollution Control and Energy Conservation,
+Fundamental Research and Test & Characterization.Powder metallurgy is one of the leading processes used for forming engineering components. The technology, as developed at
+the beginning of the 20th century, has since advanced significantly from both the materials and energy-conservation points of
+view. Novel, and automated, equipment has played a significant role in enhancing the growth of the powder metallurgy industry.
+The present work includes, in addition to the editor’s introductory paper, eleven invited papers from organizations of
+international repute. In brief, the book presents expert assessments from the major metal-powder and powder-metallurgy
+equipment-makers in the world. This distinguishes it from other works, which are contributed mainly by academics. The book
+concentrates on particular topics of interest and does not attempt to be comprehensive.
+The objective of this volume is to show case studies and research on novel and interesting ways of achieving sustainable
+construction practices via the use of new building materials and technologies. The papers originate from both academia and
+industry and treat the topics of: traditional construction materials, advanced construction materials, green building materials,
+architectural design and its theory, urban planning and design, landscape planning and design, building energy saving
+technology and ecological architecture.This special issue of Trends in Automotive Research contains papers contributed to the Regional Conference on Automotive
+Research (ReCAR) , held on the 14 and 15th December, 2011, in Kuala Lumpur, Malaysia.
+The conference was organised by the Centre for Automotive Research (CAR), Faculty of Engineering and the Built Environment,
+Universiti Kebangsaan Malaysia.The uniqueness of the title of this book, Materials Science and Design for Engineers, already indicates that the authors -
+professionals having over 30 years of experience in the fields of materials science and engineering - are here tackling the rarelydiscussed topic of the science of materials as directly related to the domain of design in engineering applications. This
+comprehensive textbook has now filled that gap in the engineering literature.The subjects covered by this special collection include the fatigue life of elements of structures, research on low- and high-cycle
+fatigue, fatigue under conditions of complex states of stress and strain, analysis of fatigue loads, design taking fatigue into
+consideration, analysis of random fatigue loads, experimental methods in the mechanics of cracking, application of fracture
+mechanics to engineering issues, the impact of structural, technological and functional factors upon the fatigue of elements of
+structures, research methods and equipment. This coverage makes the work a veritable handbook guide to the subject matter.These are the proceedings of the 2012 International Conference on Civil Engineering and Material Engineering (CEME2012),
+August 25-26, Wuhan, China. The 90 peer reviewed paper are grouped as follows: Chapter 1: Material Application and Structure
+in Civil Engineering; Chapter 2: Mechanics Research in Civil Engineering and Material Engineering; Chapter 3: Environmental
+Material and Civil Engineering; Chapter 4: Material Engineering and its Application Technology.
+These proceedings of the 2012 International Conference of Green Building Materials and Energy-Saving Construction (GBMEC
+2012), held on August 18th 2012 in Harbin (China) comprise 30 peer- reviewed papers.The aim of the special collection of peer reviewed papers was to present the latest research results from scientist such as
+professors, students, PhD. students and engineers related to robotics and manufacturing systems. This Special Topic Volume comprises selected peer-reviewed papers from the international scientific community on the topic of
+“Bone and biomaterials for bone tissue engineering”. The volume covers some relevant aspects spanning from bone tissue
+mechanics to scaffolding for bone tissue engineering in terms of microstructure, biological evaluation, fabrication technologies,
+surface modifications and coatings. The aim of this collection was to provide an interdisciplinary panorama on this emerging and
+promising biomedical field.Metals, because of their inherent properties, have been in service to mankind from the Early Periods. Metal craft started turning
+into metal science in the 19th Century and got matured in 20th century. The present book, to the best of author’s memory, is the
+first attempt to present the history of metal science in one volume, covering both extractive and physical metallurgy. The book is
+aimed as a supplementary text book for students in metallurgy and materials science and also selectively for general readers.
+After a brief introduction (Chapter 1), the second and third chapters are devoted to extractive metallurgy. The chapters related
+to physical metallurgy (4th to 6th) are written in a sequence such that the description of structures is given first, before
+highlighting the properties of metals and alloys. The final chapter ‘Future Trends’ highlights various topics in contemporary
+metal science.Collection of selected, peer reviewed papers from the 1st International "NEW METROPOLITAN PERSPECTIVES. The Integrated
+Approach of Urban Sustainable Development through the Implementation of Horizon/Europe2020" (ISTH2020), May 6-9, 2014,
+Reggio Calabria, Italy. Challenges, Identity, Ii. The Integrated Approach of Sustainable Urban Development, III. Metropolitan City: Issues,
+Iv. Urban Regeneration: Community Involvement, Marginal Areas in Local Economic Development Strategies, PPP,
+Urban, V. Urban/Rural - the Role of Urban/Rural Regeneration in Regional Context, Valuation Tools, Vi. Heritage,
+VII. Economic-Estimative Dynamics.Damages, Diagnostics of Structures, Durability, Dynamic Analysis of Structures, Experimental Analysis, Failure,
+Material Optimization of Structures, Mathematical Applications, Numerical Methods, Reconstructions of
+Structures, Reliability of Structures, Resistance, Seismic, Shape, Simulations, Stability Problems of Building
+Structures, Static, Static - Design.Advanced Construction Materials Research, Architectural Design, Building Planning, Building Science, City, Design,
+Ecological Architecture, Environmental Architecture Research, Landscape Planning, Technology, Traditional
+Construction Materials Research, Urban Planning.The word luminescence was first used by a German physicist, Eilhardt Wiedemann, in 1888. He also classified luminescence into
+six kinds according to the method of excitation. No better basis of classification is available today. He recognized
+photoluminescence, thermoluminescence, electroluminescence, crystalloluminescence, triboluminescence, and
+chemiluminescence. The designations are obvious, characterized by the prefix. This Volume consists of 9 Chapters, including 8
+Review Papers and one Case Study.This special issue of Key Engineering Materials journal is to communicate the latest progress and research of new theory,
+technology, method, equipment in materials processing and manufacturing automation technology field, and to grasp the
+forefront technological and research trends worldwide, which will drive international communication and cooperation of
+production, education and research in this field. The major topics covered by the special issue include Experience and Paper of
+Education in Special Machining Technology, Process Monitoring and Quality Control of Manufacturing Systems, Industrial Robot
+Technology, Agile Manufacturing, Intelligent Manufacturing, Green Manufacturing, Virtual Manufacturing, Networked
+Manufacturing, Computer Integrated Manufacturing System and Contemporary Integrated Manufacturing System, Product
+Lifecycle Management, Computerized Numerical Control System and Flexible Manufacturing System, Precision Machining
+Technology, CAD/CAE/CAPP/CAM and Application of Product Data Management, Logistics Engineering and Equipment and
+Other Related Topics and so on. The guest editors would like to thank the contributors of papers, the reviewers and the Key
+Engineering Materials journal for helping put together this special issue.This special topic volume tends to present leading publications dealing with the Environmental and Safety Aspects of Renewable
+Materials and Energy Sources.Electrical Engineering, Energy Engineering, Integrated Circuits, Manufacturing, Materials Engineering,
+Measurement Technologies, Mechanical Engineering, Mechatronics, Power, Robotics.Collection of selected, peer reviewed papers from the 6th International Scientific Conference on Dynamic of Civil Engineering
+and Transport Structures and Wind Engineering (DYN-WIND 2014), May 25-29, 2014, Donovaly, Slovak Republic.Advanced Construction Materials, Air Conditioning Works, Applied Mechanics, Architectural Design, Building
+Technology Science, Cartography, Civil, Coastal Engineering, Computational Mechanics, Construction Industry
+Management, Construction Technology, Design, Disaster Prevention, Ecological Building, Energy Saving Building,
+Engineering Education, Engineering Management, Gas, Gas Supply, Geographic Information Systems, Geological
+Engineering, Geotechnical, Heating, Infrastructure Demand, Its Theory, Landscape Planning, Low-Carbon Building,
+Mineral Resources Exploitation, Mitigation, Oil, Project Management, Renewable Energy, Rural Planning, Seismic
+Engineering, Structural Engineering, Subway, Supply, Surveying Engineering, Traditional Construction Materials,
+Tunnel, Underground Facilities, Urban, Ventilation.Advanced Materials, Bonding, Coatings, Drawing, Extrusion, Forging, Formability, Hydro Forming, Incremental
+Forming, Joining, Magnesium Forming, Numerical Modelling, Optimisation, Powder, Rolling , Shearing, Sheet
+Metal Forming, Surfaces, Titanium Forming, Tube.These are the proceedings of “Special concrete and composites 2014” conference, which is the most powerful meeting for
+experts in the field of concrete and composite research in the Czech Republic. The venue celebrated its 22th anniversary this
+year. The conference is international focused with over 60 experts from Czech Republic, Slovakia, Poland and United States of
+America. The 50 peer reviewed paper cover the current knowledge in the field of concrete..
+Algorithms for Engineering Research, Applied Material Science, Applied Nanotechnologies, Architecture, Biology,
+Biomedical Engineering, Biotechnologies, Business Management, Chemical Engineering, Computational Methods,
+Design, Designing, Environmental Engineering, Industrial Engineering, Manufacturing Processes, Materials in
+Construction, Nanomaterials, Research in General Mechanical Engineering, Sustainable Development,
+Technologies, Waste Recycling.The need of today is to have energy efficient buildings materials and construction technologies that cater to this rising need.
+Hence, selecting construction and finishing materials that have low embodied energy and haveless operational and maintenance
+cost is the most powerful tool for the architects, designers and the constructors to achieve high energy efficiency in buildings.
+This special volume on ‘Materials and Technologies for Green Construction’ contains Ten chapters which address a wide range
+of issues pertaining to building materials and technologies with reference to energy efficiency. This volume demonstrates that
+alternatives to modern building materials are available and that today it is possible to produce building materials and select raw
+materials from an ecological perspective.The present volume “Nanomaterials: Basic Concepts and Applications”, as the title suggests, deals with basic concepts and
+applications of anomaterials, a buzz word in the modern world of Science and Technology. Because of advanced characterization
+and new fabrication techniques, nanomaterials are now central to multiple disciplines, including materials science, chemistry,
+physics, engineering and medicine. This special volume under Solid State Phenomena series will present an overview of recent
+research developments, including synthesis, characterization, and applications, in Nanoelectronics, Luminescence, Drug
+Delivery, Memristors, Solar Cells and Semiconductors.Automation, Development, ECT, Electric, Electric Vehicles, Electrical Theory, Energy Chemical Engineering, Energy
+Materials, Energy-Saving, Energy-Storage Technology, Fuel Cell, High Voltage, Insulation Technology, Motor, New
+Energy Vehicles, Nuclear Energy, Other Energy, Power Drives, Power Electronics, Power System, Power Systems
+Management, Smart Grid Technology, Utilization of Biomass Energy, Utilization of Solar Energy, Utilization of
+Wind Energy.Assessment, Biology, Control, Disaster Prevention, Drainage, ECT, Environmental Analysis, Environmental
+Chemistry, Environmental Materials, Environmental Planning, Environmental Restoration Engineering,
+Environmental Safety, Health, HYDROLOGY, Mitigation, Monitoring, Noise Analysis, Pollution Control Engineering,
+Processing Technology, Recycling, Vibration, Waste Disposal, Water Resources Engineering, Water Supply.Analysis, Applied Mechanics, Automation, Biotechnologies, Chemical Processes, Communications, Construction,
+Control, Detection Technologies, Electric, Electronics, Embedded, Energy, Equipment, General Mechanical
+Engineering, Instrumentation, Integrated Systems, Magnetic Systems, Manufacturing, Materials, Materials Science,
+Measurements, Mechatronics, Microelectronics, Monitoring, Power, Processing Technologies, Robotics, Signal
+Processing, Structural Engineering, Technologies, Testing.
+At Trans Tech Publications we are publishing many new book titles
+every year. The total number of books published since the beginning of
+our publishing house now runs in the thousands. These books are
+read by many and we use many different ways to globally distribute
+these. And thus provide access and significant exposure of this
+content to the broader scientific community.
+We, as Publisher, are very proud of our contribution to academic
+knowledge and research by bringing to life these books which have
+been read and demanded by scholars, researchers, students and
+other members of the scientific society all over the world. The value of
+the book rises with the growing demand for it, proving the
+importance and the relevance of topics highlighted or problems
+elaborated therein.
+For your ease and comfort, we gathered a top 100 into this
+catalogue. This list will also be available in the following Section on our
+website.
+Trans Tech Publications Ltd. is founded in 1967 and endorses the latest trends in
+academic publishing. The editorial and publishing processes are supported by our
+online management and publishing system which is integrated into the Scientific.Net
+website.
+The trademark Scientific.Net is designed by us and is the name of our website
+providing a resource of high-demand content focused on science and
+engineering published in academic journals, book series, conference proceedings
+and monographs.
+The publishing scope covers the hard sciences such as Materials Science &
+Engineering (incl. manufacturing, processing & application), sustainable engineering,
+green technologies (incl. energy storage, 3D printing/additive manufacturing).
+To process the manuscripts our company-owned editorial and publishing workflows
+allow Open Access models and funder requirements. Alongside systems, we feel a
+personal touch throughout the process is essential and our Customer Care foresees in
+this need.
+The visibility and outreach of our content are ensured through on the one hand the
+indexing with the major and niche partners, and the other the distribution via
+internationally recognised parties that make our content available at the paper, book
+and/or journal level.
+Our customers are top-rated higher educational, research institutions, R&D
+departments and Universities Libraries as well as (nationwide) consortia.
+Our business models are traditional subscription-based model, Open Access,
+Read & Publish, pay-per-view and token licences enabling the reading on most
+mobile devices.
+Since the first development of lithium-ion batteries in the early 1990 s, there have been tremendous advances in the science and
+technology of these electrochemical energy sources. At present, lithium batteries dominate the field of advanced power sources
+and have almost entirely replaced their bulkier and less energetic counterparts such as nickel-cadmium and nickel-metalhydride
+batteries; especially in portable electronic devices. But lithium batteries are still the object of continuing intense research aimed
+at making further improvements in performance and safety, at lower cost, so as to make them suitable for higher-power and
+more demanding applications such as electric vehicles. The research and development of new electrode materials, particularly
+for cathodes, having an improved electrochemical performance has always been a matter of changing focus. Thus, olivine,
+lithium iron phosphate, has attracted considerable attention in recent years as a safe, environmentally friendly, extremely stable
+and very promising cathode material.It is well-known that fossil fuels are being rapidly depleted, and that atomic power is rejected by many people. As a consequence,
+there is a strong trend towards alternative sources such as wind, photovoltaics, solar heat and biomass. Strangely enough, quite
+another power source is generally neglected: namely, the thermoelectric generator (a device which converts heat, i.e. thermal
+energy, directly into electrical energy). The reason for this neglect is probably the low conversion efficiency, which is of the
+order of a few percent at most. However, there are two arguments in favor of the thermoelectric generator. Firstly, we might in
+effect be at the same point as we were in the early stages of photovoltaics use (it was only in 1954 that the first attractive solar
+cells, with efficiencies of around 4% were produced). Today, even large modules attain 20%. Secondly, the potential applications
+of thermoelectric generators are very tempting. Wherever heat is generated, it is amenable to electrical conversion. Energy
+harvesting via a thermoelectric generator may be accompanied by a further benefit: The use of a solar module inevitably leads to
+a drastic temperature rise. A thermoelectric generator reduces the temperature rise and therefore offers a double benefit.
+The electronic properties of solids have become of increasing importance in the age of information technology. The study of
+solids and materials, while having originated from the disciplines of physics and chemistry, has evolved independently over the
+past few decades. The classical treatment of solid-state physics, which emphasized classifications, theories and fundamental
+physical principles, is no longer able to bridge the gap between materials advances and applications. In particular, the more
+recent developments in device physics and technology have not necessarily been driven by new concepts in physics or new
+materials, but rather by the ability of engineers to control crystal structures and properties better via advances in crystal growth
+and patterning techniques. In many cases, new applications simply arise from the adaption of conventional ideas to
+interdisciplinary areas. One example is that of recent advances which rely heavily upon the availability of the sub-micron
+technology developed by the semiconductor industry. Another example is the emergence of nanotechnology.
+This monograph deals with a physico-chemical approach to the problem of the solid-state growth of chemical compound layers
+and reaction-diffusion in binary heterogeneous systems formed by two solids; as well as a solid with a liquid or a gas. It is
+explained why the number of compound layers growing at the interface between the original phases is usually much lower than
+the number of chemical compounds in the phase diagram of a given binary system. For example, of the eight intermetallic
+compounds which exist in the aluminium-zirconium binary system, only ZrAl3 was found to grow as a separate layer at the
+Al Zr interface under isothermal conditions. The physico-chemical approach predicts that, in most cases, the number of
+compound layers should not exceed two; with the main factor, resulting in the appearance of additional layers, being crack
+formation due to thermal expansion and volume effects.
+The aim of this book is to develop, in the reader, the necessary skills required for designing materials, components and
+structures so as to resist fracture and failure in engineering applications. In order to achieve this objective, the authors have
+adopted a combined materials science-fracture mechanics-design approach. Although the material covered is designed for an
+advanced undergraduate course in metallurgy/materials engineering, students coming from mechanical, civil or aerospace
+engineering backgrounds will also be able to use this text as a course/reference book. In addition to students, practising
+engineers and production mangers will also find this book very useful; particular with regard to designing components and
+machine elements so as to resist fracture and failure in critical applications.
+The present volume comprises a collection of peer-reviewed papers covering manufacture and production, engineering
+materials, CAD/CAM/CAE, robotics, automation and control, environment-friendly design and manufacture, web/internet
+technologies, artificial intelligence and smart computing in design and manufacture, enterprise, management, and other related
+topics.Composite materials are increasingly finding use in diverse applications requiring a wide range of property and performance
+requirements. Low density, high specific strength and stiffness are the main features that make composite materials most
+suitable for structural applications. The field covers the concurrent manipulation of the material’s composition and of the
+internal architecture of the composite in order to obtain the desired properties. The ability to tailor composite materials
+precisely is of great importance in structural applications. A systematic approach to the optimum tailoring of composite
+materials is a challenging design problem. The focus should be on the practical design aspects, and that is what is addressed in
+this special-topic volume.The electronic properties of solids have become of increasing importance in the age of information technology. The study of
+solids and materials, while having originated from the disciplines of physics and chemistry, has evolved independently over the
+past few decades. The classical treatment of solid-state physics, which emphasized classifications, theories and fundamental
+physical principles, is no longer able to bridge the gap between materials advances and applications. In particular, the more
+recent developments in device physics and technology have not necessarily been driven by new concepts in physics or new
+materials, but rather by the ability of engineers to control crystal structures and properties better via advances in crystal growth
+and patterning techniques. In many cases, new applications simply arise from the adaption of conventional ideas to
+interdisciplinary areas. One example is that of recent advances which rely heavily upon the availability of the sub-micron
+technology developed by the semiconductor industry. Another example is the emergence of nanotechnology.This monograph deals with a physico-chemical approach to the problem of the solid-state growth of chemical compound layers
+and reaction-diffusion in binary heterogeneous systems formed by two solids; as well as a solid with a liquid or a gas. It is
+explained why the number of compound layers growing at the interface between the original phases is usually much lower than
+the number of chemical compounds in the phase diagram of a given binary system. For example, of the eight intermetallic
+compounds which exist in the aluminium-zirconium binary system, only ZrAl3 was found to grow as a separate layer at the
+Al–Zr interface under isothermal conditions. The physico-chemical approach predicts that, in most cases, the number of
+compound layers should not exceed two; with the main factor, resulting in the appearance of additional layers, being crack
+formation due to thermal expansion and volume effects.The aim of this book is to develop, in the reader, the necessary skills required for designing materials, components and
+structures so as to resist fracture and failure in engineering applications. In order to achieve this objective, the authors have
+adopted a combined materials science-fracture mechanics-design approach. Although the material covered is designed for an
+advanced undergraduate course in metallurgy/materials engineering, students coming from mechanical, civil or aerospace
+engineering backgrounds will also be able to use this text as a course/reference book. In addition to students, practising
+engineers and production mangers will also find this book very useful; particular with regard to designing components and
+machine elements so as to resist fracture and failure in critical applications.The present volume comprises a collection of peer-reviewed papers covering manufacture and production, engineering
+materials, CAD/CAM/CAE, robotics, automation and control, environment-friendly design and manufacture, web/internet
+technologies, artificial intelligence and smart computing in design and manufacture, enterprise, management, and other related
+topics.This work comprises eight contributions from leading experts on the topic of the mechanical behaviour of materials. The
+research themes described in this special volume range from surface forces, surface energies and adhesion to the indentation
+and nano-indentation of solids and fracture waves in glasses to spectroscopic studies of biological cells.The field of “polymers in concrete” is rather well consolidated within the construction industry, and its future will be one of
+benefiting fully from the synergy between the organic and mineral materials. Concrete-polymer composites (C-PC) exhibit
+excellent adhesion strength and durability in aggressive environments and the good performance of these materials makes
+innovative applications possible; including new technologies for restoring and renovating buildings.
+The purpose of this book is to present the current state of knowledge in the field of energy harvesting using piezoelectric and
+pyroelectric materials. The book is addressed to students and academics engaged in research in the fields of energy harvesting,
+material sciences and engineering. Scientists and engineers who are working in the area of energy conservation and renewable
+energy resources should find it useful as well. Explanations of fundamental physical properties such as piezoelectricity and
+pyroelectricity are included to aid the understanding of the non-specialist. Specific technologies and particular applications are
+also presented. This book is divided into two parts, each subdivided into chapters. Part I concerns fundamentals. Chapter 1
+reports the discoveries, standard issues and various materials involved with energy harvesting. Chapter 2 presents
+electromechanical models enabling an understanding of how energy harvesting systems behave. The vibration theory and
+designs for various piezoelectric energy harvesting structures are addressed in Chapter 3. Chapter 4 describes the analytical
+expressions for the energy flow in piezoelectric energy harvesting systems, in particular, with cymbal and flexible transducers. A
+description of the conversion enhancement for powering low-energy consumption devices is presented in Chapter 5. Part II
+concerns Applications and Case Studies. It begins with Chapter 6, in which the principles and applications of piezoelectric
+nanogenerators are reported. Chapter 7 describes the utilization of energy harvesting from low-frequency energy sources. There
+are more ways to use vibrational energy than waste heat. However, Chapter 8 presents the fundamentals of an important
+application of heat conversion with a copolymer. Finally, commercial energy harvesting products and a technological forecast
+are provided in Chapter 9.A major goal of this special collection of 47 peer-reviewed papers was to gather together the current knowledge of academic
+scientists, engineers and industrial researchers and have them share their experiences and research results concerning every
+aspect of green building technologies and materials, and discuss the practical challenges encountered and the solutions adopted.
+An interesting guide to this increasingly relevant subject.The goal of this special collection of peer-reviewed papers was to provide an unique opportunity to exchange information, to
+present the latest results and to review relevant issues in contemporary diffusion research. The result is a work which will
+provide valuable insights into this subject.This collection of peer-reviewed papers, on new research results in green building materials and energy-saving construction,
+brings together industrial and academic researchers, developers and users from around the world to - in effect - share their
+state-of-the-art results, to explore new areas of research and development and to discuss the emerging issues facing green
+building materials and energy-saving construction.EDFGC is an international conference series covering research and development in the fields of textile dyeing/finishing and
+green chemistry. With its theme of “Innovation, Eco-Textile and Sustainability”, the 2011 conference provided a platform for the
+presentation of research findings, the exchange of innovative ideas and the seeking-out of opportunities for collaboration, in the
+above fields, among both academics and industrialists all over the world. The proceedings of EDFGC 2011 include Eco-Dyeing &
+Finishing, Functional Textiles, Green Chemistry and Functional Chemicals, Pollution Control and Energy Conservation,
+Fundamental Research and Test & Characterization.Powder metallurgy is one of the leading processes used for forming engineering components. The technology, as developed at
+the beginning of the 20th century, has since advanced significantly from both the materials and energy-conservation points of
+view. Novel, and automated, equipment has played a significant role in enhancing the growth of the powder metallurgy industry.
+The present work includes, in addition to the editor’s introductory paper, eleven invited papers from organizations of
+international repute. In brief, the book presents expert assessments from the major metal-powder and powder-metallurgy
+equipment-makers in the world. This distinguishes it from other works, which are contributed mainly by academics. The book
+concentrates on particular topics of interest and does not attempt to be comprehensive.
+The objective of this volume is to show case studies and research on novel and interesting ways of achieving sustainable
+construction practices via the use of new building materials and technologies. The papers originate from both academia and
+industry and treat the topics of: traditional construction materials, advanced construction materials, green building materials,
+architectural design and its theory, urban planning and design, landscape planning and design, building energy saving
+technology and ecological architecture.This special issue of Trends in Automotive Research contains papers contributed to the Regional Conference on Automotive
+Research (ReCAR) , held on the 14 and 15th December, 2011, in Kuala Lumpur, Malaysia.
+The conference was organised by the Centre for Automotive Research (CAR), Faculty of Engineering and the Built Environment,
+Universiti Kebangsaan Malaysia.The uniqueness of the title of this book, Materials Science and Design for Engineers, already indicates that the authors -
+professionals having over 30 years of experience in the fields of materials science and engineering - are here tackling the rarelydiscussed topic of the science of materials as directly related to the domain of design in engineering applications. This
+comprehensive textbook has now filled that gap in the engineering literature.The subjects covered by this special collection include the fatigue life of elements of structures, research on low- and high-cycle
+fatigue, fatigue under conditions of complex states of stress and strain, analysis of fatigue loads, design taking fatigue into
+consideration, analysis of random fatigue loads, experimental methods in the mechanics of cracking, application of fracture
+mechanics to engineering issues, the impact of structural, technological and functional factors upon the fatigue of elements of
+structures, research methods and equipment. This coverage makes the work a veritable handbook guide to the subject matter.These are the proceedings of the 2012 International Conference on Civil Engineering and Material Engineering (CEME2012),
+August 25-26, Wuhan, China. The 90 peer reviewed paper are grouped as follows: Chapter 1: Material Application and Structure
+in Civil Engineering; Chapter 2: Mechanics Research in Civil Engineering and Material Engineering; Chapter 3: Environmental
+Material and Civil Engineering; Chapter 4: Material Engineering and its Application Technology.
+These proceedings of the 2012 International Conference of Green Building Materials and Energy-Saving Construction (GBMEC
+2012), held on August 18th 2012 in Harbin (China) comprise 30 peer- reviewed papers.The aim of the special collection of peer reviewed papers was to present the latest research results from scientist such as
+professors, students, PhD. students and engineers related to robotics and manufacturing systems. This Special Topic Volume comprises selected peer-reviewed papers from the international scientific community on the topic of
+“Bone and biomaterials for bone tissue engineering”. The volume covers some relevant aspects spanning from bone tissue
+mechanics to scaffolding for bone tissue engineering in terms of microstructure, biological evaluation, fabrication technologies,
+surface modifications and coatings. The aim of this collection was to provide an interdisciplinary panorama on this emerging and
+promising biomedical field.Metals, because of their inherent properties, have been in service to mankind from the Early Periods. Metal craft started turning
+into metal science in the 19th Century and got matured in 20th century. The present book, to the best of author’s memory, is the
+first attempt to present the history of metal science in one volume, covering both extractive and physical metallurgy. The book is
+aimed as a supplementary text book for students in metallurgy and materials science and also selectively for general readers.
+After a brief introduction (Chapter 1), the second and third chapters are devoted to extractive metallurgy. The chapters related
+to physical metallurgy (4th to 6th) are written in a sequence such that the description of structures is given first, before
+highlighting the properties of metals and alloys. The final chapter ‘Future Trends’ highlights various topics in contemporary
+metal science.Collection of selected, peer reviewed papers from the 1st International "NEW METROPOLITAN PERSPECTIVES. The Integrated
+Approach of Urban Sustainable Development through the Implementation of Horizon/Europe2020" (ISTH2020), May 6-9, 2014,
+Reggio Calabria, Italy. Challenges, Identity, Ii. The Integrated Approach of Sustainable Urban Development, III. Metropolitan City: Issues,
+Iv. Urban Regeneration: Community Involvement, Marginal Areas in Local Economic Development Strategies, PPP,
+Urban, V. Urban/Rural - the Role of Urban/Rural Regeneration in Regional Context, Valuation Tools, Vi. Heritage,
+VII. Economic-Estimative Dynamics.Damages, Diagnostics of Structures, Durability, Dynamic Analysis of Structures, Experimental Analysis, Failure,
+Material Optimization of Structures, Mathematical Applications, Numerical Methods, Reconstructions of
+Structures, Reliability of Structures, Resistance, Seismic, Shape, Simulations, Stability Problems of Building
+Structures, Static, Static - Design.Advanced Construction Materials Research, Architectural Design, Building Planning, Building Science, City, Design,
+Ecological Architecture, Environmental Architecture Research, Landscape Planning, Technology, Traditional
+Construction Materials Research, Urban Planning.The word luminescence was first used by a German physicist, Eilhardt Wiedemann, in 1888. He also classified luminescence into
+six kinds according to the method of excitation. No better basis of classification is available today. He recognized
+photoluminescence, thermoluminescence, electroluminescence, crystalloluminescence, triboluminescence, and
+chemiluminescence. The designations are obvious, characterized by the prefix. This Volume consists of 9 Chapters, including 8
+Review Papers and one Case Study.This special issue of Key Engineering Materials journal is to communicate the latest progress and research of new theory,
+technology, method, equipment in materials processing and manufacturing automation technology field, and to grasp the
+forefront technological and research trends worldwide, which will drive international communication and cooperation of
+production, education and research in this field. The major topics covered by the special issue include Experience and Paper of
+Education in Special Machining Technology, Process Monitoring and Quality Control of Manufacturing Systems, Industrial Robot
+Technology, Agile Manufacturing, Intelligent Manufacturing, Green Manufacturing, Virtual Manufacturing, Networked
+Manufacturing, Computer Integrated Manufacturing System and Contemporary Integrated Manufacturing System, Product
+Lifecycle Management, Computerized Numerical Control System and Flexible Manufacturing System, Precision Machining
+Technology, CAD/CAE/CAPP/CAM and Application of Product Data Management, Logistics Engineering and Equipment and
+Other Related Topics and so on. The guest editors would like to thank the contributors of papers, the reviewers and the Key
+Engineering Materials journal for helping put together this special issue.This special topic volume tends to present leading publications dealing with the Environmental and Safety Aspects of Renewable
+Materials and Energy Sources.Electrical Engineering, Energy Engineering, Integrated Circuits, Manufacturing, Materials Engineering,
+Measurement Technologies, Mechanical Engineering, Mechatronics, Power, Robotics.Collection of selected, peer reviewed papers from the 6th International Scientific Conference on Dynamic of Civil Engineering
+and Transport Structures and Wind Engineering (DYN-WIND 2014), May 25-29, 2014, Donovaly, Slovak Republic.Advanced Construction Materials, Air Conditioning Works, Applied Mechanics, Architectural Design, Building
+Technology Science, Cartography, Civil, Coastal Engineering, Computational Mechanics, Construction Industry
+Management, Construction Technology, Design, Disaster Prevention, Ecological Building, Energy Saving Building,
+Engineering Education, Engineering Management, Gas, Gas Supply, Geographic Information Systems, Geological
+Engineering, Geotechnical, Heating, Infrastructure Demand, Its Theory, Landscape Planning, Low-Carbon Building,
+Mineral Resources Exploitation, Mitigation, Oil, Project Management, Renewable Energy, Rural Planning, Seismic
+Engineering, Structural Engineering, Subway, Supply, Surveying Engineering, Traditional Construction Materials,
+Tunnel, Underground Facilities, Urban, Ventilation.Advanced Materials, Bonding, Coatings, Drawing, Extrusion, Forging, Formability, Hydro Forming, Incremental
+Forming, Joining, Magnesium Forming, Numerical Modelling, Optimisation, Powder, Rolling , Shearing, Sheet
+Metal Forming, Surfaces, Titanium Forming, Tube.These are the proceedings of “Special concrete and composites 2014” conference, which is the most powerful meeting for
+experts in the field of concrete and composite research in the Czech Republic. The venue celebrated its 22th anniversary this
+year. The conference is international focused with over 60 experts from Czech Republic, Slovakia, Poland and United States of
+America. The 50 peer reviewed paper cover the current knowledge in the field of concrete..
+Algorithms for Engineering Research, Applied Material Science, Applied Nanotechnologies, Architecture, Biology,
+Biomedical Engineering, Biotechnologies, Business Management, Chemical Engineering, Computational Methods,
+Design, Designing, Environmental Engineering, Industrial Engineering, Manufacturing Processes, Materials in
+Construction, Nanomaterials, Research in General Mechanical Engineering, Sustainable Development,
+Technologies, Waste Recycling.The need of today is to have energy efficient buildings materials and construction technologies that cater to this rising need.
+Hence, selecting construction and finishing materials that have low embodied energy and haveless operational and maintenance
+cost is the most powerful tool for the architects, designers and the constructors to achieve high energy efficiency in buildings.
+This special volume on ‘Materials and Technologies for Green Construction’ contains Ten chapters which address a wide range
+of issues pertaining to building materials and technologies with reference to energy efficiency. This volume demonstrates that
+alternatives to modern building materials are available and that today it is possible to produce building materials and select raw
+materials from an ecological perspective.The present volume “Nanomaterials: Basic Concepts and Applications”, as the title suggests, deals with basic concepts and
+applications of anomaterials, a buzz word in the modern world of Science and Technology. Because of advanced characterization
+and new fabrication techniques, nanomaterials are now central to multiple disciplines, including materials science, chemistry,
+physics, engineering and medicine. This special volume under Solid State Phenomena series will present an overview of recent
+research developments, including synthesis, characterization, and applications, in Nanoelectronics, Luminescence, Drug
+Delivery, Memristors, Solar Cells and Semiconductors.Automation, Development, ECT, Electric, Electric Vehicles, Electrical Theory, Energy Chemical Engineering, Energy
+Materials, Energy-Saving, Energy-Storage Technology, Fuel Cell, High Voltage, Insulation Technology, Motor, New
+Energy Vehicles, Nuclear Energy, Other Energy, Power Drives, Power Electronics, Power System, Power Systems
+Management, Smart Grid Technology, Utilization of Biomass Energy, Utilization of Solar Energy, Utilization of
+Wind Energy.Assessment, Biology, Control, Disaster Prevention, Drainage, ECT, Environmental Analysis, Environmental
+Chemistry, Environmental Materials, Environmental Planning, Environmental Restoration Engineering,
+Environmental Safety, Health, HYDROLOGY, Mitigation, Monitoring, Noise Analysis, Pollution Control Engineering,
+Processing Technology, Recycling, Vibration, Waste Disposal, Water Resources Engineering, Water Supply.Analysis, Applied Mechanics, Automation, Biotechnologies, Chemical Processes, Communications, Construction,
+Control, Detection Technologies, Electric, Electronics, Embedded, Energy, Equipment, General Mechanical
+Engineering, Instrumentation, Integrated Systems, Magnetic Systems, Manufacturing, Materials, Materials Science,
+Measurements, Mechatronics, Microelectronics, Monitoring, Power, Processing Technologies, Robotics, Signal
+Processing, Structural Engineering, Technologies, Testing.
+At Trans Tech Publications we are publishing many new book titles
+every year. The total number of books published since the beginning of
+our publishing house now runs in the thousands. These books are
+read by many and we use many different ways to globally distribute
+these. And thus provide access and significant exposure of this
+content to the broader scientific community.
+We, as Publisher, are very proud of our contribution to academic
+knowledge and research by bringing to life these books which have
+been read and demanded by scholars, researchers, students and
+other members of the scientific society all over the world. The value of
+the book rises with the growing demand for it, proving the
+importance and the relevance of topics highlighted or problems
+elaborated therein.
+For your ease and comfort, we gathered a top 100 into this
+catalogue. This list will also be available in the following Section on our
+website.
+Trans Tech Publications Ltd. is founded in 1967 and endorses the latest trends in
+academic publishing. The editorial and publishing processes are supported by our
+online management and publishing system which is integrated into the Scientific.Net
+website.
+The trademark Scientific.Net is designed by us and is the name of our website
+providing a resource of high-demand content focused on science and
+engineering published in academic journals, book series, conference proceedings
+and monographs.
+The publishing scope covers the hard sciences such as Materials Science &
+Engineering (incl. manufacturing, processing & application), sustainable engineering,
+green technologies (incl. energy storage, 3D printing/additive manufacturing).
+To process the manuscripts our company-owned editorial and publishing workflows
+allow Open Access models and funder requirements. Alongside systems, we feel a
+personal touch throughout the process is essential and our Customer Care foresees in
+this need.
+The visibility and outreach of our content are ensured through on the one hand the
+indexing with the major and niche partners, and the other the distribution via
+internationally recognised parties that make our content available at the paper, book
+and/or journal level.
+Our customers are top-rated higher educational, research institutions, R&D
+departments and Universities Libraries as well as (nationwide) consortia.
+Our business models are traditional subscription-based model, Open Access,
+Read & Publish, pay-per-view and token licences enabling the reading on most
+mobile devices.
+Since the first development of lithium-ion batteries in the early 1990 s, there have been tremendous advances in the science and
+technology of these electrochemical energy sources. At present, lithium batteries dominate the field of advanced power sources
+and have almost entirely replaced their bulkier and less energetic counterparts such as nickel-cadmium and nickel-metalhydride
+batteries; especially in portable electronic devices. But lithium batteries are still the object of continuing intense research aimed
+at making further improvements in performance and safety, at lower cost, so as to make them suitable for higher-power and
+more demanding applications such as electric vehicles. The research and development of new electrode materials, particularly
+for cathodes, having an improved electrochemical performance has always been a matter of changing focus. Thus, olivine,
+lithium iron phosphate, has attracted considerable attention in recent years as a safe, environmentally friendly, extremely stable
+and very promising cathode material.It is well-known that fossil fuels are being rapidly depleted, and that atomic power is rejected by many people. As a consequence,
+there is a strong trend towards alternative sources such as wind, photovoltaics, solar heat and biomass. Strangely enough, quite
+another power source is generally neglected: namely, the thermoelectric generator (a device which converts heat, i.e. thermal
+energy, directly into electrical energy). The reason for this neglect is probably the low conversion efficiency, which is of the
+order of a few percent at most. However, there are two arguments in favor of the thermoelectric generator. Firstly, we might in
+effect be at the same point as we were in the early stages of photovoltaics use (it was only in 1954 that the first attractive solar
+cells, with efficiencies of around 4% were produced). Today, even large modules attain 20%. Secondly, the potential applications
+of thermoelectric generators are very tempting. Wherever heat is generated, it is amenable to electrical conversion. Energy
+harvesting via a thermoelectric generator may be accompanied by a further benefit: The use of a solar module inevitably leads to
+a drastic temperature rise. A thermoelectric generator reduces the temperature rise and therefore offers a double benefit.
+The electronic properties of solids have become of increasing importance in the age of information technology. The study of
+solids and materials, while having originated from the disciplines of physics and chemistry, has evolved independently over the
+past few decades. The classical treatment of solid-state physics, which emphasized classifications, theories and fundamental
+physical principles, is no longer able to bridge the gap between materials advances and applications. In particular, the more
+recent developments in device physics and technology have not necessarily been driven by new concepts in physics or new
+materials, but rather by the ability of engineers to control crystal structures and properties better via advances in crystal growth
+and patterning techniques. In many cases, new applications simply arise from the adaption of conventional ideas to
+interdisciplinary areas. One example is that of recent advances which rely heavily upon the availability of the sub-micron
+technology developed by the semiconductor industry. Another example is the emergence of nanotechnology.
+This monograph deals with a physico-chemical approach to the problem of the solid-state growth of chemical compound layers
+and reaction-diffusion in binary heterogeneous systems formed by two solids; as well as a solid with a liquid or a gas. It is
+explained why the number of compound layers growing at the interface between the original phases is usually much lower than
+the number of chemical compounds in the phase diagram of a given binary system. For example, of the eight intermetallic
+compounds which exist in the aluminium-zirconium binary system, only ZrAl3 was found to grow as a separate layer at the
+Al Zr interface under isothermal conditions. The physico-chemical approach predicts that, in most cases, the number of
+compound layers should not exceed two; with the main factor, resulting in the appearance of additional layers, being crack
+formation due to thermal expansion and volume effects.
+The aim of this book is to develop, in the reader, the necessary skills required for designing materials, components and
+structures so as to resist fracture and failure in engineering applications. In order to achieve this objective, the authors have
+adopted a combined materials science-fracture mechanics-design approach. Although the material covered is designed for an
+advanced undergraduate course in metallurgy/materials engineering, students coming from mechanical, civil or aerospace
+engineering backgrounds will also be able to use this text as a course/reference book. In addition to students, practising
+engineers and production mangers will also find this book very useful; particular with regard to designing components and
+machine elements so as to resist fracture and failure in critical applications.
+The present volume comprises a collection of peer-reviewed papers covering manufacture and production, engineering
+materials, CAD/CAM/CAE, robotics, automation and control, environment-friendly design and manufacture, web/internet
+technologies, artificial intelligence and smart computing in design and manufacture, enterprise, management, and other related
+topics.Composite materials are increasingly finding use in diverse applications requiring a wide range of property and performance
+requirements. Low density, high specific strength and stiffness are the main features that make composite materials most
+suitable for structural applications. The field covers the concurrent manipulation of the material’s composition and of the
+internal architecture of the composite in order to obtain the desired properties. The ability to tailor composite materials
+precisely is of great importance in structural applications. A systematic approach to the optimum tailoring of composite
+materials is a challenging design problem. The focus should be on the practical design aspects, and that is what is addressed in
+this special-topic volume.The electronic properties of solids have become of increasing importance in the age of information technology. The study of
+solids and materials, while having originated from the disciplines of physics and chemistry, has evolved independently over the
+past few decades. The classical treatment of solid-state physics, which emphasized classifications, theories and fundamental
+physical principles, is no longer able to bridge the gap between materials advances and applications. In particular, the more
+recent developments in device physics and technology have not necessarily been driven by new concepts in physics or new
+materials, but rather by the ability of engineers to control crystal structures and properties better via advances in crystal growth
+and patterning techniques. In many cases, new applications simply arise from the adaption of conventional ideas to
+interdisciplinary areas. One example is that of recent advances which rely heavily upon the availability of the sub-micron
+technology developed by the semiconductor industry. Another example is the emergence of nanotechnology.This monograph deals with a physico-chemical approach to the problem of the solid-state growth of chemical compound layers
+and reaction-diffusion in binary heterogeneous systems formed by two solids; as well as a solid with a liquid or a gas. It is
+explained why the number of compound layers growing at the interface between the original phases is usually much lower than
+the number of chemical compounds in the phase diagram of a given binary system. For example, of the eight intermetallic
+compounds which exist in the aluminium-zirconium binary system, only ZrAl3 was found to grow as a separate layer at the
+Al–Zr interface under isothermal conditions. The physico-chemical approach predicts that, in most cases, the number of
+compound layers should not exceed two; with the main factor, resulting in the appearance of additional layers, being crack
+formation due to thermal expansion and volume effects.The aim of this book is to develop, in the reader, the necessary skills required for designing materials, components and
+structures so as to resist fracture and failure in engineering applications. In order to achieve this objective, the authors have
+adopted a combined materials science-fracture mechanics-design approach. Although the material covered is designed for an
+advanced undergraduate course in metallurgy/materials engineering, students coming from mechanical, civil or aerospace
+engineering backgrounds will also be able to use this text as a course/reference book. In addition to students, practising
+engineers and production mangers will also find this book very useful; particular with regard to designing components and
+machine elements so as to resist fracture and failure in critical applications.The present volume comprises a collection of peer-reviewed papers covering manufacture and production, engineering
+materials, CAD/CAM/CAE, robotics, automation and control, environment-friendly design and manufacture, web/internet
+technologies, artificial intelligence and smart computing in design and manufacture, enterprise, management, and other related
+topics.This work comprises eight contributions from leading experts on the topic of the mechanical behaviour of materials. The
+research themes described in this special volume range from surface forces, surface energies and adhesion to the indentation
+and nano-indentation of solids and fracture waves in glasses to spectroscopic studies of biological cells.The field of “polymers in concrete” is rather well consolidated within the construction industry, and its future will be one of
+benefiting fully from the synergy between the organic and mineral materials. Concrete-polymer composites (C-PC) exhibit
+excellent adhesion strength and durability in aggressive environments and the good performance of these materials makes
+innovative applications possible; including new technologies for restoring and renovating buildings.
+The purpose of this book is to present the current state of knowledge in the field of energy harvesting using piezoelectric and
+pyroelectric materials. The book is addressed to students and academics engaged in research in the fields of energy harvesting,
+material sciences and engineering. Scientists and engineers who are working in the area of energy conservation and renewable
+energy resources should find it useful as well. Explanations of fundamental physical properties such as piezoelectricity and
+pyroelectricity are included to aid the understanding of the non-specialist. Specific technologies and particular applications are
+also presented. This book is divided into two parts, each subdivided into chapters. Part I concerns fundamentals. Chapter 1
+reports the discoveries, standard issues and various materials involved with energy harvesting. Chapter 2 presents
+electromechanical models enabling an understanding of how energy harvesting systems behave. The vibration theory and
+designs for various piezoelectric energy harvesting structures are addressed in Chapter 3. Chapter 4 describes the analytical
+expressions for the energy flow in piezoelectric energy harvesting systems, in particular, with cymbal and flexible transducers. A
+description of the conversion enhancement for powering low-energy consumption devices is presented in Chapter 5. Part II
+concerns Applications and Case Studies. It begins with Chapter 6, in which the principles and applications of piezoelectric
+nanogenerators are reported. Chapter 7 describes the utilization of energy harvesting from low-frequency energy sources. There
+are more ways to use vibrational energy than waste heat. However, Chapter 8 presents the fundamentals of an important
+application of heat conversion with a copolymer. Finally, commercial energy harvesting products and a technological forecast
+are provided in Chapter 9.A major goal of this special collection of 47 peer-reviewed papers was to gather together the current knowledge of academic
+scientists, engineers and industrial researchers and have them share their experiences and research results concerning every
+aspect of green building technologies and materials, and discuss the practical challenges encountered and the solutions adopted.
+An interesting guide to this increasingly relevant subject.The goal of this special collection of peer-reviewed papers was to provide an unique opportunity to exchange information, to
+present the latest results and to review relevant issues in contemporary diffusion research. The result is a work which will
+provide valuable insights into this subject.This collection of peer-reviewed papers, on new research results in green building materials and energy-saving construction,
+brings together industrial and academic researchers, developers and users from around the world to - in effect - share their
+state-of-the-art results, to explore new areas of research and development and to discuss the emerging issues facing green
+building materials and energy-saving construction.EDFGC is an international conference series covering research and development in the fields of textile dyeing/finishing and
+green chemistry. With its theme of “Innovation, Eco-Textile and Sustainability”, the 2011 conference provided a platform for the
+presentation of research findings, the exchange of innovative ideas and the seeking-out of opportunities for collaboration, in the
+above fields, among both academics and industrialists all over the world. The proceedings of EDFGC 2011 include Eco-Dyeing &
+Finishing, Functional Textiles, Green Chemistry and Functional Chemicals, Pollution Control and Energy Conservation,
+Fundamental Research and Test & Characterization.Powder metallurgy is one of the leading processes used for forming engineering components. The technology, as developed at
+the beginning of the 20th century, has since advanced significantly from both the materials and energy-conservation points of
+view. Novel, and automated, equipment has played a significant role in enhancing the growth of the powder metallurgy industry.
+The present work includes, in addition to the editor’s introductory paper, eleven invited papers from organizations of
+international repute. In brief, the book presents expert assessments from the major metal-powder and powder-metallurgy
+equipment-makers in the world. This distinguishes it from other works, which are contributed mainly by academics. The book
+concentrates on particular topics of interest and does not attempt to be comprehensive.
+The objective of this volume is to show case studies and research on novel and interesting ways of achieving sustainable
+construction practices via the use of new building materials and technologies. The papers originate from both academia and
+industry and treat the topics of: traditional construction materials, advanced construction materials, green building materials,
+architectural design and its theory, urban planning and design, landscape planning and design, building energy saving
+technology and ecological architecture.This special issue of Trends in Automotive Research contains papers contributed to the Regional Conference on Automotive
+Research (ReCAR) , held on the 14 and 15th December, 2011, in Kuala Lumpur, Malaysia.
+The conference was organised by the Centre for Automotive Research (CAR), Faculty of Engineering and the Built Environment,
+Universiti Kebangsaan Malaysia.The uniqueness of the title of this book, Materials Science and Design for Engineers, already indicates that the authors -
+professionals having over 30 years of experience in the fields of materials science and engineering - are here tackling the rarelydiscussed topic of the science of materials as directly related to the domain of design in engineering applications. This
+comprehensive textbook has now filled that gap in the engineering literature.The subjects covered by this special collection include the fatigue life of elements of structures, research on low- and high-cycle
+fatigue, fatigue under conditions of complex states of stress and strain, analysis of fatigue loads, design taking fatigue into
+consideration, analysis of random fatigue loads, experimental methods in the mechanics of cracking, application of fracture
+mechanics to engineering issues, the impact of structural, technological and functional factors upon the fatigue of elements of
+structures, research methods and equipment. This coverage makes the work a veritable handbook guide to the subject matter.These are the proceedings of the 2012 International Conference on Civil Engineering and Material Engineering (CEME2012),
+August 25-26, Wuhan, China. The 90 peer reviewed paper are grouped as follows: Chapter 1: Material Application and Structure
+in Civil Engineering; Chapter 2: Mechanics Research in Civil Engineering and Material Engineering; Chapter 3: Environmental
+Material and Civil Engineering; Chapter 4: Material Engineering and its Application Technology.
+These proceedings of the 2012 International Conference of Green Building Materials and Energy-Saving Construction (GBMEC
+2012), held on August 18th 2012 in Harbin (China) comprise 30 peer- reviewed papers.The aim of the special collection of peer reviewed papers was to present the latest research results from scientist such as
+professors, students, PhD. students and engineers related to robotics and manufacturing systems. This Special Topic Volume comprises selected peer-reviewed papers from the international scientific community on the topic of
+“Bone and biomaterials for bone tissue engineering”. The volume covers some relevant aspects spanning from bone tissue
+mechanics to scaffolding for bone tissue engineering in terms of microstructure, biological evaluation, fabrication technologies,
+surface modifications and coatings. The aim of this collection was to provide an interdisciplinary panorama on this emerging and
+promising biomedical field.Metals, because of their inherent properties, have been in service to mankind from the Early Periods. Metal craft started turning
+into metal science in the 19th Century and got matured in 20th century. The present book, to the best of author’s memory, is the
+first attempt to present the history of metal science in one volume, covering both extractive and physical metallurgy. The book is
+aimed as a supplementary text book for students in metallurgy and materials science and also selectively for general readers.
+After a brief introduction (Chapter 1), the second and third chapters are devoted to extractive metallurgy. The chapters related
+to physical metallurgy (4th to 6th) are written in a sequence such that the description of structures is given first, before
+highlighting the properties of metals and alloys. The final chapter ‘Future Trends’ highlights various topics in contemporary
+metal science.Collection of selected, peer reviewed papers from the 1st International "NEW METROPOLITAN PERSPECTIVES. The Integrated
+Approach of Urban Sustainable Development through the Implementation of Horizon/Europe2020" (ISTH2020), May 6-9, 2014,
+Reggio Calabria, Italy. Challenges, Identity, Ii. The Integrated Approach of Sustainable Urban Development, III. Metropolitan City: Issues,
+Iv. Urban Regeneration: Community Involvement, Marginal Areas in Local Economic Development Strategies, PPP,
+Urban, V. Urban/Rural - the Role of Urban/Rural Regeneration in Regional Context, Valuation Tools, Vi. Heritage,
+VII. Economic-Estimative Dynamics.Damages, Diagnostics of Structures, Durability, Dynamic Analysis of Structures, Experimental Analysis, Failure,
+Material Optimization of Structures, Mathematical Applications, Numerical Methods, Reconstructions of
+Structures, Reliability of Structures, Resistance, Seismic, Shape, Simulations, Stability Problems of Building
+Structures, Static, Static - Design.Advanced Construction Materials Research, Architectural Design, Building Planning, Building Science, City, Design,
+Ecological Architecture, Environmental Architecture Research, Landscape Planning, Technology, Traditional
+Construction Materials Research, Urban Planning.The word luminescence was first used by a German physicist, Eilhardt Wiedemann, in 1888. He also classified luminescence into
+six kinds according to the method of excitation. No better basis of classification is available today. He recognized
+photoluminescence, thermoluminescence, electroluminescence, crystalloluminescence, triboluminescence, and
+chemiluminescence. The designations are obvious, characterized by the prefix. This Volume consists of 9 Chapters, including 8
+Review Papers and one Case Study.This special issue of Key Engineering Materials journal is to communicate the latest progress and research of new theory,
+technology, method, equipment in materials processing and manufacturing automation technology field, and to grasp the
+forefront technological and research trends worldwide, which will drive international communication and cooperation of
+production, education and research in this field. The major topics covered by the special issue include Experience and Paper of
+Education in Special Machining Technology, Process Monitoring and Quality Control of Manufacturing Systems, Industrial Robot
+Technology, Agile Manufacturing, Intelligent Manufacturing, Green Manufacturing, Virtual Manufacturing, Networked
+Manufacturing, Computer Integrated Manufacturing System and Contemporary Integrated Manufacturing System, Product
+Lifecycle Management, Computerized Numerical Control System and Flexible Manufacturing System, Precision Machining
+Technology, CAD/CAE/CAPP/CAM and Application of Product Data Management, Logistics Engineering and Equipment and
+Other Related Topics and so on. The guest editors would like to thank the contributors of papers, the reviewers and the Key
+Engineering Materials journal for helping put together this special issue.This special topic volume tends to present leading publications dealing with the Environmental and Safety Aspects of Renewable
+Materials and Energy Sources.Electrical Engineering, Energy Engineering, Integrated Circuits, Manufacturing, Materials Engineering,
+Measurement Technologies, Mechanical Engineering, Mechatronics, Power, Robotics.Collection of selected, peer reviewed papers from the 6th International Scientific Conference on Dynamic of Civil Engineering
+and Transport Structures and Wind Engineering (DYN-WIND 2014), May 25-29, 2014, Donovaly, Slovak Republic.Advanced Construction Materials, Air Conditioning Works, Applied Mechanics, Architectural Design, Building
+Technology Science, Cartography, Civil, Coastal Engineering, Computational Mechanics, Construction Industry
+Management, Construction Technology, Design, Disaster Prevention, Ecological Building, Energy Saving Building,
+Engineering Education, Engineering Management, Gas, Gas Supply, Geographic Information Systems, Geological
+Engineering, Geotechnical, Heating, Infrastructure Demand, Its Theory, Landscape Planning, Low-Carbon Building,
+Mineral Resources Exploitation, Mitigation, Oil, Project Management, Renewable Energy, Rural Planning, Seismic
+Engineering, Structural Engineering, Subway, Supply, Surveying Engineering, Traditional Construction Materials,
+Tunnel, Underground Facilities, Urban, Ventilation.Advanced Materials, Bonding, Coatings, Drawing, Extrusion, Forging, Formability, Hydro Forming, Incremental
+Forming, Joining, Magnesium Forming, Numerical Modelling, Optimisation, Powder, Rolling , Shearing, Sheet
+Metal Forming, Surfaces, Titanium Forming, Tube.These are the proceedings of “Special concrete and composites 2014” conference, which is the most powerful meeting for
+experts in the field of concrete and composite research in the Czech Republic. The venue celebrated its 22th anniversary this
+year. The conference is international focused with over 60 experts from Czech Republic, Slovakia, Poland and United States of
+America. The 50 peer reviewed paper cover the current knowledge in the field of concrete..
+Algorithms for Engineering Research, Applied Material Science, Applied Nanotechnologies, Architecture, Biology,
+Biomedical Engineering, Biotechnologies, Business Management, Chemical Engineering, Computational Methods,
+Design, Designing, Environmental Engineering, Industrial Engineering, Manufacturing Processes, Materials in
+Construction, Nanomaterials, Research in General Mechanical Engineering, Sustainable Development,
+Technologies, Waste Recycling.The need of today is to have energy efficient buildings materials and construction technologies that cater to this rising need.
+Hence, selecting construction and finishing materials that have low embodied energy and haveless operational and maintenance
+cost is the most powerful tool for the architects, designers and the constructors to achieve high energy efficiency in buildings.
+This special volume on ‘Materials and Technologies for Green Construction’ contains Ten chapters which address a wide range
+of issues pertaining to building materials and technologies with reference to energy efficiency. This volume demonstrates that
+alternatives to modern building materials are available and that today it is possible to produce building materials and select raw
+materials from an ecological perspective.The present volume “Nanomaterials: Basic Concepts and Applications”, as the title suggests, deals with basic concepts and
+applications of anomaterials, a buzz word in the modern world of Science and Technology. Because of advanced characterization
+and new fabrication techniques, nanomaterials are now central to multiple disciplines, including materials science, chemistry,
+physics, engineering and medicine. This special volume under Solid State Phenomena series will present an overview of recent
+research developments, including synthesis, characterization, and applications, in Nanoelectronics, Luminescence, Drug
+Delivery, Memristors, Solar Cells and Semiconductors.Automation, Development, ECT, Electric, Electric Vehicles, Electrical Theory, Energy Chemical Engineering, Energy
+Materials, Energy-Saving, Energy-Storage Technology, Fuel Cell, High Voltage, Insulation Technology, Motor, New
+Energy Vehicles, Nuclear Energy, Other Energy, Power Drives, Power Electronics, Power System, Power Systems
+Management, Smart Grid Technology, Utilization of Biomass Energy, Utilization of Solar Energy, Utilization of
+Wind Energy.Assessment, Biology, Control, Disaster Prevention, Drainage, ECT, Environmental Analysis, Environmental
+Chemistry, Environmental Materials, Environmental Planning, Environmental Restoration Engineering,
+Environmental Safety, Health, HYDROLOGY, Mitigation, Monitoring, Noise Analysis, Pollution Control Engineering,
+Processing Technology, Recycling, Vibration, Waste Disposal, Water Resources Engineering, Water Supply.Analysis, Applied Mechanics, Automation, Biotechnologies, Chemical Processes, Communications, Construction,
+Control, Detection Technologies, Electric, Electronics, Embedded, Energy, Equipment, General Mechanical
+Engineering, Instrumentation, Integrated Systems, Magnetic Systems, Manufacturing, Materials, Materials Science,
+Measurements, Mechatronics, Microelectronics, Monitoring, Power, Processing Technologies, Robotics, Signal
+Processing, Structural Engineering, Technologies, Testing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

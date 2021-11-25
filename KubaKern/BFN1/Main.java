@@ -15,7 +15,6 @@ public class Main {
     static void palindrome(int number) {
         int count = 0;
         int unreversed = number;
-        int reversed = reverse(unreversed);
         while (unreversed != reverse(unreversed)) {
             unreversed += reverse(unreversed);
             count++;
@@ -27,10 +26,9 @@ public class Main {
 
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
-
         for (int i = 0; i < n; i++) {
-            int number = scan.nextInt();
-            palindrome(number);
+            palindrome(scan.nextInt());
         }
+        scan.close();
     }
 }

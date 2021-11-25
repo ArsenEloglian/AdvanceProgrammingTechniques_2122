@@ -5,14 +5,8 @@ using namespace std;
 
 bool isPrime(int x) {
     if (x < 2) return false;
-    bool test = true;
-    for(int i = 2; i <= x / 2; i++) {
-        if(x % i == 0) {
-            test = false;
-            break;
-        }
-    }
-    return test;
+    for(int i = 2; i <= x / 2; i++) if(x % i == 0)  return false;       
+    return true;
 }
 
 int main() {
@@ -32,6 +26,4 @@ int main() {
             cout << "NIE" << endl;
         }
     }
-
-    return 0;
 }
