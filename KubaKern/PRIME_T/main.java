@@ -19,7 +19,6 @@ class Main
 				continue;
 			}
 			for (int j=2;j<=tab[i]/2;j++) {
-
 				if (tab[i]%j == 0) s = "NIE";
 			}
 			System.out.println(s);
