@@ -7,6 +7,7 @@ Artur Oliferuk
 	04.11.2021
 	10.11.2021
 	18.11.2021
+	25.11.2021
 }
 Bartosz Gołąbczak
 {
@@ -16,6 +17,7 @@ Bartosz Gołąbczak
 	28.10.2021
 	10.11.2021
 	18.11.2021
+	25.11.2021
 }
 
 Daria Hyrenko
@@ -27,6 +29,7 @@ Daria Hyrenko
 	04.11.2021
 	10.11.2021
 	18.11.2021
+	25.11.2021
 }
 
 Dmytro Sokolovskyi
@@ -36,6 +39,7 @@ Dmytro Sokolovskyi
 	21.10.2021
 	28.10.2021
 	04.11.2021
+	25.11.2021
 }
 
 Dominik Lesniewski
@@ -47,6 +51,7 @@ Dominik Lesniewski
 	04.11.2021
 	10.11.2021
 	18.11.2021
+	25.11.2021
 }
 
 Kamil Gajewski
@@ -58,6 +63,7 @@ Kamil Gajewski
 	04.11.2021
 	10.11.2021
 	18.11.2021
+	25.11.2021
 }
 
 Kamil Olejarz
@@ -67,6 +73,7 @@ Kamil Olejarz
 	21.10.2021
 	10.11.2021
 	18.11.2021
+	25.11.2021
 }
 
 Kornel Motyka
@@ -87,6 +94,7 @@ Kuba Kern
 	04.11.2021
 	10.11.2021
 	18.11.2021
+	25.11.2021
 }
 
 Mateusz Gowin
@@ -96,6 +104,7 @@ Mateusz Gowin
 	21.10.2021
 	28.10.2021
 	04.11.2021
+	25.11.2021
 }
 
 Michal Swiac
@@ -107,6 +116,7 @@ Michal Swiac
 	04.11.2021
 	10.11.2021
 	18.11.2021
+	25.11.2021
 }
 
 Michal Plewa
@@ -117,6 +127,7 @@ Michal Plewa
 	28.10.2021
 	04.11.2021
 	18.11.2021
+	25.11.2021
 }
 
 Pawel Kumorowski
@@ -126,6 +137,7 @@ Pawel Kumorowski
 	21.10.2021
 	04.11.2021
 	18.11.2021
+	25.11.2021
 }
 
 Segeda Oleksandr
@@ -136,6 +148,7 @@ Segeda Oleksandr
 	04.11.2021
 	10.11.2021
 	18.11.2021
+	25.11.2021
 }
 
 Weronika Demich
@@ -147,6 +160,7 @@ Weronika Demich
 	04.11.2021
 	10.11.2021
 	18.11.2021
+	25.11.2021
 }
 
 Jan Walendziak
