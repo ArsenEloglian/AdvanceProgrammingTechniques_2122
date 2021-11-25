@@ -14,5 +14,4 @@ int main()
     {
         cin>>a>>b;
     }
-    return 0;
 }
