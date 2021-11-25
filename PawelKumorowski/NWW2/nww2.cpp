@@ -62,5 +62,4 @@ int main()
     }
 
     delete[] wyniki;
-    return 0;
 }
