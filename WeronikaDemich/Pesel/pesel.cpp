@@ -28,6 +28,4 @@ int main()
         else
             std::cout << "N\n";
     }
-
-    return 0;
 }
