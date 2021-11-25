@@ -15,8 +15,11 @@ Group 2
 
 Group 3
 {
+	{Dmytro Sokolovskyi, Kamil Olejarz, Jan Walendziak, Bartosz Gołąbczak}
 	28.10.2021 - Wprowadzenie do Java Spring
 	04.11.2021 - Podstawy Git
+	18.11.2021 - Czym jest JavaScript
+	25.11.2021 - Wprowadzenie do języka Python
 }
 
 Group 4

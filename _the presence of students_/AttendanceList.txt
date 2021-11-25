@@ -36,8 +36,6 @@ Dmytro Sokolovskyi
 	21.10.2021
 	28.10.2021
 	04.11.2021
-	10.11.2021
-	18.11.2021
 }
 
 Dominik Lesniewski
