@@ -11,23 +11,23 @@ int main()
         cin>>tekst;
         for(int j = 0; j<ile - 1; j++)
         {
-            if(tekst[j] == NULL) break; 
+            if(tekst[j] == 0) break;
             if(licznik < 3)
             {
-                if(tekst[j] == tekst[j+1]) licznik++;  
-                else licznik = 1;                     
-                if(licznik < 3) cout<<tekst[j];    
-            }                                          
+                if(tekst[j] == tekst[j+1]) licznik++;
+                else licznik = 1;
+                if(licznik < 3) cout<<tekst[j];
+            }
             else
             {
-                if(tekst[j] == tekst[j+1]) licznik++;  
+                if(tekst[j] == tekst[j+1]) licznik++;
                 else
                 {
-                    cout<<licznik;                      
+                    cout<<licznik;
                     licznik = 1;
                 }
             }
         }
-        cout<<endl;
+        cout<<"Poszczegolne elementy:" << endl;
     }
 }

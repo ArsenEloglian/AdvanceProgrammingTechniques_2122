@@ -7,7 +7,7 @@ int factorial(int i)
   	if (i==0) return 1;
   	else return i*factorial(i-1);
 }
- 
+
 int main()
 {
 	int q,n;
@@ -20,6 +20,14 @@ int main()
 		{
 			cout<<0<<" "<<0<<endl;
 		}
+
+		else
+		{
+    			fakt=factorial(n);
+			cout<<(fakt%100)/10<<" "<<fakt%10<<endl;
+			fakt=1;
+		}
+
 		else
 		{
     			fakt=factorial(n);
