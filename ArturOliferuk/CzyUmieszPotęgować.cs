@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +23,6 @@ namespace Potęg
                 }
                 Console.WriteLine(a % 10);
             }
-            
             Console.Read();
         }
     }
