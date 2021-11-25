@@ -17,6 +17,6 @@ public class Main
                 System.out.print(" ");
             }
         }
-
+	sc.close();
 	}
 }
