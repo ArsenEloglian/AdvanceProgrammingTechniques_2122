@@ -1,17 +1,34 @@
 #include<iostream>
-#include<string>
+#include<cstring>
 using namespace std;
-char* string_merge(char*,char*)
+char* string_merge(char*a,char*b)
 {
-
+    int i=0, j=0;
+    char *s = new char [513];
+    while(a[i] != '\0' && b[i] !=  '\0')
+    {
+        s[j]=a[i];
+        j++;
+        s[j]=b[i];
+        j++;
+        i++;
+    }
+    s[j]='\0';
+    return s;
 }
 int main()
 {
-    string a,b;
     int t;
+    char s1[256], s2[256], *s;
     cin>>t;
-    for(int i=0;i<t;i++)
+    cin.getline(s1,256);
+    while(t)
     {
-        cin>>a>>b;
+        cin.getline(s1,256,' ');
+        cin.getline(s2,256);
+        S=string_merge(s1,s2);
+        cout<<s<<endl;
+        delete[] s;
+        t--;
     }
 }
