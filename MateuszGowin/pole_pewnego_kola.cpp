@@ -9,5 +9,4 @@ int main()
     cin>>r>>d;
     s=((r*r)-((d*d)/4))*pi;
     printf("%.2lf",s);
-    return 0;
 }

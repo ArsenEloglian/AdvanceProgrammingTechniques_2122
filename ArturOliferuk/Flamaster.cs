@@ -26,7 +26,6 @@ namespace ConsoleApplication3
                         else
                             break;
                     }
-
                     if (count >= 3)
                     {
                         temp += word[j] + count.ToString();
@@ -41,7 +40,6 @@ namespace ConsoleApplication3
                     }
                     j=l-1;
                     count = 0;
-                    
                 }
                 Console.WriteLine(temp);
                 Console.Read();

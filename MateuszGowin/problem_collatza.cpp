@@ -21,5 +21,4 @@ int main()
        cin>>n;
        cout<<x(n)<<endl;
     }
-  return 0;
 }
