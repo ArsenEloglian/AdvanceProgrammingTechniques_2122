@@ -1,1 +1,2 @@
 Dmytro Sokolovskyi, Daria Hyrenko : Web solution for Amazon's Game
+Mateusz Gowin, Michał Plewa : Amazon Game - Java
