@@ -1,2 +1,3 @@
 Dmytro Sokolovskyi, Daria Hyrenko : Web solution for Amazon's Game
 Mateusz Gowin, Michał Plewa : Amazon Game - Java
+Dominik Leśniewski, Kuba Kern : Game of the Amazons (JavaFX PC game, AI + hot-seat)
