@@ -1,20 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int nwd(int a, int b);
-int main()
-{
-    int test, a, b, i = 0;
-    cin>>test;
-    while(i < test)
-    {
-        cin>>a>>b;
-        cout<<nwd(a, b)<<endl;
-        i++;
-    }
-}
-int nwd(int a, int b)
-{
+int nwd(int a, int b) {
     int c;
     while(b != 0)
     {
@@ -23,4 +10,14 @@ int nwd(int a, int b)
         b = c;
     }
     return a;
+}
+
+int main()
+{
+    int test, a, b;
+    cin >> test;
+    for (int i = 0; i < test ;i ++) {
+        cin >> a >> b;
+        cout<<nwd(a, b)<<endl;
+    }
 }
