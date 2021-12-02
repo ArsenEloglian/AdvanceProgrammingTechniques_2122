@@ -8,6 +8,7 @@ Artur Oliferuk
 	10.11.2021
 	18.11.2021
 	25.11.2021
+	02.12.2021
 }
 Bartosz Gołąbczak
 {
@@ -133,6 +134,7 @@ Michal Plewa
 	04.11.2021
 	18.11.2021
 	25.11.2021
+	02.12.2021
 }
 
 Pawel Kumorowski
@@ -154,6 +156,7 @@ Segeda Oleksandr
 	10.11.2021
 	18.11.2021
 	25.11.2021
+	02.12.2021
 }
 
 Weronika Demich
