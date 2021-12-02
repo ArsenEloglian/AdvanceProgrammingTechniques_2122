@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,7 +28,6 @@ namespace Wiatraczki
                 Console.WriteLine(faktorial(temp[0]) / (faktorial(temp[1]) * faktorial(temp[0]-temp[1])));
             }
         }
-
-        
+        }   
     }
 }

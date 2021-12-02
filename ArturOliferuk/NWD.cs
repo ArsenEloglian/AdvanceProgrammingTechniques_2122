@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +27,6 @@ namespace NWD
                         b -= a;
                     }
                 }
-
                 return a;
             }
         }
@@ -39,7 +38,6 @@ namespace NWD
                 var temp = Console.ReadLine().Split().Select(s=>int.Parse(s)).ToList();
                 Console.WriteLine(nwd(temp[0],temp[1]));
             }
-
         }
     }
 }
