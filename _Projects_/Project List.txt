@@ -1,1 +1,2 @@
 Dmytro Sokolovskyi, Daria Hyrenko : Web solution for Amazon's Game
+Weronika Demich, Kamil Gajewski : Game Of Amazons (SFML + C++)
