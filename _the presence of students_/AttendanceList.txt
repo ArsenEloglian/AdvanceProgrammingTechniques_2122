@@ -30,6 +30,7 @@ Daria Hyrenko
 	10.11.2021
 	18.11.2021
 	25.11.2021
+	02.12.2021
 }
 
 Dmytro Sokolovskyi
