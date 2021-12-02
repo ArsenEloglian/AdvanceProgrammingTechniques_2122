@@ -21,10 +21,13 @@ int main()
 		{
 			c = cin.get();			
 			matrix[i][j] = c - '0';
-			if (matrix[i][j])
-				if (i - 2 >= 0 && j - 1 >= 0 && j + 1 < size)
-					if (matrix[i - 1][j] && matrix[i - 2][j] && matrix[i - 1][j - 1] && matrix[i - 1][j + 1])
+			if (matrix[i][j]) {
+				if (i - 2 >= 0 && j - 1 >= 0 && j + 1 < size) {
+					if (matrix[i - 1][j] && matrix[i - 2][j] && matrix[i - 1][j - 1] && matrix[i - 1][j + 1]) {
 						plus.push_back({ i - 1, j });
+					}
+				}
+			}
 		}		
 	}
 	for (int i = 0; i < plus.size(); i++)
