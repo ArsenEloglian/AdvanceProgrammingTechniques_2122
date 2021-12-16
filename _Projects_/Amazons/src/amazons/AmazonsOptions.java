@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 public class AmazonsOptions {
 
-    public ComboBox difficultSelect;
+    public ComboBox<String> difficultSelect;
 
     @FXML
     public void initialize() {
@@ -51,9 +51,7 @@ public class AmazonsOptions {
 
         // save all settings
 
-        final Node source = (Node) actionEvent.getSource();
-        final Stage stage = (Stage) source.getScene().getWindow();
-        stage.close();
+        backToMenu(actionEvent);
 
     }
 }
