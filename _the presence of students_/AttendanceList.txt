@@ -157,6 +157,7 @@ Pawel Kumorowski
 	04.11.2021
 	18.11.2021
 	25.11.2021
+	16.12.2021
 }
 
 Segeda Oleksandr
