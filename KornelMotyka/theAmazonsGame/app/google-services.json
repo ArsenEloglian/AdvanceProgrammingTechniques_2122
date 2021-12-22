@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "883925867303",
+    "firebase_url": "https://the-674ae-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "the-674ae",
+    "storage_bucket": "the-674ae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:883925867303:android:5dbca47bd240a6ee796702",
+        "android_client_info": {
+          "package_name": "com.example.theamazonsgame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "883925867303-8mmceilce1ss11pjp0a42htvjl894u59.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAl08BxAHxStFPHF4BmQmtDGOXTVVcJFj8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "883925867303-8mmceilce1ss11pjp0a42htvjl894u59.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
