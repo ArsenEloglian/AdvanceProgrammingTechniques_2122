@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">theAmazonsGame</string>
+    <string name="hint_email">E-mail</string>
+    <string name="hint_password">password</string>
+    <string name="button_login">login</string>
+    <string name="button_register">register</string>
 </resources>
