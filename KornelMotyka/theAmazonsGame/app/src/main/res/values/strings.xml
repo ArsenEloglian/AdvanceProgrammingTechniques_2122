@@ -4,4 +4,9 @@
     <string name="hint_password">password</string>
     <string name="button_login">login</string>
     <string name="button_register">register</string>
+    <string name="button_createNewGame">Create new game</string>
+    <string name="button_findGame">find game</string>
+    <string name="button_Enter">enter</string>
+    <string name="TextView_enterCode">Enter game code:</string>
+
 </resources>
