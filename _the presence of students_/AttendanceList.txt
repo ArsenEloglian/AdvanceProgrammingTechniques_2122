@@ -10,6 +10,7 @@ Artur Oliferuk
 	25.11.2021
 	02.12.2021
 	09.12.2021
+	16.12.2021
 }
 Bartosz Gołąbczak
 {
@@ -46,6 +47,7 @@ Dmytro Sokolovskyi
 	25.11.2021
 	02.12.2021
 	09.12.2021
+	16.12.2021
 }
 
 Dominik Lesniewski
@@ -60,6 +62,7 @@ Dominik Lesniewski
 	25.11.2021
 	02.12.2021
 	09.12.2021
+	16.12.2021
 }
 
 Kamil Gajewski
@@ -74,6 +77,7 @@ Kamil Gajewski
 	25.11.2021
 	02.12.2021
 	09.12.2021
+	16.12.2021
 }
 
 Kamil Olejarz
@@ -87,6 +91,7 @@ Kamil Olejarz
 	18.11.2021
 	25.11.2021
 	09.12.2021
+	16.12.2021
 }
 
 Kornel Motyka
@@ -121,6 +126,7 @@ Mateusz Gowin
 	04.11.2021
 	25.11.2021
 	02.12.2021
+	16.12.2021
 }
 
 Michal Swiac
@@ -133,6 +139,7 @@ Michal Swiac
 	10.11.2021
 	18.11.2021
 	25.11.2021
+	16.12.2021
 }
 
 Michal Plewa
@@ -145,6 +152,7 @@ Michal Plewa
 	18.11.2021
 	25.11.2021
 	02.12.2021
+	16.12.2021
 }
 
 Pawel Kumorowski
@@ -155,6 +163,7 @@ Pawel Kumorowski
 	04.11.2021
 	18.11.2021
 	25.11.2021
+	16.12.2021
 }
 
 Segeda Oleksandr
@@ -168,6 +177,7 @@ Segeda Oleksandr
 	25.11.2021
 	02.12.2021
 	09.12.2021
+	16.12.2021
 }
 
 Weronika Demich
