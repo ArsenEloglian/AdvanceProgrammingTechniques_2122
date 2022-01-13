@@ -46,7 +46,6 @@
             this.button19 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
@@ -64,6 +63,7 @@
             this.button36 = new System.Windows.Forms.Button();
             this.button29 = new System.Windows.Forms.Button();
             this.button35 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button2
@@ -246,16 +246,6 @@
             this.button22.UseVisualStyleBackColor = true;
             this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
-            // button15
-            // 
-            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button15.Location = new System.Drawing.Point(197, 198);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(100, 100);
-            this.button15.TabIndex = 0;
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
-            // 
             // button21
             // 
             this.button21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -425,6 +415,16 @@
             this.button35.TabIndex = 0;
             this.button35.UseVisualStyleBackColor = true;
             this.button35.Click += new System.EventHandler(this.button35_Click);
+            // 
+            // button15
+            // 
+            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button15.Location = new System.Drawing.Point(197, 198);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(100, 100);
+            this.button15.TabIndex = 0;
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // Form1
             // 
