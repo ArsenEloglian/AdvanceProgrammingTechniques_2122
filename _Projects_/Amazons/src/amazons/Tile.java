@@ -13,6 +13,13 @@ public class Tile extends StackPane {
         this.getChildren().addAll(this.piece);
     }
 
+    public void movePiece(Tile[][] b, int targetX, int targetY) {
+        Piece p = this.piece;
+        this.piece = null;
+
+        b[targetX][targetY].setPiece(p);
+    }
+
     public Piece getPiece() {
         return this.piece;
     }
