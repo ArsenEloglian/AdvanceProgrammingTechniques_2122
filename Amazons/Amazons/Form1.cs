@@ -261,6 +261,128 @@ namespace Amazons
             }
             return result;
         }
+        public bool Ban(int position)
+        {
+            if (check.ban)
+            {
+                if (Posible(position))
+                {
+                    switch (position)
+                    {
+                        case 1:
+                            button1.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 2:
+                            button2.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 3:
+                            button3.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 4:
+                            button4.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 5:
+                            button5.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 6:
+                            button6.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 7:
+                            button7.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 8:
+                            button8.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 9:
+                            button9.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 10:
+                            button10.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 11:
+                            button11.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 12:
+                            button12.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 13:
+                            button13.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 14:
+                            button14.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 15:
+                            button15.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 16:
+                            button16.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 17:
+                            button17.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 18:
+                            button18.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 19:
+                            button19.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 20:
+                            button20.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 21:
+                            button21.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 22:
+                            button22.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 23:
+                            button23.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 24:
+                            button24.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 25:
+                            button25.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 26:
+                            button26.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 27:
+                            button27.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 28:
+                            button28.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 29:
+                            button29.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 30:
+                            button30.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 31:
+                            button31.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 32:
+                            button32.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 33:
+                            button33.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 34:
+                            button34.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 35:
+                            button35.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                        case 36:
+                            button36.BackgroundImage = Amazons.Properties.Resources._2;
+                            break;
+                    }
+                    return true;
+                }
+            }
+            return false;
+        }
         public void Moves(Button button, int number)
         {
             if (check.select)
@@ -275,6 +397,7 @@ namespace Amazons
                         {
                             check.Qeens[i] = number;
                             check.select = false;
+                            check.ban = true;
                             check.position = number;
                             break;
                         }
@@ -292,9 +415,17 @@ namespace Amazons
                 {
                     if (check.Qeens[i] == number)
                     {
-                        check.select = true;
-                        check.position = number;
-                        break;
+                        if (Ban(number))
+                        {
+                            check.ban = false;
+                        }
+                        else
+                        {
+                            check.select = true;
+                            check.ban = false;
+                            check.position = number;
+                            break;
+                        }
                     }
                     else
                         check.select = false;
@@ -449,8 +580,10 @@ namespace Amazons
     public class Check
     {
         public int[] Qeens = { 2, 5, 7, 12, 25, 30, 32, 35 };
+        public int[] Baned = new int[28];
         public int position = 0;
         public bool select = false;
+        public bool ban = false;
         
     }
 }
