@@ -17,14 +17,14 @@ namespace Amazons
         {
             InitializeComponent();
             
-            button2.BackgroundImage = Amazons.Properties.Resources._1;
-            button5.BackgroundImage = Amazons.Properties.Resources._1;
-            button7.BackgroundImage = Amazons.Properties.Resources._1;
-            button12.BackgroundImage = Amazons.Properties.Resources._1;
-            button25.BackgroundImage = Amazons.Properties.Resources._1;
-            button30.BackgroundImage = Amazons.Properties.Resources._1;
-            button32.BackgroundImage = Amazons.Properties.Resources._1;
-            button35.BackgroundImage = Amazons.Properties.Resources._1;
+            button2.BackgroundImage = Amazons.Properties.Resources._4;
+            button5.BackgroundImage = Amazons.Properties.Resources._4;
+            button7.BackgroundImage = Amazons.Properties.Resources._4;
+            button12.BackgroundImage = Amazons.Properties.Resources._4;
+            button25.BackgroundImage = Amazons.Properties.Resources._5;
+            button30.BackgroundImage = Amazons.Properties.Resources._5;
+            button32.BackgroundImage = Amazons.Properties.Resources._5;
+            button35.BackgroundImage = Amazons.Properties.Resources._5;
 
         }
         public void Off(int position)
@@ -154,6 +154,19 @@ namespace Amazons
             }
             return result;
         }
+        public bool Baned(int position)
+        {
+            bool result = true;
+            for (int i = 0; i < check.Baned.Length; i++)
+            {
+                if (position == check.Baned[i])
+                {
+                    result = false;
+                    break;
+                }
+            }
+            return result;
+        }
         public bool Posible(int position)
         {
             bool result = false;
@@ -162,7 +175,9 @@ namespace Amazons
                 if (i != check.position)
                     if (!Qeens(i))
                         break;
-                if (i == position)
+                if (!Baned(i))
+                    break;
+                if (i == position && i != check.position)
                 {
                     result = true;
                     break;
@@ -172,10 +187,12 @@ namespace Amazons
             }
             for (int i = check.position; i > (check.position % 6 == 0 ? (check.position / 6 - 1) * 6 : (check.position / 6) * 6) && i > 0; i--)
             {
-                if(i!=check.position)
+                if (i != check.position)
                     if (!Qeens(i))
                         break;
-                if (i == position)
+                if (!Baned(i))
+                    break;
+                if (i == position && i != check.position)
                 {
                     result = true;
                     break;
@@ -188,11 +205,15 @@ namespace Amazons
                 if (i != check.position)
                     if (!Qeens(i))
                         break;
-                if (i == position)
+                    if (!Baned(i))
+                        break;
+                if (i == position && i != check.position)
                 {
                     result = true;
                     break;
                 }
+                if (i % 6 == 1)
+                    break;
             }
             if (result)
                 return result;
@@ -201,7 +222,9 @@ namespace Amazons
                 if (i != check.position)
                     if (!Qeens(i))
                         break;
-                if (i == position)
+                    if (!Baned(i))
+                        break;
+                if (i == position && i != check.position)
                 {
                     result = true;
                     break;
@@ -214,7 +237,9 @@ namespace Amazons
                 if (i != check.position)
                     if (!Qeens(i))
                         break;
-                if (i == position)
+                    if (!Baned(i))
+                        break;
+                if (i == position && i != check.position)
                 {
                     result = true;
                     break;
@@ -227,11 +252,15 @@ namespace Amazons
                 if (i != check.position)
                     if (!Qeens(i))
                         break;
-                if (i == position)
+                    if (!Baned(i))
+                        break;
+                if (i == position && i != check.position)
                 {
                     result = true;
                     break;
                 }
+                if (i % 6 == 0)
+                    break;
             }
             if (result)
                 return result;
@@ -240,11 +269,15 @@ namespace Amazons
                 if (i != check.position)
                     if (!Qeens(i))
                         break;
-                if (i == position)
-                {
-                    result = true;
-                    break;
-                }
+                    if (!Baned(i))
+                        break;
+                    if (i == position && i != check.position)
+                    {
+                        result = true;
+                        break;
+                    }
+                    if (i % 6 == 1)
+                        break;
             }
             if (result)
                 return result;
@@ -253,155 +286,86 @@ namespace Amazons
                 if (i != check.position)
                     if (!Qeens(i))
                         break;
-                if (i == position)
+                    if (!Baned(i))
+                        break;
+                if (i == position && i != check.position)
                 {
                     result = true;
                     break;
                 }
+                if (i % 6 == 0)
+                    break;
             }
             return result;
         }
-        public bool Ban(int position)
+        public void Ban(int position, Button button)
         {
             if (check.ban)
             {
                 if (Posible(position))
                 {
-                    switch (position)
+                    if(check.queue == 2)
+                     button.BackgroundImage = Amazons.Properties.Resources._2;
+                    if (check.queue == 1)
+                        button.BackgroundImage = Amazons.Properties.Resources._3;
+                    for (int i = 0; i < check.Baned.Length; i++)
                     {
-                        case 1:
-                            button1.BackgroundImage = Amazons.Properties.Resources._2;
+                        if (0 == check.Baned[i])
+                        {
+                            check.Baned[i] = position;
+                            check.time = 31;
                             break;
-                        case 2:
-                            button2.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 3:
-                            button3.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 4:
-                            button4.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 5:
-                            button5.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 6:
-                            button6.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 7:
-                            button7.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 8:
-                            button8.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 9:
-                            button9.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 10:
-                            button10.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 11:
-                            button11.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 12:
-                            button12.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 13:
-                            button13.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 14:
-                            button14.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 15:
-                            button15.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 16:
-                            button16.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 17:
-                            button17.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 18:
-                            button18.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 19:
-                            button19.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 20:
-                            button20.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 21:
-                            button21.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 22:
-                            button22.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 23:
-                            button23.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 24:
-                            button24.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 25:
-                            button25.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 26:
-                            button26.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 27:
-                            button27.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 28:
-                            button28.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 29:
-                            button29.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 30:
-                            button30.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 31:
-                            button31.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 32:
-                            button32.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 33:
-                            button33.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 34:
-                            button34.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 35:
-                            button35.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
-                        case 36:
-                            button36.BackgroundImage = Amazons.Properties.Resources._2;
-                            break;
+                        }
                     }
-                    return true;
+                    check.ban = false;
                 }
             }
-            return false;
         }
         public void Moves(Button button, int number)
         {
-            if (check.select)
+            if (check.select && !check.ban)
             {
                 if (Posible(number))
                 {
                     Off(check.position);
-                    button.BackgroundImage = Amazons.Properties.Resources._1;
+                    if(check.queue == 1)
+                        button.BackgroundImage = Amazons.Properties.Resources._4;
+                    if (check.queue == 2)
+                        button.BackgroundImage = Amazons.Properties.Resources._5;
+                    check.ban = true;
+                    check.banPos = number;
                     for (int i = 0; i < check.Qeens.Length; i++)
                     {
                         if (check.Qeens[i] == check.position)
                         {
                             check.Qeens[i] = number;
+                            break;
+                        }
+                    }
+                    for (int i = 0; i < check.Red.Length; i++)
+                    {
+                        if (check.Red[i] == check.position && check.queue == 2)
+                        {
+                            check.Red[i] = number;
                             check.select = false;
-                            check.ban = true;
                             check.position = number;
                             break;
                         }
                     }
+                    for (int i = 0; i < check.Blue.Length; i++)
+                    {
+                        if (check.Blue[i] == check.position && check.queue == 1)
+                        {
+                            check.Blue[i] = number;
+                            check.select = false;
+                            check.position = number;
+                            break;
+                        }
+                    }
+                    if (check.queue == 1)
+                        check.queue = 2;
+                    else
+                        check.queue = 1;
                 }
                 else
                 {
@@ -411,24 +375,26 @@ namespace Amazons
             }
             else
             {
-                for (int i = 0; i < check.Qeens.Length; i++)
+                for (int i = 0; i < check.Blue.Length; i++)
                 {
-                    if (check.Qeens[i] == number)
+                    if (check.Blue[i] == number && check.queue == 1)
                     {
-                        if (Ban(number))
-                        {
-                            check.ban = false;
-                        }
-                        else
-                        {
-                            check.select = true;
-                            check.ban = false;
-                            check.position = number;
-                            break;
-                        }
+                        check.select = true;
+                        check.position = number;
+                        break;
+                    }
+                    if (check.Red[i] == number && check.queue == 2)
+                    {
+                        check.select = true;
+                        check.position = number;
+                        break;
                     }
                     else
+                    {
                         check.select = false;
+                        check.position = check.banPos;
+                        Ban(number, button);
+                    }
                 }
             } 
         }
@@ -576,14 +542,43 @@ namespace Amazons
         {
             Moves(button36, 36);
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (check.time <= 0)
+            {
+                timer1.Enabled = false;
+                textBox1.Text = check.queue == 1 ? "First Player Losses" : "Second Player Losses";
+            }
+            else
+            {
+                check.time--;
+                label1.Text = check.time.ToString();
+            }
+        }
+
+        private void button37_Click(object sender, EventArgs e)
+        {
+            timer1.Enabled = true; 
+        }
+
+        private void button38_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
     public class Check
     {
         public int[] Qeens = { 2, 5, 7, 12, 25, 30, 32, 35 };
+        public int[] Red = { 25, 30, 32, 35 };
+        public int[] Blue = { 2, 5, 7, 12 };
         public int[] Baned = new int[28];
+        public int time = 30;
+        public int queue = 1;
         public int position = 0;
         public bool select = false;
         public bool ban = false;
+        public int banPos = 0;
         
     }
 }
