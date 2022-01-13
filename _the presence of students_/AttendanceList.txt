@@ -78,6 +78,7 @@ Kamil Gajewski
 	02.12.2021
 	09.12.2021
 	16.12.2021
+	13.01.2022
 }
 
 Kamil Olejarz
