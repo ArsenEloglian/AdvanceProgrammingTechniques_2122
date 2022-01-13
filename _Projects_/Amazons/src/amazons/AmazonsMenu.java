@@ -24,7 +24,8 @@ public class AmazonsMenu {
             stage.close();
         }
         catch (Exception e) {
-            System.out.println("Can't open new window");
+            //System.out.println("Can't open new window");
+            e.printStackTrace();
         }
     }
 
