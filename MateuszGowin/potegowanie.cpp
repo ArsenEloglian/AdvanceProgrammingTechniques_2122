@@ -37,5 +37,4 @@ int main()
     }
 
     delete[] tab;
-    return 0;
 }

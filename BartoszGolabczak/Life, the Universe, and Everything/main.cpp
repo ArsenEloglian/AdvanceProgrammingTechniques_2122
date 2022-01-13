@@ -16,5 +16,4 @@ int main()
    else
     cout << "Life doesnt exists";
     } while ( x!= 42);
-    return 0;
 }

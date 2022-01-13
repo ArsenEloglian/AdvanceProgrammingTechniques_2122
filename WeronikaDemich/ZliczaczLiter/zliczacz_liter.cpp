@@ -34,6 +34,4 @@ int main()
         if(chars[i] != 0)
             std::cout << char(i) << ' ' << chars[i] << '\n';
     }
-
-    return 0;
 }

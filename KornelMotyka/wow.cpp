@@ -13,6 +13,4 @@ int main() {
 	}
 	cout<<"w";
 	}
-
-	return 0;
 }

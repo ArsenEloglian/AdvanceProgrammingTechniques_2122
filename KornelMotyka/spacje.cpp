@@ -23,6 +23,4 @@ int main()
         }
         cout<<sWiersz<<endl;
     } while( !sWiersz.empty() );
-
-    return 0;
 }

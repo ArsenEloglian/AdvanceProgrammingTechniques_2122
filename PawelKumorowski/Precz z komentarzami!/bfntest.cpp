@@ -12,7 +12,7 @@ bool inputEnd(string &input)
     if(!mainFunc)
     {
         string pattern = "int main(";
-        
+
         for(; i < input.length(); i++)
         {
             if(input[i] != pattern[i])
@@ -89,5 +89,5 @@ int main()
 
     cout << usunKomentarz(program);
 
-    return 0;
+
 }
