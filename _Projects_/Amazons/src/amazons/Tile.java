@@ -16,6 +16,7 @@ public class Tile extends StackPane {
     }
 
     public void movePiece(Tile[][] b, int targetX, int targetY) {
+        if (this.piece == null) return; //bugfix on wall drag
         Piece p = this.piece;
         this.piece = null;
         b[targetX][targetY].setPiece(p);
@@ -30,6 +31,10 @@ public class Tile extends StackPane {
             return false;
         }
         return true;
+    }
+
+    public boolean isEmpty() {
+        return this.piece == null;
     }
 
     public void shootAt(Tile[][] b, int targetX, int targetY) {
@@ -58,10 +63,46 @@ public class Tile extends StackPane {
             if(newX < 0 || newY < 0 || newX >= b.length || newY >= b.length) return; //mouse released out of window
             //checkIfLegalMove placeholder
             if(b[newX][newY].piece == null) {//checkIfEmpty
-                if((newX == oldX && newY != oldY) || (newX != oldX && newY == oldY)) {//checkIfStraightLine
+                if(newX == oldX && newY != oldY) {//checkIfStraightLine
+                    if(newY < oldY) {//moveUp
+                        for(int i = oldY - 1; i > newY; i--) {
+                            if (!b[oldX][i].isEmpty()) return; //path blocked by wall/amazon
+                        }
+                    }
+                    else if(newY > oldY) {//moveDown
+                        for(int i = oldY + 1; i < newY; i++) {
+                            if (!b[oldX][i].isEmpty()) return; //path blocked by wall/amazon
+                        }
+                    }
+                    b[oldX][oldY].movePiece(b, newX, newY);
+                }
+                else if(newX != oldX && newY == oldY) {
+                    if(newX < oldX) {//moveLeft
+                        for(int i = oldX - 1; i > newX; i--) {
+                            if (!b[i][oldY].isEmpty()) return; //path blocked by wall/amazon
+                        }
+                    }
+                    else if(newX > oldX) {//moveRight
+                        for(int i = oldX + 1; i < newX; i++) {
+                            if (!b[i][oldY].isEmpty()) return; //path blocked by wall/amazon
+                        }
+                    }
                     b[oldX][oldY].movePiece(b, newX, newY);
                 }
                 else if(Math.abs(newX-oldX) == Math.abs(newY-oldY)) {//checkIfDiagonal
+                    int xd, yd;
+                    if(newX > oldX) xd = 1;
+                    else xd = -1;
+                    if(newY > oldY) yd = 1;
+                    else yd = -1;
+
+                    int i = oldX + xd;
+                    int j = oldY + yd;
+                    while(i != newX && j != newY) {
+                        if (!b[i][j].isEmpty()) return; //path blocked by wall/amazon
+                        i += xd;
+                        j += yd;
+                    }
                     b[oldX][oldY].movePiece(b, newX, newY);
                 }
             }
