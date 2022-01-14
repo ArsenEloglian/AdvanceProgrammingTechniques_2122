@@ -18,7 +18,7 @@ public class AmazonsGame {
 
         for (int y = 0; y < HEIGHT; y++) {
             for (int x = 0; x < WIDTH; x++) {
-                Tile tile = new Tile((x + y) % 2 == 0, x, y);
+                Tile tile = new Tile(b,(x + y) % 2 == 0, x, y);
                 b[x][y] = tile;
                 tileGroup.getChildren().add(tile);
             }
