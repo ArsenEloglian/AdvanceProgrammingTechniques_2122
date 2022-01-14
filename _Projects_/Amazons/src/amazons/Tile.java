@@ -31,6 +31,10 @@ public class Tile extends StackPane {
         return true;
     }
 
+    public void shootAt(Tile[][] b, int targetX, int targetY) {
+        b[targetX][targetY].setPiece(new Piece(2));
+    }
+
     public Tile(boolean light, int x, int y) {
         Rectangle t = new Rectangle(TILE_SIZE, TILE_SIZE);
         t.setFill(light ? Color.valueOf("#ffce9e") : Color.valueOf("#D18B47"));

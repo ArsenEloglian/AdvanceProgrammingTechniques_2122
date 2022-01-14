@@ -37,5 +37,7 @@ public class AmazonsGame {
         //if (b[3][0].hasPiece()) System.out.println("[3][0] contains a piece!");
         //b[3][0].getPiece() System.out.println("Maybe this will be useful!");
         b[3][0].movePiece(b, 9, 9);
+        b[3][0].shootAt(b, 8, 8);
+        b[3][0].shootAt(b, 7, 7);
     }
 }
