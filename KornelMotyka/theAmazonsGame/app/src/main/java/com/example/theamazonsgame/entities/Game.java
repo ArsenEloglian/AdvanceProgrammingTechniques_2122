@@ -13,6 +13,7 @@ import lombok.RequiredArgsConstructor;
 @AllArgsConstructor
 public class Game {
 
+    private String id;
     private String player1;
     private String player2;
     private String date;

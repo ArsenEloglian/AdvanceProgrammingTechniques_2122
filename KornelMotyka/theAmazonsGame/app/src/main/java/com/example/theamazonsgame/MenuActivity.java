@@ -41,7 +41,7 @@ public class MenuActivity extends AppCompatActivity {
         String gameId = uuid + " - " + date;
 
         DatabaseReference myRef = database.getReference("Games").child(gameId);
-        Game game = getGameInstance(uuid, date);
+        Game game = getGameInstance(uuid, date, gameId);
         myRef.setValue(game);
 
         Intent intent = new Intent(MenuActivity.this, GameActivity.class);
@@ -62,11 +62,12 @@ public class MenuActivity extends AppCompatActivity {
         return formatter.format(date);
     }
 
-    private Game getGameInstance(String uuid, String date){
+    private Game getGameInstance(String uuid, String date, String gameId){
         return Game.builder()
                 .player1(uuid)
                 .code(getRandomKey())
                 .date(date)
+                .id(gameId)
                 .result(ResultEnum.waitingForPlayer)
                 .board(Board.createNewBoard())
                 .build();
