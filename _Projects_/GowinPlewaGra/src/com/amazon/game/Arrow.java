@@ -5,8 +5,7 @@ import javafx.scene.image.ImageView;
 
 public class Arrow extends ImageView {
 
-    private Image arrowIMG = new Image(getClass().getResourceAsStream("/res/arrow.png"));
-    
+    private Image arrowIMG = new Image(getClass().getResourceAsStream("/res/arrow.png"),50,50,false,false);
     public Arrow(int x, int y) {
         setImage(arrowIMG);
         relocate(x * AmazonApp.TILE_SIZE,y * AmazonApp.TILE_SIZE);

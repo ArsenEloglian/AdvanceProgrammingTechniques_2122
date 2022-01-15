@@ -8,8 +8,12 @@ import java.util.List;
 public class Board{
 
     private Tile board [][] = new Tile[AmazonApp.WIDTH][AmazonApp.HEIGHT];
+    private List<Queen> whiteQueens = new ArrayList<Queen>();
+    private List<Queen> blackQueens = new ArrayList<Queen>();
     private Group tileGroup = new Group();
-    private Group queensGroup = new Group();    
+    private Group queensGroup = new Group();
+    private Group circlesGroup = new Group();
+    private Group arrowsGroup = new Group();
 
     Board() {
         for(int y = 0; y < AmazonApp.HEIGHT; y++) {
@@ -26,6 +30,7 @@ public class Board{
                 }
                 if(queen != null) {
                     queensGroup.getChildren().add(queen);
+                    tile.setQueen(queen);
                 }
             }
         }
@@ -36,5 +41,18 @@ public class Board{
     }
     public Group getTileGroup() {
         return tileGroup;
-    }    
+    }
+    public Group getCirclesGroup() {
+        return circlesGroup;
+    }
+    public void addCirclesGroup(LegalMove legalMove) {
+        circlesGroup.getChildren().add(legalMove);
+    }
+    public void clearCirclesGroup() {
+        circlesGroup.getChildren().clear();
+    }
+    public Tile getTile(int x, int y) {
+        return board[x][y];
+    }
+    
 }
