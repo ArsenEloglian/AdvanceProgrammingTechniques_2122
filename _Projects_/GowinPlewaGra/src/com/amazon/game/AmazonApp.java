@@ -12,15 +12,16 @@ public class AmazonApp extends Application {
     public static final int WIDTH = 10;
     public static final int HEIGHT = 10;
 
-    private Board board;    
+    private Board board;        
 
     private Parent createContent() {
         BorderPane root = new BorderPane();
         Pane table = new Pane();
         board = new Board();
         table.setPrefSize(10*50,10*50);
-        table.getChildren().addAll(board.getTileGroup(),board.getQueensGroup());
+        table.getChildren().addAll(board.getTileGroup(),board.getArrowsGroup(),board.getCirclesGroup(),board.getQueensGroup());
         root.setCenter(table);
+        
         return root;
     }
 
@@ -29,7 +30,7 @@ public class AmazonApp extends Application {
         Scene scene = new Scene(createContent());
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
-        primaryStage.setTitle("Amazon Game");
+        primaryStage.setTitle("Amazon Game");        
         primaryStage.show();
     }
 
