@@ -35,41 +35,53 @@ public class Queen extends ImageView {
         setOnMouseReleased(this::setOnMouseReleased);
         relocate(x * AmazonApp.TILE_SIZE,y * AmazonApp.TILE_SIZE);
     }
-    private void onMouseEntered() {        
-        for (Tile legalMove : getLegalMoves()) {
-            legalMove.setLegalMoveOnTile();            
-        }
-    }
-
-    private void onMouseExited() {        
-        for (Tile legalMove : getLegalMoves()) {
-            legalMove.removeLegalMoveFromTile();
-        }        
-    }
-    private void onMouseDragged(MouseEvent e) {        
-        relocate(e.getSceneX() - mouseX + (x * 50), e.getSceneY() - mouseY + (y * 50));       
-    }
-
-    private void setOnMousePressed(MouseEvent e) {        
-        mouseX = e.getSceneX();
-        mouseY = e.getSceneY();
-    }
-    private void setOnMouseReleased(MouseEvent e) {
-        double newX = e.getSceneX();
-        double newY = e.getSceneY();
-
-        for (Tile legalMove : getLegalMoves()) {
-            legalMove.removeLegalMoveFromTile();
-        }
-
-        if(getLegalMoves().contains(this.tile.getBoard().getTile((int)(newX/50),(int)(newY/50)))) {
-            move(this.tile.getBoard().getTile((int)(newX/50),(int)(newY/50)));
+    private void onMouseEntered() {
+        if(this.canMove()) {
             for (Tile legalMove : getLegalMoves()) {
                 legalMove.setLegalMoveOnTile();
             }
         }
-        else
-            relocate(x*50, y*50);        
+    }
+
+    private void onMouseExited() {
+        if(this.canMove()) {
+            for (Tile legalMove : getLegalMoves()) {
+                legalMove.removeLegalMoveFromTile();
+            }
+        }
+    }
+    private void onMouseDragged(MouseEvent e) {
+        if(this.canMove()) {            
+            relocate(e.getSceneX() - mouseX + (x * 50), e.getSceneY() - mouseY + (y * 50));
+        }
+    }
+
+    private void setOnMousePressed(MouseEvent e) {
+        if(this.canMove()) {
+            mouseX = e.getSceneX();
+            mouseY = e.getSceneY();
+        }
+
+    }
+    private void setOnMouseReleased(MouseEvent e) {
+        if(this.canMove()) {
+            double newX = e.getSceneX();
+            double newY = e.getSceneY();            
+
+            for (Tile legalMove : getLegalMoves()) {
+                legalMove.removeLegalMoveFromTile();
+            }
+
+            if(getLegalMoves().contains(this.tile.getBoard().getTile((int)(newX/50),(int)(newY/50))) && canMove()) {
+                move(this.tile.getBoard().getTile((int)(newX/50),(int)(newY/50)));
+                for (Tile legalMove : getLegalMoves()) {
+                    legalMove.setLegalMoveOnTile();
+                }
+				this.tile,getBoard().setCurrentTurn(getBoard().getCurrentTurn() == Color.BLACK ? Color.WHITE : Color.BLACK);
+            }
+            else
+                relocate(x*50, y*50);
+        }
     }
 
     public void move(Tile tile) {
@@ -82,7 +94,10 @@ public class Queen extends ImageView {
 
         relocate(x*50, y*50);
     }
-    
+    public boolean canMove() {
+        return this.tile.getBoard().getCurrentTurn() == this.color;
+    }
+	
     public List<Tile> getLegalMoves() {
         List<Tile> legalMoves = new ArrayList<>();
         for(int i = 1; x + i <= 9; i++)
