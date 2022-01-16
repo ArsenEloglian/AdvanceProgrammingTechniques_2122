@@ -2,12 +2,16 @@
   <library name="lib">
     <CLASSES>
       <root url="file://$USER_HOME$/JetBrains/javafx-sdk-11.0.2/lib" />
+      <root url="file://$USER_HOME$/JetBrains/javafx-sdk/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="file://$USER_HOME$/JetBrains/javafx-sdk-11.0.2/lib" />
+      <root url="file://$USER_HOME$/JetBrains/javafx-sdk/lib" />
     </SOURCES>
     <jarDirectory url="file://$USER_HOME$/JetBrains/javafx-sdk-11.0.2/lib" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/JetBrains/javafx-sdk/lib" recursive="false" />
     <jarDirectory url="file://$USER_HOME$/JetBrains/javafx-sdk-11.0.2/lib" recursive="false" type="SOURCES" />
+    <jarDirectory url="file://$USER_HOME$/JetBrains/javafx-sdk/lib" recursive="false" type="SOURCES" />
   </library>
 </component>
