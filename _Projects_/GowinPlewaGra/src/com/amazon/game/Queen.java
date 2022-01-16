@@ -36,37 +36,45 @@ public class Queen extends ImageView {
         relocate(x * AmazonApp.TILE_SIZE,y * AmazonApp.TILE_SIZE);
     }
     private void onMouseEntered() {
-        if(this.canMove()) {
+        if(this.canMove() && this.tile.getBoard().getActiveTile() == null && !isDragged) {
             for (Tile legalMove : getLegalMoves()) {
                 legalMove.setLegalMoveOnTile();
             }
         }
     }
-
     private void onMouseExited() {
-        if(this.canMove()) {
+        if(this.canMove() && this.tile.getBoard().getActiveTile() == null&& !isDragged){
             for (Tile legalMove : getLegalMoves()) {
                 legalMove.removeLegalMoveFromTile();
             }
         }
     }
+    boolean isDragged = false;
     private void onMouseDragged(MouseEvent e) {
-        if(this.canMove()) {            
-            relocate(e.getSceneX() - mouseX + (x * 50), e.getSceneY() - mouseY + (y * 50));
+        if(this.canMove() && this.tile.getBoard().getActiveTile() == null) {
+            if(e.getSceneX() > 500 || e.getSceneX() < 0 || e.getSceneY() > 500 || e.getSceneY() < 0) {
+                relocate(x*50, y*50);
+				isDragged=false;
+            } else {
+                relocate(e.getSceneX() - mouseX + (x * 50), e.getSceneY() - mouseY + (y * 50));
+            }
         }
     }
-
     private void setOnMousePressed(MouseEvent e) {
-        if(this.canMove()) {
+        isDragged = true;
+        if(this.canMove() && this.tile.getBoard().getActiveTile() == null) {
             mouseX = e.getSceneX();
             mouseY = e.getSceneY();
         }
-
     }
     private void setOnMouseReleased(MouseEvent e) {
-        if(this.canMove()) {
+        isDragged = false;
+        if(this.canMove() && this.tile.getBoard().getActiveTile() == null) {
             double newX = e.getSceneX();
-            double newY = e.getSceneY();            
+            double newY = e.getSceneY();
+
+            if(newX > 500 || newX < 0 || newY > 500 || newY < 0)
+                return;
 
             for (Tile legalMove : getLegalMoves()) {
                 legalMove.removeLegalMoveFromTile();
@@ -77,13 +85,12 @@ public class Queen extends ImageView {
                 for (Tile legalMove : getLegalMoves()) {
                     legalMove.setLegalMoveOnTile();
                 }
-				this.tile,getBoard().setCurrentTurn(getBoard().getCurrentTurn() == Color.BLACK ? Color.WHITE : Color.BLACK);
+                tile.getBoard().setActiveTile(tile);
             }
             else
                 relocate(x*50, y*50);
         }
     }
-
     public void move(Tile tile) {
         tile.setQueen(this);
         if(this.tile != null)
@@ -96,8 +103,7 @@ public class Queen extends ImageView {
     }
     public boolean canMove() {
         return this.tile.getBoard().getCurrentTurn() == this.color;
-    }
-	
+    }    
     public List<Tile> getLegalMoves() {
         List<Tile> legalMoves = new ArrayList<>();
         for(int i = 1; x + i <= 9; i++)
@@ -126,14 +132,12 @@ public class Queen extends ImageView {
                 break;
         return legalMoves;
     }
-
     private boolean addLegalMove(int x, int y, List<Tile> legalMoves) {
         Tile tile = this.tile.getBoard().getTile(x, y);
-        if(!tile.hasQueen())
+        if(!tile.hasQueen() && !tile.hasArrow())
             legalMoves.add(tile);
         else
             return false;
         return true;
     }
-
 }
