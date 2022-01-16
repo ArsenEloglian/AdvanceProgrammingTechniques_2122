@@ -21,7 +21,6 @@ public class Tile extends Rectangle {
         setFill(color ? Color.valueOf("#ffce9e") : Color.valueOf("#d18847"));
         this.board = board;
         setOnMousePressed(this::setOnMousePressed);
-
     }
 
     public boolean hasQueen() {
@@ -32,7 +31,13 @@ public class Tile extends Rectangle {
     }
     public void setQueen(Queen queen) {
         this.queen = queen;
-    }    
+    }
+    public void setArrow(Arrow arrow) {
+        this.arrow = arrow;
+    }
+    public boolean hasArrow() {
+        return arrow != null;
+    }
     public int getTileX(){return x;}
     public int getTileY(){return y;}
     public Board getBoard(){
@@ -47,6 +52,19 @@ public class Tile extends Rectangle {
         board.clearCirclesGroup();
     }
     private void setOnMousePressed(MouseEvent e) {
-        
+        if(this.getBoard().getActiveTile() == null) {
+            return;
+        }
+        List<Tile> legalArrows = getBoard().getActiveTile().getQueen().getLegalMoves();
+        if(legalArrows.contains(this)) {
+            for (Tile legalMove : legalArrows) {
+                legalMove.removeLegalMoveFromTile();
+            }
+            getBoard().setActiveTile(null);
+            Arrow arrow = new Arrow((int)(e.getSceneX()/50),(int)(e.getSceneY()/50));
+            setArrow(arrow);
+            board.addArrowsGroup(arrow);
+            getBoard().setCurrentTurn(getBoard().getCurrentTurn() == Color.BLACK ? Color.WHITE : Color.BLACK);
+        }
     }
 }

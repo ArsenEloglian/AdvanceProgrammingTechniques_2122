@@ -3,8 +3,10 @@ package com.amazon.game;
 import javafx.application.Application;
 import javafx.scene.*;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class AmazonApp extends Application {
@@ -15,7 +17,7 @@ public class AmazonApp extends Application {
 
     private Board board;
     private Image white_queen = new Image("/res/white_queen.png",50,50,false,false);
-    private Image black_queen = new Image("/res/black_queen.png",50,50,false,false);
+    private Image black_queen = new Image("/res/black_queen.png",50,50,false,false);    
 
     private Parent createContent() {
         BorderPane root = new BorderPane();
@@ -23,8 +25,7 @@ public class AmazonApp extends Application {
         board = new Board();
         table.setPrefSize(10*50,10*50);
         table.getChildren().addAll(board.getTileGroup(),board.getArrowsGroup(),board.getCirclesGroup(),board.getQueensGroup());
-        root.setCenter(table);
-        
+        root.setCenter(table);        
         return root;
     }
 
@@ -33,7 +34,7 @@ public class AmazonApp extends Application {
         Scene scene = new Scene(createContent());
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
-        primaryStage.setTitle("Amazon Game");        
+        primaryStage.setTitle("Amazon Game");
         primaryStage.show();
     }
 

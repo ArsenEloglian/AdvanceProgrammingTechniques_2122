@@ -15,6 +15,7 @@ public class Board{
     private Group circlesGroup = new Group();
     private Group arrowsGroup = new Group();
     private Color currentTurn = Color.WHITE;
+    private Tile ActiveTile;
 
     Board() {
         for(int y = 0; y < AmazonApp.HEIGHT; y++) {
@@ -68,5 +69,11 @@ public class Board{
     }
     public void setCurrentTurn(Color currentTurn) {
         this.currentTurn = currentTurn;
-    }  
+    }
+    public Tile getActiveTile() {
+        return ActiveTile;
+    }
+    public void setActiveTile(Tile tile) {
+        ActiveTile = tile;
+    }
 }
