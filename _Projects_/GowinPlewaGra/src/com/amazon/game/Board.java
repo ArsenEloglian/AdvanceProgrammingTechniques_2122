@@ -14,6 +14,7 @@ public class Board{
     private Group queensGroup = new Group();
     private Group circlesGroup = new Group();
     private Group arrowsGroup = new Group();
+    private Color currentTurn = Color.WHITE;
 
     Board() {
         for(int y = 0; y < AmazonApp.HEIGHT; y++) {
@@ -24,9 +25,11 @@ public class Board{
                 Queen queen = null;
                 if((y == 0 && (x == 3 || x == 6)) || (y == 3 && (x == 0 || x == 9))) {
                     queen = new Queen(Color.WHITE, x, y,tile);
+                    whiteQueens.add(queen);
                 }
                 if((y == 6 && (x == 0 || x == 9)) || (y == 9 && (x == 3 || x == 6))) {
                     queen = new Queen(Color.BLACK, x, y,tile);
+                    blackQueens.add(queen);
                 }
                 if(queen != null) {
                     queensGroup.getChildren().add(queen);
@@ -45,6 +48,12 @@ public class Board{
     public Group getCirclesGroup() {
         return circlesGroup;
     }
+    public Group getArrowsGroup() {
+        return arrowsGroup;
+    }
+    public void addArrowsGroup(Arrow arrow){
+        arrowsGroup.getChildren().add(arrow);
+    }
     public void addCirclesGroup(LegalMove legalMove) {
         circlesGroup.getChildren().add(legalMove);
     }
@@ -54,5 +63,10 @@ public class Board{
     public Tile getTile(int x, int y) {
         return board[x][y];
     }
-    
+    public Color getCurrentTurn() {
+        return currentTurn;
+    }
+    public void setCurrentTurn(Color currentTurn) {
+        this.currentTurn = currentTurn;
+    }  
 }

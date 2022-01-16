@@ -2,6 +2,7 @@ package com.amazon.game;
 
 import javafx.application.Application;
 import javafx.scene.*;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -12,7 +13,9 @@ public class AmazonApp extends Application {
     public static final int WIDTH = 10;
     public static final int HEIGHT = 10;
 
-    private Board board;        
+    private Board board;
+    private Image white_queen = new Image("/res/white_queen.png",50,50,false,false);
+    private Image black_queen = new Image("/res/black_queen.png",50,50,false,false);
 
     private Parent createContent() {
         BorderPane root = new BorderPane();

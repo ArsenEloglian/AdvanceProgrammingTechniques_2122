@@ -9,6 +9,7 @@ public class Tile extends Rectangle {
 
     private Queen queen;
     private Board board;
+    private Arrow arrow;
     private int x;
     private int y;
     public Tile(Board board,boolean color, int x, int y) {
@@ -18,7 +19,9 @@ public class Tile extends Rectangle {
         setHeight(AmazonApp.TILE_SIZE);
         relocate(x * AmazonApp.TILE_SIZE, y * AmazonApp.TILE_SIZE);
         setFill(color ? Color.valueOf("#ffce9e") : Color.valueOf("#d18847"));
-        this.board = board;        
+        this.board = board;
+        setOnMousePressed(this::setOnMousePressed);
+
     }
 
     public boolean hasQueen() {
@@ -29,17 +32,21 @@ public class Tile extends Rectangle {
     }
     public void setQueen(Queen queen) {
         this.queen = queen;
-    }
+    }    
     public int getTileX(){return x;}
     public int getTileY(){return y;}
     public Board getBoard(){
         return board;
     }
-	public void setLegalMoveOnTile() {
+    public void setLegalMoveOnTile() {
         LegalMove legalMove = new LegalMove(x,y);
+        legalMove.setOnMousePressed(this::setOnMousePressed);
         board.addCirclesGroup(legalMove);
     }
     public void removeLegalMoveFromTile() {
         board.clearCirclesGroup();
+    }
+    private void setOnMousePressed(MouseEvent e) {
+        
     }
 }
