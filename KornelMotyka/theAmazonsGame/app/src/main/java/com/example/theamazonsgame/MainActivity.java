@@ -30,13 +30,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void login(View view) {
-        /*prepareProgressDialog();
-        LoginService loginService = new LoginService();
-        loginService.loginUser(emailEditText.getText().toString(), passwordEditText.getText().toString(), getApplicationContext(), progressDialog);*/
         prepareProgressDialog();
         LoginService loginService = new LoginService();
-        loginService.loginUser("kornel.motyka1@gmail.com", "qwerty", getApplicationContext(), progressDialog);
-
+        loginService.loginUser(emailEditText.getText().toString(), passwordEditText.getText().toString(), getApplicationContext(), progressDialog);
     }
 
     public void register(View view) {

@@ -8,5 +8,6 @@
     <string name="button_findGame">find game</string>
     <string name="button_Enter">enter</string>
     <string name="TextView_enterCode">Enter game code:</string>
+    <string name="Board_ContentDescription">game_board</string>
 
 </resources>

@@ -62,6 +62,7 @@ public class FindGameActivity extends AppCompatActivity {
 
                         Intent intent = new Intent(FindGameActivity.this, GameActivity.class);
                         intent.putExtra("gameId", game.getId());
+                        myRef.removeEventListener(this);
                         startActivity(intent);
                     }
                 }
