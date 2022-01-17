@@ -10,8 +10,11 @@ Artur Oliferuk
 	25.11.2021
 	02.12.2021
 	09.12.2021
+<<<<<<< HEAD
 	16.12.2021
 	13.01.2022
+=======
+>>>>>>> 090dfe5dceb05df93c0bdb4ea5e6ffed6c0cce80
 }
 Bartosz Gołąbczak
 {
@@ -50,8 +53,11 @@ Dmytro Sokolovskyi
 	25.11.2021
 	02.12.2021
 	09.12.2021
+<<<<<<< HEAD
 	16.12.2021
 	13.01.2022
+=======
+>>>>>>> 090dfe5dceb05df93c0bdb4ea5e6ffed6c0cce80
 }
 
 Dominik Lesniewski
@@ -66,8 +72,11 @@ Dominik Lesniewski
 	25.11.2021
 	02.12.2021
 	09.12.2021
+<<<<<<< HEAD
 	16.12.2021
 	13.01.2022
+=======
+>>>>>>> 090dfe5dceb05df93c0bdb4ea5e6ffed6c0cce80
 }
 
 Kamil Gajewski
@@ -82,8 +91,11 @@ Kamil Gajewski
 	25.11.2021
 	02.12.2021
 	09.12.2021
+<<<<<<< HEAD
 	16.12.2021
 	13.01.2022
+=======
+>>>>>>> 090dfe5dceb05df93c0bdb4ea5e6ffed6c0cce80
 }
 
 Kamil Olejarz
@@ -97,8 +109,11 @@ Kamil Olejarz
 	18.11.2021
 	25.11.2021
 	09.12.2021
+<<<<<<< HEAD
 	13.01.2022
 	16.12.2021
+=======
+>>>>>>> 090dfe5dceb05df93c0bdb4ea5e6ffed6c0cce80
 }
 
 Kornel Motyka
@@ -135,8 +150,11 @@ Mateusz Gowin
 	04.11.2021
 	25.11.2021
 	02.12.2021
+<<<<<<< HEAD
 	16.12.2021
 	13.01.2022
+=======
+>>>>>>> 090dfe5dceb05df93c0bdb4ea5e6ffed6c0cce80
 }
 
 Michal Swiac
@@ -149,7 +167,6 @@ Michal Swiac
 	10.11.2021
 	18.11.2021
 	25.11.2021
-	16.12.2021
 }
 
 Michal Plewa
@@ -162,8 +179,11 @@ Michal Plewa
 	18.11.2021
 	25.11.2021
 	02.12.2021
+<<<<<<< HEAD
 	16.12.2021
 	13.01.2022
+=======
+>>>>>>> 090dfe5dceb05df93c0bdb4ea5e6ffed6c0cce80
 }
 
 Pawel Kumorowski
@@ -174,7 +194,6 @@ Pawel Kumorowski
 	04.11.2021
 	18.11.2021
 	25.11.2021
-	16.12.2021
 }
 
 Segeda Oleksandr
@@ -188,8 +207,11 @@ Segeda Oleksandr
 	25.11.2021
 	02.12.2021
 	09.12.2021
+<<<<<<< HEAD
 	16.12.2021
 	13.01.2022
+=======
+>>>>>>> 090dfe5dceb05df93c0bdb4ea5e6ffed6c0cce80
 }
 
 Weronika Demich
