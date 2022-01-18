@@ -1,14 +1,30 @@
 package amazons;
 
+<<<<<<< HEAD
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
+=======
+import javafx.animation.AnimationTimer;
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+>>>>>>> 2d84568a1dae87b6281304e7bcd1c53d449f69f3
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Group;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+<<<<<<< HEAD
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+=======
+import javafx.scene.control.ListView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+>>>>>>> 2d84568a1dae87b6281304e7bcd1c53d449f69f3
 
 public class AmazonsGame {
 
@@ -41,8 +57,42 @@ public class AmazonsGame {
     boolean move = false;
 
     GameLogic game = new GameLogic();
+<<<<<<< HEAD
+=======
+
+    @FXML
+    ListView<String> list;
+    @FXML
+    Rectangle turnColor;
+
+    public Label cord;
+    public Label whatDo;
+    public Label currentTime;
+
+>>>>>>> 2d84568a1dae87b6281304e7bcd1c53d449f69f3
     @FXML
     public void initialize() {
+        turn.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> ov, String t, String t1) {
+               if(game.getTurnsInt() % 2 == 1) {
+                   turnColor.setFill(Color.WHITE);
+               }
+               else {
+                   turnColor.setFill(Color.BLACK);
+               }
+            }
+        });
+
+        long startTime = System.currentTimeMillis();
+
+        new AnimationTimer() {
+            @Override
+            public void handle(long now) {
+                long elapsedMillis = System.currentTimeMillis() - startTime ;
+                currentTime.setText(Long.toString(elapsedMillis / 1000));
+            }
+        }.start();
         Board.getChildren().addAll(tileGroup);
 
         for (int y = 0; y < HEIGHT; y++) {
@@ -165,6 +215,7 @@ public class AmazonsGame {
         System.out.println("costam");
         shot = true;
 
+<<<<<<< HEAD
     }
 
     public void movePiece() {
@@ -184,6 +235,37 @@ public class AmazonsGame {
 
         }
     }
+=======
+    }
+
+    public void movePiece() {
+
+        Piece piece = b[oldX][oldY].getPiece();
+        if (player != piece.type) return;
+
+        if (move == true) return;
+        if (b[oldX][oldY].moveIfLegal(b,newX,newY) == false) { // checking movement restrictions
+
+            return;
+        }
+        else {                                                 // if ok move piece
+            //list.getItems().add(0,"[" + oldX + "][" + oldY + "] movedTo [" + newX + "][" + newY + "]");
+            list.getItems().add(0,(char)(oldX + 97) + "" + oldY + "" + (char)(newX + 97) + "" + newY);
+            whatDo.setText("Shoot");
+            move = true;
+            shot = false;
+
+        }
+    }
+    public void getHover(MouseEvent e) {
+        int x = (int) e.getSceneX();
+        int y = (int) e.getSceneY();
+        x/=50;
+        y/=50;
+        cord.setText((char)(x + 97) + "" + y);
+    }
+
+>>>>>>> 2d84568a1dae87b6281304e7bcd1c53d449f69f3
     public void shoot() {
 
         //if (shot == true) return;
@@ -207,6 +289,13 @@ public class AmazonsGame {
 
         else {                                                  // if ok shoot
             //shot = true;
+<<<<<<< HEAD
+=======
+            //list.getItems().add(0,"[" + oldX + "][" + oldY + "] shotAt [" + newX + "][" + newY + "]");
+            String temp = list.getItems().get(0) + " -> " + (char)(newX + 97) + "" + newY;;
+            list.getItems().set(0, temp);
+            whatDo.setText("Move");
+>>>>>>> 2d84568a1dae87b6281304e7bcd1c53d449f69f3
             shot = true;
             move = false;
            // System.out.println("Strzelił");

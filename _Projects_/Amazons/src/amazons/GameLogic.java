@@ -32,6 +32,13 @@ public class GameLogic {
         return Integer.toString(turns);
     }
 
+<<<<<<< HEAD
+=======
+    public int getTurnsInt() {
+        return turns;
+    }
+
+>>>>>>> 2d84568a1dae87b6281304e7bcd1c53d449f69f3
     public void setTurns(int turns) {
         this.turns = turns;
     }
