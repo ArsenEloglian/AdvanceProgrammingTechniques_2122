@@ -37,7 +37,7 @@
         app:layout_constraintVertical_bias="0.499" />
 
     <ImageButton
-        android:id="@+id/buttonA1"
+        android:id="@+id/A1"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_below="@id/gameActivity_turnTextView"
@@ -51,7 +51,7 @@
         android:onClick="click"/>
 
     <ImageButton
-        android:id="@+id/buttonB1"
+        android:id="@+id/B1"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_below="@id/gameActivity_turnTextView"
@@ -65,7 +65,7 @@
         android:onClick="click"/>
 
     <ImageButton
-        android:id="@+id/buttonC1"
+        android:id="@+id/C1"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_below="@id/gameActivity_turnTextView"
@@ -78,7 +78,7 @@
         android:onClick="click"/>
 
     <ImageButton
-        android:id="@+id/buttonD1"
+        android:id="@+id/D1"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_below="@id/gameActivity_turnTextView"
@@ -92,7 +92,7 @@
         android:onClick="click"/>
 
     <ImageButton
-        android:id="@+id/buttonE1"
+        android:id="@+id/E1"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_below="@id/gameActivity_turnTextView"
@@ -106,7 +106,7 @@
         android:onClick="click"/>
 
     <ImageButton
-        android:id="@+id/buttonA2"
+        android:id="@+id/A2"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_below="@id/gameActivity_turnTextView"
@@ -121,7 +121,7 @@
         android:onClick="click"/>
 
     <ImageButton
-        android:id="@+id/buttonB2"
+        android:id="@+id/B2"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_below="@id/gameActivity_turnTextView"
@@ -135,7 +135,7 @@
         android:onClick="click"/>
 
     <ImageButton
-        android:id="@+id/buttonC2"
+        android:id="@+id/C2"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_below="@id/gameActivity_turnTextView"
@@ -148,7 +148,7 @@
         android:onClick="click"/>
 
     <ImageButton
-        android:id="@+id/buttonD2"
+        android:id="@+id/D2"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_below="@id/gameActivity_turnTextView"
@@ -162,7 +162,7 @@
         android:onClick="click"/>
 
     <ImageButton
-        android:id="@+id/buttonE2"
+        android:id="@+id/E2"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_below="@id/gameActivity_turnTextView"
@@ -176,7 +176,7 @@
         android:onClick="click"/>
 
     <ImageButton
-        android:id="@+id/buttonA3"
+        android:id="@+id/A3"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_below="@id/gameActivity_turnTextView"
@@ -190,7 +190,7 @@
         android:onClick="click"/>
 
     <ImageButton
-        android:id="@+id/buttonB3"
+        android:id="@+id/B3"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_below="@id/gameActivity_turnTextView"
@@ -204,7 +204,7 @@
         android:onClick="click"/>
 
     <ImageButton
-        android:id="@+id/buttonC3"
+        android:id="@+id/C3"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_below="@id/gameActivity_turnTextView"
@@ -217,7 +217,7 @@
         android:onClick="click"/>
 
     <ImageButton
-        android:id="@+id/buttonD3"
+        android:id="@+id/D3"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_below="@id/gameActivity_turnTextView"
@@ -231,7 +231,7 @@
         android:onClick="click"/>
 
     <ImageButton
-        android:id="@+id/buttonE3"
+        android:id="@+id/E3"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_below="@id/gameActivity_turnTextView"
@@ -245,7 +245,7 @@
         android:onClick="click"/>
 
     <ImageButton
-        android:id="@+id/buttonA4"
+        android:id="@+id/A4"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_below="@id/gameActivity_turnTextView"
@@ -259,7 +259,7 @@
         android:onClick="click"/>
 
     <ImageButton
-        android:id="@+id/buttonB4"
+        android:id="@+id/B4"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_below="@id/gameActivity_turnTextView"
@@ -273,7 +273,7 @@
         android:onClick="click"/>
 
     <ImageButton
-        android:id="@+id/buttonC4"
+        android:id="@+id/C4"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_below="@id/gameActivity_turnTextView"
@@ -286,7 +286,7 @@
         android:onClick="click"/>
 
     <ImageButton
-        android:id="@+id/buttonD4"
+        android:id="@+id/D4"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_below="@id/gameActivity_turnTextView"
@@ -300,7 +300,7 @@
         android:onClick="click"/>
 
     <ImageButton
-        android:id="@+id/buttonE4"
+        android:id="@+id/E4"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_below="@id/gameActivity_turnTextView"
@@ -314,7 +314,7 @@
         android:onClick="click"/>
 
     <ImageButton
-        android:id="@+id/buttonA5"
+        android:id="@+id/A5"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_below="@id/gameActivity_turnTextView"
@@ -328,7 +328,7 @@
         android:onClick="click"/>
 
     <ImageButton
-        android:id="@+id/buttonB5"
+        android:id="@+id/B5"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_below="@id/gameActivity_turnTextView"
@@ -342,7 +342,7 @@
         android:onClick="click"/>
 
     <ImageButton
-        android:id="@+id/buttonC5"
+        android:id="@+id/C5"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_below="@id/gameActivity_turnTextView"
@@ -355,7 +355,7 @@
         android:onClick="click"/>
 
     <ImageButton
-        android:id="@+id/buttonD5"
+        android:id="@+id/D5"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_below="@id/gameActivity_turnTextView"
@@ -369,7 +369,7 @@
         android:onClick="click"/>
 
     <ImageButton
-        android:id="@+id/buttonE5"
+        android:id="@+id/E5"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_below="@id/gameActivity_turnTextView"
