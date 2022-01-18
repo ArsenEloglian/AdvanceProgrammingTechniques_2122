@@ -21,6 +21,7 @@ public class Tile extends Rectangle {
         setFill(color ? Color.valueOf("#ffce9e") : Color.valueOf("#d18847"));
         this.board = board;
         setOnMousePressed(this::setOnMousePressed);
+
     }
 
     public boolean hasQueen() {
@@ -50,6 +51,10 @@ public class Tile extends Rectangle {
     }
     public void removeLegalMoveFromTile() {
         board.clearCirclesGroup();
+    }
+    public void clearTile() {
+        setQueen(null);
+        setArrow(null);
     }
     private void setOnMousePressed(MouseEvent e) {
         if(this.getBoard().getActiveTile() == null) {

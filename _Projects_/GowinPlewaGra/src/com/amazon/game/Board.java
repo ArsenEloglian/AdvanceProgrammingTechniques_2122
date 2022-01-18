@@ -69,11 +69,59 @@ public class Board{
     }
     public void setCurrentTurn(Color currentTurn) {
         this.currentTurn = currentTurn;
+        currentGameState();
     }
     public Tile getActiveTile() {
         return ActiveTile;
     }
     public void setActiveTile(Tile tile) {
         ActiveTile = tile;
+    }
+    private void currentGameState() {
+        int iloscMozliwychRuchow = 0;
+        for(Queen queen : blackQueens){
+            if(queen.numberOfPossibleMoves() != 0)
+                iloscMozliwychRuchow += queen.numberOfPossibleMoves();
+        }
+        if(iloscMozliwychRuchow == 0) {
+            AmazonApp.displayStatusText("Wygrały białe !");
+            currentTurn=null;
+            return;
+        }
+        iloscMozliwychRuchow = 0;
+        for(Queen queen : whiteQueens){
+            if(queen.numberOfPossibleMoves() != 0)
+                iloscMozliwychRuchow += queen.numberOfPossibleMoves();
+        }
+        if(iloscMozliwychRuchow == 0) {
+            AmazonApp.displayStatusText("Wygrały czarne !");
+            currentTurn=null;
+            return;
+        }
+    }
+    public void clearBoard() {
+        arrowsGroup.getChildren().clear();
+        queensGroup.getChildren().clear();
+        currentTurn = Color.WHITE;
+        blackQueens.clear();
+        whiteQueens.clear();
+        for(int y = 0; y < AmazonApp.HEIGHT; y++) {
+            for(int x = 0; x < AmazonApp.WIDTH; x++) {
+                if((y == 0 && (x == 3 || x == 6)) || (y == 3 && (x == 0 || x == 9))) {
+                    Queen queen = new Queen(Color.WHITE, x, y,board[x][y]);
+                    board[x][y].setQueen(queen);
+                    whiteQueens.add(queen);
+                    queensGroup.getChildren().add(board[x][y].getQueen());
+                }
+                else if((y == 6 && (x == 0 || x == 9)) || (y == 9 && (x == 3 || x == 6))) {
+                    Queen queen = new Queen(Color.BLACK, x, y,board[x][y]);
+                    board[x][y].setQueen(queen);
+                    blackQueens.add(queen);
+                    queensGroup.getChildren().add(board[x][y].getQueen());
+                } else {
+                    board[x][y].clearTile();
+                }
+            }
+        }
     }
 }
