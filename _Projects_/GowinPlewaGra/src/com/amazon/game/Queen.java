@@ -60,6 +60,7 @@ public class Queen extends ImageView {
             }
         }
     }
+
     private void setOnMousePressed(MouseEvent e) {
         isDragged = true;
         if(this.canMove() && this.tile.getBoard().getActiveTile() == null) {
@@ -103,7 +104,10 @@ public class Queen extends ImageView {
     }
     public boolean canMove() {
         return this.tile.getBoard().getCurrentTurn() == this.color;
-    }    
+    }
+    public int numberOfPossibleMoves() {
+        return getLegalMoves().size();
+    }
     public List<Tile> getLegalMoves() {
         List<Tile> legalMoves = new ArrayList<>();
         for(int i = 1; x + i <= 9; i++)
