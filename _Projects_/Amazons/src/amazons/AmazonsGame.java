@@ -1,5 +1,6 @@
 package amazons;
 
+import javafx.application.Platform;
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
 import javafx.animation.AnimationTimer;
@@ -7,18 +8,29 @@ import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
-import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
+import javafx.util.Pair;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 public class AmazonsGame {
 
@@ -61,29 +73,42 @@ public class AmazonsGame {
     public Label whatDo;
     public Label currentTime;
 
+    boolean whiteCanMove = true;
+    boolean blackCanMove = true;
+    AnimationTimer animationTimer;
+
+    public Button exitButton;
+    public Button restartButton;
+    ButtonType restart = new ButtonType("Play again");
+    ButtonType exit = new ButtonType("Exit to menu");
+    Dialog<ButtonType> dialog = new Dialog<>();
+
     @FXML
     public void initialize() {
         turn.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> ov, String t, String t1) {
-               if(game.getTurnsInt() % 2 == 1) {
-                   turnColor.setFill(Color.WHITE);
-               }
-               else {
-                   turnColor.setFill(Color.BLACK);
-               }
+                if(game.getTurnsInt() % 2 == 1) {
+                    turnColor.setFill(Color.WHITE);
+                }
+                else {
+                    turnColor.setFill(Color.BLACK);
+                }
             }
         });
+        dialog.setTitle("Game Over...");
+        dialog.getDialogPane().getButtonTypes().addAll(restart, exit);
 
         long startTime = System.currentTimeMillis();
 
-        new AnimationTimer() {
+        animationTimer = new AnimationTimer() {
             @Override
             public void handle(long now) {
-                long elapsedMillis = System.currentTimeMillis() - startTime ;
+                long elapsedMillis = System.currentTimeMillis() - startTime;
                 currentTime.setText(Long.toString(elapsedMillis / 1000));
             }
-        }.start();
+        };
+        animationTimer.start();
         Board.getChildren().addAll(tileGroup);
 
         for (int y = 0; y < HEIGHT; y++) {
@@ -243,7 +268,7 @@ public class AmazonsGame {
             whatDo.setText("Shoot");
             move = true;
             shot = false;
-
+            checkMoves(); //temporary
         }
     }
     public void shoot() {
@@ -276,6 +301,7 @@ public class AmazonsGame {
             shot = true;
             move = false;
            // System.out.println("Strzelił");
+            checkMoves(); //temporary
         }
     }
     public void setActivePlayer(int active) {
@@ -289,6 +315,109 @@ public class AmazonsGame {
         x/=50;
         y/=50;
         cord.setText((char)(x + 97) + "" + y);
+    }
+    public void backToMenu(ActionEvent actionEvent) {
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Amazons_menu.fxml"));
+            Parent root1 = (Parent) loader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Game of the Amazons");
+            Scene scene = new Scene(root1);
+            stage.setScene(scene);
+            stage.show();
+
+            final Node source = (Node) actionEvent.getSource();
+            final Stage stage1 = (Stage) source.getScene().getWindow();
+            stage1.close();
+
+        }
+        catch (Exception e) {
+            System.out.println("Can't open new window");
+        }
+
+    }
+    public void restart(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Amazons_game.fxml"));
+            Parent root1 = (Parent) loader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Game of the Amazons");
+            Scene scene = new Scene(root1);
+            stage.setScene(scene);
+            stage.show();
+
+            final Node source = (Node) actionEvent.getSource();
+            final Stage stage1 = (Stage) source.getScene().getWindow();
+            stage1.close();
+        }
+        catch (Exception e) {
+            //System.out.println("Can't open new window");
+            e.printStackTrace();
+        }
+    }
+
+    public void checkMoves() {
+        List<Pair<Integer, Integer>> whitePieces = new ArrayList<>();
+        List<Pair<Integer, Integer>> blackPieces = new ArrayList<>();
+        for(int y = 0; y < HEIGHT; y++) {
+            for(int x = 0; x < WIDTH; x++) {
+                if(b[x][y].getPiece() == null) {
+                    continue;
+                }
+                else if(b[x][y].getPiece().type == 0) {
+                    whitePieces.add(new Pair<>(x, y));
+                }
+                else if(b[x][y].getPiece().type == 1){
+                    blackPieces.add(new Pair<>(x, y));
+                }
+            }
+        }
+
+        //System.out.println("White can move " + canPlayerMove(whitePieces));
+        //System.out.println("Black can move " + canPlayerMove(blackPieces) + "\n");
+
+        if(!canPlayerMove(whitePieces)) {
+            animationTimer.stop();
+            dialog.setHeaderText("Black won!");
+            dialog.setGraphic(new ImageView(new Image("file:res/pieceB.png")));
+            Optional<ButtonType> result = dialog.showAndWait();
+            if(result.isPresent() && result.get() == restart) {
+                restartButton.fireEvent(new ActionEvent());
+            }
+            else {
+                exitButton.fireEvent(new ActionEvent());
+            }
+        }
+        if(!canPlayerMove(blackPieces)) {
+            animationTimer.stop();
+            dialog.setHeaderText("White won!");
+            dialog.setGraphic(new ImageView(new Image("file:res/pieceW.png")));
+            Optional<ButtonType> result = dialog.showAndWait();
+            if(result.isPresent() && result.get() == restart) {
+                restartButton.fireEvent(new ActionEvent());
+            }
+            else {
+                exitButton.fireEvent(new ActionEvent());
+            }
+        }
+    }
+
+    boolean canPlayerMove(List<Pair<Integer, Integer>> pieceList) {
+        boolean canMove = false;
+        for(int k = 0; k < 4; k++) {
+            int checkX = pieceList.get(k).getKey();
+            int checkY = pieceList.get(k).getValue();
+
+            for(int i = checkX-1; i <= checkX+1; i++) {
+                for(int j = checkY-1; j <= checkY+1; j++) {
+                    if((i != checkX || j != checkY) && i >= 0 && j >= 0 && i < WIDTH && j < HEIGHT) { //ignore the center tile and out of bounds elements
+                        if(b[i][j].isEmpty()) canMove = true;
+                    }
+                }
+            }
+        }
+        return canMove;
     }
 
 //    public boolean gameLoop() {

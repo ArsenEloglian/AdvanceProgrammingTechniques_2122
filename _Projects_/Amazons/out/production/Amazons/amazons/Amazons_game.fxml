@@ -16,6 +16,8 @@
             <Label fx:id="whatDo" layoutX="119.0" layoutY="48.0" text="Move" />
             <Label fx:id="currentTime" layoutX="120.0" layoutY="14.0" text="Label" />
             <ListView fx:id="list" focusTraversable="false" layoutX="5.0" layoutY="100.0" prefHeight="200.0" prefWidth="190.0" stylesheets="@style.css" />
+             <Button fx:id="exitButton" focusTraversable="false" layoutX="66.0" layoutY="375.0" mnemonicParsing="false" onAction="#backToMenu" text="Exit" />
+            <Button fx:id="restartButton" layoutX="122.0" layoutY="375.0" mnemonicParsing="false" onAction="#restart" text="Restart" />
 
          </children></Pane>
       <Label fx:id="cord" layoutX="658.0" layoutY="469.0" text="Label" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" />
