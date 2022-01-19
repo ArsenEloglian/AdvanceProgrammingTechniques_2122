@@ -27,118 +27,155 @@ namespace Amazons
             button35.BackgroundImage = Amazons.Properties.Resources._5;
 
         }
-        public void Off(int position)
+        public Button Off(int position,int mode)
         {
             switch (position)
             {
                 case 1:
+                    if(mode ==0)
                     button1.BackgroundImage = null;
-                    break;
+                    return button1;
                 case 2:
+                    if (mode == 0)
                     button2.BackgroundImage = null;
-                    break;
+                    return button2;
                 case 3:
+                    if (mode == 0)
                     button3.BackgroundImage = null;
-                    break;
+                    return button3;
                 case 4:
+                    if (mode == 0)
                     button4.BackgroundImage = null;
-                    break;
+                    return button4;
                 case 5:
+                    if (mode == 0)
                     button5.BackgroundImage = null;
-                    break;
-                case 6:
+                    return button5;
+                case 6: 
+                    if (mode == 0)
                     button6.BackgroundImage = null;
-                    break;
+                    return button6;
                 case 7:
+                    if (mode == 0)
                     button7.BackgroundImage = null;
-                    break;
+                    return button7;
                 case 8:
+                    if (mode == 0)
                     button8.BackgroundImage = null;
-                    break;
+                    return button8;
                 case 9:
                     button9.BackgroundImage = null;
-                    break;
+                    return button9;
                 case 10:
+                    if (mode == 0)
                     button10.BackgroundImage = null;
-                    break;
+                    return button10;
                 case 11:
+                    if (mode == 0)
                     button11.BackgroundImage = null;
-                    break;
+                    return button11;
                 case 12:
+                    if (mode == 0)
                     button12.BackgroundImage = null;
-                    break;
+                    return button12;
                 case 13:
+                    if (mode == 0)
                     button13.BackgroundImage = null;
-                    break;
+                    return button13;
                 case 14:
+                    if (mode == 0)
                     button14.BackgroundImage = null;
-                    break;
+                    return button14;
                 case 15:
+                    if (mode == 0)
                     button15.BackgroundImage = null;
-                    break;
+                    return button15;
                 case 16:
+                    if (mode == 0)
                     button16.BackgroundImage = null;
-                    break;
+                    return button16;
                 case 17:
+                    if (mode == 0)
                     button17.BackgroundImage = null;
-                    break;
+                    return button17;
                 case 18:
+                    if (mode == 0)
                     button18.BackgroundImage = null;
-                    break;
+                    return button18;
                 case 19:
+                    if (mode == 0)
                     button19.BackgroundImage = null;
-                    break;
+                    return button19;
                 case 20:
+                    if (mode == 0)
                     button20.BackgroundImage = null;
-                    break;
+                    return button20;
                 case 21:
+                    if (mode == 0)
                     button21.BackgroundImage = null;
-                    break;
+                    return button21;
                 case 22:
+                    if (mode == 0)
                     button22.BackgroundImage = null;
-                    break;
+                    return button22;
                 case 23:
+                    if (mode == 0)
                     button23.BackgroundImage = null;
-                    break;
+                    return button23;
                 case 24:
+                    if (mode == 0)
                     button24.BackgroundImage = null;
-                    break;
+                    return button24;
                 case 25:
+                    if (mode == 0)
                     button25.BackgroundImage = null;
-                    break;
+                    return button25;
                 case 26:
+                    if (mode == 0)
                     button26.BackgroundImage = null;
-                    break;
+                    return button26;
                 case 27:
+                    if (mode == 0)
                     button27.BackgroundImage = null;
-                    break;
+                    return button27;
                 case 28:
+                    if (mode == 0)
                     button28.BackgroundImage = null;
-                    break;
+                    return button28;
                 case 29:
+                    if (mode == 0)
                     button29.BackgroundImage = null;
-                    break;
+                    return button29;
                 case 30:
+                    if (mode == 0)
                     button30.BackgroundImage = null;
-                    break;
+                    return button30;
                 case 31:
+                    if (mode == 0)
                     button31.BackgroundImage = null;
-                    break;
+                    return button31;
                 case 32:
+                    if (mode == 0)
                     button32.BackgroundImage = null;
-                    break;
+                    return button32;
                 case 33:
+                    if (mode == 0)
                     button33.BackgroundImage = null;
-                    break;
+                    return button33;
                 case 34:
+                    if (mode == 0)
                     button34.BackgroundImage = null;
-                    break;
+                    return button34;
                 case 35:
+                    if (mode == 0)
                     button35.BackgroundImage = null;
-                    break;
+                    return button35;
                 case 36:
+                    if (mode == 0)
                     button36.BackgroundImage = null;
-                    break;
+                    return button36;
+                default:
+                    return button1;
             }
         }
         public bool Qeens(int position)
@@ -198,8 +235,6 @@ namespace Amazons
                     break;
                 }
             }
-            if (result)
-                return result;
             for (int i = check.position; i <= 36; i+=5)
             {
                 if (i != check.position)
@@ -215,8 +250,6 @@ namespace Amazons
                 if (i % 6 == 1)
                     break;
             }
-            if (result)
-                return result;
             for (int i = check.position; i <= 36; i += 6)
             {
                 if (i != check.position)
@@ -230,8 +263,6 @@ namespace Amazons
                     break;
                 }
             }
-            if (result)
-                return result;
             for (int i = check.position; i > 0; i -= 6)
             {
                 if (i != check.position)
@@ -245,8 +276,6 @@ namespace Amazons
                     break;
                 }
             }
-            if (result)
-                return result;
             for (int i = check.position; i > 0; i -= 5)
             {
                 if (i != check.position)
@@ -262,8 +291,6 @@ namespace Amazons
                 if (i % 6 == 0)
                     break;
             }
-            if (result)
-                return result;
             for (int i = check.position; i > 0; i -= 7)
             {
                 if (i != check.position)
@@ -279,8 +306,6 @@ namespace Amazons
                     if (i % 6 == 1)
                         break;
             }
-            if (result)
-                return result;
             for (int i = check.position; i <= 36; i += 7)
             {
                 if (i != check.position)
@@ -304,10 +329,16 @@ namespace Amazons
             {
                 if (Posible(position))
                 {
-                    if(check.queue == 2)
-                     button.BackgroundImage = Amazons.Properties.Resources._2;
+                    if (check.queue == 2)
+                    {
+                        button.BackgroundImage = Amazons.Properties.Resources._2;
+                        textBox1.Text = "Red Player Turn";
+                    }
                     if (check.queue == 1)
+                    {
                         button.BackgroundImage = Amazons.Properties.Resources._3;
+                        textBox1.Text = "Blue Player Turn";
+                    }
                     for (int i = 0; i < check.Baned.Length; i++)
                     {
                         if (0 == check.Baned[i])
@@ -319,7 +350,718 @@ namespace Amazons
                     }
                     check.ban = false;
                 }
+                else
+                {
+                    textBox1.Text = "Error, invalid move!";
+                }
             }
+        }
+        public int Cost(int ban)
+        {
+            int price = 0;
+            int max = 0;
+            int move = 0;
+            int Queen = 0;
+            if (check.queue == 1)
+            {
+                for (int i = 0; i < 4; i++)
+                {
+                    if(ban==0)
+                        check.position = check.Blue[i];
+                    if(ban!=0)
+                         {check.position = ban; i=3;}
+                    for (int j = 1; j <= 36; j++)
+                    {
+                        if (Posible(j))
+                        {
+                            for (int q = 0; q < check.Red.Length; q++)
+                            {
+                                if (j == 1)
+                                {
+                                    if (j + 1 == check.Red[q] && j + 1 != check.position)
+                                        price++;
+                                    if (j + 6 == check.Red[q] && j + 6 != check.position)
+                                        price++;
+                                    if (j + 7 == check.Red[q] && j + 7 != check.position)
+                                        price++;
+                                }
+                                if (j == 6)
+                                {
+                                    if (j - 1 == check.Red[q] && j - 1 != check.position)
+                                        price++;
+                                    if (j + 6 == check.Red[q] && j + 6 != check.position)
+                                        price++;
+                                    if (j + 5 == check.Red[q] && j + 5 != check.position)
+                                        price++;
+                                }
+                                if (j == 31)
+                                {
+                                    if (j + 1 == check.Red[q] && j + 1 != check.position)
+                                        price++;
+                                    if (j - 6 == check.Red[q] && j - 6 != check.position)
+                                        price++;
+                                    if (j - 5 == check.Red[q] && j - 5 != check.position)
+                                        price++;
+                                }
+                                if (j == 36)
+                                {
+                                    if (j - 1 == check.Red[q] && j - 1 != check.position)
+                                        price++;
+                                    if (j - 6 == check.Red[q] && j - 6 != check.position)
+                                        price++;
+                                    if (j - 7 == check.Red[q] && j - 7 != check.position)
+                                        price++;
+                                }
+                                if (j >= 2 && j <= 5)
+                                {
+                                    if (j - 1 == check.Red[q] && j - 1 != check.position)
+                                        price++;
+                                    if (j + 1 == check.Red[q] && j + 1 != check.position)
+                                        price++;
+                                    if (j + 5 == check.Red[q] && j + 5 != check.position)
+                                        price++;
+                                    if (j + 7 == check.Red[q] && j + 7 != check.position)
+                                        price++;
+                                    if (j + 6 == check.Red[q] && j + 6 != check.position)
+                                        price++;
+                                }
+                                if (j >= 32 && j <= 35)
+                                {
+                                    if (j - 1 == check.Red[q] && j - 1 != check.position)
+                                        price++;
+                                    if (j + 1 == check.Red[q] && j + 1 != check.position)
+                                        price++;
+                                    if (j - 5 == check.Red[q] && j - 5 != check.position)
+                                        price++;
+                                    if (j - 7 == check.Red[q] && j - 7 != check.position)
+                                        price++;
+                                    if (j - 6 == check.Red[q] && j - 6 != check.position)
+                                        price++;
+                                }
+                                if (j % 6 == 0 && j != 36 && j != 6)
+                                {
+                                    if (j - 6 == check.Red[q] && j - 6 != check.position)
+                                        price++;
+                                    if (j + 6 == check.Red[q] && j + 6 != check.position)
+                                        price++;
+                                    if (j - 1 == check.Red[q] && j - 1 != check.position)
+                                        price++;
+                                    if (j - 7 == check.Red[q] && j - 7 != check.position)
+                                        price++;
+                                    if (j + 5 == check.Red[q] && j + 5 != check.position)
+                                        price++;
+                                }
+                                if (j % 6 == 1 && j != 31 && j != 1)
+                                {
+                                    if (j - 6 == check.Red[q] && j - 6 != check.position)
+                                        price++;
+                                    if (j + 6 == check.Red[q] && j + 6 != check.position)
+                                        price++;
+                                    if (j + 1 == check.Red[q] && j + 1 != check.position)
+                                        price++;
+                                    if (j + 7 == check.Red[q] && j + 7 != check.position)
+                                        price++;
+                                    if (j - 5 == check.Red[q] && j - 5 != check.position)
+                                        price++;
+                                }
+                                if ((j >= 8 && j <= 11) || (j >= 14 && j <= 17) || (j >= 20 && j <= 23) || (j >= 26 && j <= 29))
+                                {
+                                    if (j - 6 == check.Red[q] && j - 6 != check.position)
+                                        price++;
+                                    if (j + 6 == check.Red[q] && j + 6 != check.position)
+                                        price++;
+                                    if (j + 1 == check.Red[q] && j + 1 != check.position)
+                                        price++;
+                                    if (j + 7 == check.Red[q] && j + 7 != check.position)
+                                        price++;
+                                    if (j - 5 == check.Red[q] && j - 5 != check.position)
+                                        price++;
+                                    if (j - 1 == check.Red[q] && j - 1 != check.position)
+                                        price++;
+                                    if (j - 7 == check.Red[q] && j - 7 != check.position)
+                                        price++;
+                                    if (j + 5 == check.Red[q] && j + 5 != check.position)
+                                        price++;
+                                }
+                            }
+                            for (int q = 0; q < check.Baned.Length; q++)
+                            {
+                                if (j == 1)
+                                {
+                                    if (j + 1 == check.Baned[q] && j + 1 != check.position)
+                                        price++;
+                                    if (j + 6 == check.Baned[q] && j + 6 != check.position)
+                                        price++;
+                                    if (j + 7 == check.Baned[q] && j + 7 != check.position)
+                                        price++;
+                                }
+                                if (j == 6)
+                                {
+                                    if (j - 1 == check.Baned[q] && j - 1 != check.position)
+                                        price++;
+                                    if (j + 6 == check.Baned[q] && j + 6 != check.position)
+                                        price++;
+                                    if (j + 5 == check.Baned[q] && j + 5 != check.position)
+                                        price++;
+                                }
+                                if (j == 31)
+                                {
+                                    if (j + 1 == check.Baned[q] && j + 1 != check.position)
+                                        price++;
+                                    if (j - 6 == check.Baned[q] && j - 6 != check.position)
+                                        price++;
+                                    if (j - 5 == check.Baned[q] && j - 5 != check.position)
+                                        price++;
+                                }
+                                if (j == 36)
+                                {
+                                    if (j - 1 == check.Baned[q] && j - 1 != check.position)
+                                        price++;
+                                    if (j - 6 == check.Baned[q] && j - 6 != check.position)
+                                        price++;
+                                    if (j - 7 == check.Baned[q] && j - 7 != check.position)
+                                        price++;
+                                }
+                                if (j >= 2 && j <= 5)
+                                {
+                                    if (j - 1 == check.Baned[q] && j - 1 != check.position)
+                                        price++;
+                                    if (j + 1 == check.Baned[q] && j + 1 != check.position)
+                                        price++;
+                                    if (j + 5 == check.Baned[q] && j + 5 != check.position)
+                                        price++;
+                                    if (j + 7 == check.Baned[q] && j + 7 != check.position)
+                                        price++;
+                                    if (j + 6 == check.Baned[q] && j + 6 != check.position)
+                                        price++;
+                                }
+                                if (j >= 32 && j <= 35)
+                                {
+                                    if (j - 1 == check.Baned[q] && j - 1 != check.position)
+                                        price++;
+                                    if (j + 1 == check.Baned[q] && j + 1 != check.position)
+                                        price++;
+                                    if (j - 5 == check.Baned[q] && j - 5 != check.position)
+                                        price++;
+                                    if (j - 7 == check.Baned[q] && j - 7 != check.position)
+                                        price++;
+                                    if (j - 6 == check.Baned[q] && j - 6 != check.position)
+                                        price++;
+                                }
+                                if (j % 6 == 0 && j != 36 && j != 6)
+                                {
+                                    if (j - 6 == check.Baned[q] && j - 6 != check.position)
+                                        price++;
+                                    if (j + 6 == check.Baned[q] && j + 6 != check.position)
+                                        price++;
+                                    if (j - 1 == check.Baned[q] && j - 1 != check.position)
+                                        price++;
+                                    if (j - 7 == check.Baned[q] && j - 7 != check.position)
+                                        price++;
+                                    if (j + 5 == check.Baned[q] && j + 5 != check.position)
+                                        price++;
+                                }
+                                if (j % 6 == 1 && j != 31 && j != 1)
+                                {
+                                    if (j - 6 == check.Baned[q] && j - 6 != check.position)
+                                        price++;
+                                    if (j + 6 == check.Baned[q] && j + 6 != check.position)
+                                        price++;
+                                    if (j + 1 == check.Baned[q] && j + 1 != check.position)
+                                        price++;
+                                    if (j + 7 == check.Baned[q] && j + 7 != check.position)
+                                        price++;
+                                    if (j - 5 == check.Baned[q] && j - 5 != check.position)
+                                        price++;
+                                }
+                                if ((j >= 8 && j <= 11) || (j >= 14 && j <= 17) || (j >= 20 && j <= 23) || (j >= 26 && j <= 29))
+                                {
+                                    if (j - 6 == check.Baned[q] && j - 6 != check.position)
+                                        price++;
+                                    if (j + 6 == check.Baned[q] && j + 6 != check.position)
+                                        price++;
+                                    if (j + 1 == check.Baned[q] && j + 1 != check.position)
+                                        price++;
+                                    if (j + 7 == check.Baned[q] && j + 7 != check.position)
+                                        price++;
+                                    if (j - 5 == check.Baned[q] && j - 5 != check.position)
+                                        price++;
+                                    if (j - 1 == check.Baned[q] && j - 1 != check.position)
+                                        price++;
+                                    if (j - 7 == check.Baned[q] && j - 7 != check.position)
+                                        price++;
+                                    if (j + 5 == check.Baned[q] && j + 5 != check.position)
+                                        price++;
+                                }
+                            }
+                            for (int q = 0; q < check.Blue.Length; q++)
+                            {
+                                if (j == 1)
+                                {
+                                    if (j + 1 == check.Blue[q] && j + 1 != check.position)
+                                        price--;
+                                    if (j + 6 == check.Blue[q] && j + 6 != check.position)
+                                        price--;
+                                    if (j + 7 == check.Blue[q] && j + 7 != check.position)
+                                        price--;
+                                }
+                                if (j == 6)
+                                {
+                                    if (j - 1 == check.Blue[q] && j - 1 != check.position)
+                                        price--;
+                                    if (j + 6 == check.Blue[q] && j + 6 != check.position)
+                                        price--;
+                                    if (j + 5 == check.Blue[q] && j + 5 != check.position)
+                                        price--;
+                                }
+                                if (j == 31)
+                                {
+                                    if (j + 1 == check.Blue[q] && j + 1 != check.position)
+                                        price--;
+                                    if (j - 6 == check.Blue[q] && j - 6 != check.position)
+                                        price--;
+                                    if (j - 5 == check.Blue[q] && j - 5 != check.position)
+                                        price--;
+                                }
+                                if (j == 36)
+                                {
+                                    if (j - 1 == check.Blue[q] && j - 1 != check.position)
+                                        price--;
+                                    if (j - 6 == check.Blue[q] && j - 6 != check.position)
+                                        price--;
+                                    if (j - 7 == check.Blue[q] && j - 7 != check.position)
+                                        price--;
+                                }
+                                if (j >= 2 && j <= 5)
+                                {
+                                    if (j - 1 == check.Blue[q] && j - 1 != check.position)
+                                        price--;
+                                    if (j + 1 == check.Blue[q] && j + 1 != check.position)
+                                        price--;
+                                    if (j + 5 == check.Blue[q] && j + 5 != check.position)
+                                        price--;
+                                    if (j + 7 == check.Blue[q] && j + 7 != check.position)
+                                        price--;
+                                    if (j + 6 == check.Blue[q] && j + 6 != check.position)
+                                        price--;
+                                }
+                                if (j >= 32 && j <= 35)
+                                {
+                                    if (j - 1 == check.Blue[q] && j - 1 != check.position)
+                                        price--;
+                                    if (j + 1 == check.Blue[q] && j + 1 != check.position)
+                                        price--;
+                                    if (j - 5 == check.Blue[q] && j - 5 != check.position)
+                                        price--;
+                                    if (j - 7 == check.Blue[q] && j - 7 != check.position)
+                                        price--;
+                                    if (j - 6 == check.Blue[q] && j - 6 != check.position)
+                                        price--;
+                                }
+                                if (j % 6 == 0 && j != 36 && j != 6)
+                                {
+                                    if (j - 6 == check.Blue[q] && j - 6 != check.position)
+                                        price--;
+                                    if (j + 6 == check.Blue[q] && j + 6 != check.position)
+                                        price--;
+                                    if (j - 1 == check.Blue[q] && j - 1 != check.position)
+                                        price--;
+                                    if (j - 7 == check.Blue[q] && j - 7 != check.position)
+                                        price--;
+                                    if (j + 5 == check.Blue[q] && j + 5 != check.position)
+                                        price--;
+                                }
+                                if (j % 6 == 1 && j != 31 && j != 1)
+                                {
+                                    if (j - 6 == check.Blue[q] && j - 6 != check.position)
+                                        price--;
+                                    if (j + 6 == check.Blue[q] && j + 6 != check.position)
+                                        price--;
+                                    if (j + 1 == check.Blue[q] && j + 1 != check.position)
+                                        price--;
+                                    if (j + 7 == check.Blue[q] && j + 7 != check.position)
+                                        price--;
+                                    if (j - 5 == check.Blue[q] && j - 5 != check.position)
+                                        price--;
+                                }
+                                if ((j >= 8 && j <= 11) || (j >= 14 && j <= 17) || (j >= 20 && j <= 23) || (j >= 26 && j <= 29))
+                                {
+                                    if (j - 6 == check.Blue[q] && j - 6 != check.position)
+                                        price--;
+                                    if (j + 6 == check.Blue[q] && j + 6 != check.position)
+                                        price--;
+                                    if (j + 1 == check.Blue[q] && j + 1 != check.position)
+                                        price--;
+                                    if (j + 7 == check.Blue[q] && j + 7 != check.position)
+                                        price--;
+                                    if (j - 5 == check.Blue[q] && j - 5 != check.position)
+                                        price--;
+                                    if (j - 1 == check.Blue[q] && j - 1 != check.position)
+                                        price--;
+                                    if (j - 7 == check.Blue[q] && j - 7 != check.position)
+                                        price--;
+                                    if (j + 5 == check.Blue[q] && j + 5 != check.position)
+                                        price--;
+                                }
+                            }
+                        }
+                        if (max < price)
+                        { max = price; move = j; Queen = check.position; }
+                        price = 0;
+                    }
+                }   
+            }
+            if (check.queue == 2)
+            {
+                for (int i = 0; i < 4; i++)
+                {
+                    if(ban==0)
+                        check.position = check.Red[i];
+                    if(ban!=0)
+                    {check.position = ban; i=3;}
+                    for (int j = 1; j <= 36; j++)
+                    {
+                        if (Posible(j))
+                        {
+                            for (int q = 0; q < check.Blue.Length; q++)
+                            {
+                                if (j == 1)
+                                {
+                                    if (j + 1 == check.Blue[q] && j + 1 != check.position)
+                                        price++;
+                                    if (j + 6 == check.Blue[q] && j + 6 != check.position)
+                                        price++;
+                                    if (j + 7 == check.Blue[q] && j + 7 != check.position)
+                                        price++;
+                                }
+                                if (j == 6)
+                                {
+                                    if (j - 1 == check.Blue[q] && j - 1 != check.position)
+                                        price++;
+                                    if (j + 6 == check.Blue[q] && j + 6 != check.position)
+                                        price++;
+                                    if (j + 5 == check.Blue[q] && j + 5 != check.position)
+                                        price++;
+                                }
+                                if (j == 31)
+                                {
+                                    if (j + 1 == check.Blue[q] && j + 1 != check.position)
+                                        price++;
+                                    if (j - 6 == check.Blue[q] && j - 6 != check.position)
+                                        price++;
+                                    if (j - 5 == check.Blue[q] && j - 5 != check.position)
+                                        price++;
+                                }
+                                if (j == 36)
+                                {
+                                    if (j - 1 == check.Blue[q] && j - 1 != check.position)
+                                        price++;
+                                    if (j - 6 == check.Blue[q] && j - 6 != check.position)
+                                        price++;
+                                    if (j - 7 == check.Blue[q] && j - 7 != check.position)
+                                        price++;
+                                }
+                                if (j >= 2 && j <= 5)
+                                {
+                                    if (j - 1 == check.Blue[q] && j - 1 != check.position)
+                                        price++;
+                                    if (j + 1 == check.Blue[q] && j + 1 != check.position)
+                                        price++;
+                                    if (j + 5 == check.Blue[q] && j + 5 != check.position)
+                                        price++;
+                                    if (j + 7 == check.Blue[q] && j + 7 != check.position)
+                                        price++;
+                                    if (j + 6 == check.Blue[q] && j + 6 != check.position)
+                                        price++;
+                                }
+                                if (j >= 32 && j <= 35)
+                                {
+                                    if (j - 1 == check.Blue[q] && j - 1 != check.position)
+                                        price++;
+                                    if (j + 1 == check.Blue[q] && j + 1 != check.position)
+                                        price++;
+                                    if (j - 5 == check.Blue[q] && j - 5 != check.position)
+                                        price++;
+                                    if (j - 7 == check.Blue[q] && j - 7 != check.position)
+                                        price++;
+                                    if (j - 6 == check.Blue[q] && j - 6 != check.position)
+                                        price++;
+                                }
+                                if (j % 6 == 0 && j != 36 && j != 6)
+                                {
+                                    if (j - 6 == check.Blue[q] && j - 6 != check.position)
+                                        price++;
+                                    if (j + 6 == check.Blue[q] && j + 6 != check.position)
+                                        price++;
+                                    if (j - 1 == check.Blue[q] && j - 1 != check.position)
+                                        price++;
+                                    if (j - 7 == check.Blue[q] && j - 7 != check.position)
+                                        price++;
+                                    if (j + 5 == check.Blue[q] && j + 5 != check.position)
+                                        price++;
+                                }
+                                if (j % 6 == 1 && j != 31 && j != 1)
+                                {
+                                    if (j - 6 == check.Blue[q] && j - 6 != check.position)
+                                        price++;
+                                    if (j + 6 == check.Blue[q] && j + 6 != check.position)
+                                        price++;
+                                    if (j + 1 == check.Blue[q] && j + 1 != check.position)
+                                        price++;
+                                    if (j + 7 == check.Blue[q] && j + 7 != check.position)
+                                        price++;
+                                    if (j - 5 == check.Blue[q] && j - 5 != check.position)
+                                        price++;
+                                }
+                                if ((j >= 8 && j <= 11) || (j >= 14 && j <= 17) || (j >= 20 && j <= 23) || (j >= 26 && j <= 29))
+                                {
+                                    if (j - 6 == check.Blue[q] && j - 6 != check.position)
+                                        price++;
+                                    if (j + 6 == check.Blue[q] && j + 6 != check.position)
+                                        price++;
+                                    if (j + 1 == check.Blue[q] && j + 1 != check.position)
+                                        price++;
+                                    if (j + 7 == check.Blue[q] && j + 7 != check.position)
+                                        price++;
+                                    if (j - 5 == check.Blue[q] && j - 5 != check.position)
+                                        price++;
+                                    if (j - 1 == check.Blue[q] && j - 1 != check.position)
+                                        price++;
+                                    if (j - 7 == check.Blue[q] && j - 7 != check.position)
+                                        price++;
+                                    if (j + 5 == check.Blue[q] && j + 5 != check.position)
+                                        price++;
+                                }
+                            }
+                            for (int q = 0; q < check.Baned.Length; q++)
+                            {
+                                if (j == 1)
+                                {
+                                    if (j + 1 == check.Baned[q] && j + 1 != check.position)
+                                        price++;
+                                    if (j + 6 == check.Baned[q] && j + 6 != check.position)
+                                        price++;
+                                    if (j + 7 == check.Baned[q] && j + 7 != check.position)
+                                        price++;
+                                }
+                                if (j == 6)
+                                {
+                                    if (j - 1 == check.Baned[q] && j - 1 != check.position)
+                                        price++;
+                                    if (j + 6 == check.Baned[q] && j + 6 != check.position)
+                                        price++;
+                                    if (j + 5 == check.Baned[q] && j + 5 != check.position)
+                                        price++;
+                                }
+                                if (j == 31)
+                                {
+                                    if (j + 1 == check.Baned[q] && j + 1 != check.position)
+                                        price++;
+                                    if (j - 6 == check.Baned[q] && j - 6 != check.position)
+                                        price++;
+                                    if (j - 5 == check.Baned[q] && j - 5 != check.position)
+                                        price++;
+                                }
+                                if (j == 36)
+                                {
+                                    if (j - 1 == check.Baned[q] && j - 1 != check.position)
+                                        price++;
+                                    if (j - 6 == check.Baned[q] && j - 6 != check.position)
+                                        price++;
+                                    if (j - 7 == check.Baned[q] && j - 7 != check.position)
+                                        price++;
+                                }
+                                if (j >= 2 && j <= 5)
+                                {
+                                    if (j - 1 == check.Baned[q] && j - 1 != check.position)
+                                        price++;
+                                    if (j + 1 == check.Baned[q] && j + 1 != check.position)
+                                        price++;
+                                    if (j + 5 == check.Baned[q] && j + 5 != check.position)
+                                        price++;
+                                    if (j + 7 == check.Baned[q] && j + 7 != check.position)
+                                        price++;
+                                    if (j + 6 == check.Baned[q] && j + 6 != check.position)
+                                        price++;
+                                }
+                                if (j >= 32 && j <= 35)
+                                {
+                                    if (j - 1 == check.Baned[q] && j - 1 != check.position)
+                                        price++;
+                                    if (j + 1 == check.Baned[q] && j + 1 != check.position)
+                                        price++;
+                                    if (j - 5 == check.Baned[q] && j - 5 != check.position)
+                                        price++;
+                                    if (j - 7 == check.Baned[q] && j - 7 != check.position)
+                                        price++;
+                                    if (j - 6 == check.Baned[q] && j - 6 != check.position)
+                                        price++;
+                                }
+                                if (j % 6 == 0 && j != 36 && j != 6)
+                                {
+                                    if (j - 6 == check.Baned[q] && j - 6 != check.position)
+                                        price++;
+                                    if (j + 6 == check.Baned[q] && j + 6 != check.position)
+                                        price++;
+                                    if (j - 1 == check.Baned[q] && j - 1 != check.position)
+                                        price++;
+                                    if (j - 7 == check.Baned[q] && j - 7 != check.position)
+                                        price++;
+                                    if (j + 5 == check.Baned[q] && j + 5 != check.position)
+                                        price++;
+                                }
+                                if (j % 6 == 1 && j != 31 && j != 1)
+                                {
+                                    if (j - 6 == check.Baned[q] && j - 6 != check.position)
+                                        price++;
+                                    if (j + 6 == check.Baned[q] && j + 6 != check.position)
+                                        price++;
+                                    if (j + 1 == check.Baned[q] && j + 1 != check.position)
+                                        price++;
+                                    if (j + 7 == check.Baned[q] && j + 7 != check.position)
+                                        price++;
+                                    if (j - 5 == check.Baned[q] && j - 5 != check.position)
+                                        price++;
+                                }
+                                if ((j >= 8 && j <= 11) || (j >= 14 && j <= 17) || (j >= 20 && j <= 23) || (j >= 26 && j <= 29))
+                                {
+                                    if (j - 6 == check.Baned[q] && j - 6 != check.position)
+                                        price++;
+                                    if (j + 6 == check.Baned[q] && j + 6 != check.position)
+                                        price++;
+                                    if (j + 1 == check.Baned[q] && j + 1 != check.position)
+                                        price++;
+                                    if (j + 7 == check.Baned[q] && j + 7 != check.position)
+                                        price++;
+                                    if (j - 5 == check.Baned[q] && j - 5 != check.position)
+                                        price++;
+                                    if (j - 1 == check.Baned[q] && j - 1 != check.position)
+                                        price++;
+                                    if (j - 7 == check.Baned[q] && j - 7 != check.position)
+                                        price++;
+                                    if (j + 5 == check.Baned[q] && j + 5 != check.position)
+                                        price++;
+                                }
+                            }
+                            for (int q = 0; q < check.Red.Length; q++)
+                            {
+                                if (j == 1)
+                                {
+                                    if (j + 1 == check.Red[q] && j + 1 != check.position)
+                                        price--;
+                                    if (j + 6 == check.Red[q] && j + 6 != check.position)
+                                        price--;
+                                    if (j + 7 == check.Red[q] && j + 7 != check.position)
+                                        price--;
+                                }
+                                if (j == 6)
+                                {
+                                    if (j - 1 == check.Red[q] && j - 1 != check.position)
+                                        price--;
+                                    if (j + 6 == check.Red[q] && j + 6 != check.position)
+                                        price--;
+                                    if (j + 5 == check.Red[q] && j + 5 != check.position)
+                                        price--;
+                                }
+                                if (j == 31)
+                                {
+                                    if (j + 1 == check.Red[q] && j + 1 != check.position)
+                                        price--;
+                                    if (j - 6 == check.Red[q] && j - 6 != check.position)
+                                        price--;
+                                    if (j - 5 == check.Red[q] && j - 5 != check.position)
+                                        price--;
+                                }
+                                if (j == 36)
+                                {
+                                    if (j - 1 == check.Red[q] && j - 1 != check.position)
+                                        price--;
+                                    if (j - 6 == check.Red[q] && j - 6 != check.position)
+                                        price--;
+                                    if (j - 7 == check.Red[q] && j - 7 != check.position)
+                                        price--;
+                                }
+                                if (j >= 2 && j <= 5)
+                                {
+                                    if (j - 1 == check.Red[q] && j - 1 != check.position)
+                                        price--;
+                                    if (j + 1 == check.Red[q] && j + 1 != check.position)
+                                        price--;
+                                    if (j + 5 == check.Red[q] && j + 5 != check.position)
+                                        price--;
+                                    if (j + 7 == check.Red[q] && j + 7 != check.position)
+                                        price--;
+                                    if (j + 6 == check.Red[q] && j + 6 != check.position)
+                                        price--;
+                                }
+                                if (j >= 32 && j <= 35)
+                                {
+                                    if (j - 1 == check.Red[q] && j - 1 != check.position)
+                                        price--;
+                                    if (j + 1 == check.Red[q] && j + 1 != check.position)
+                                        price--;
+                                    if (j - 5 == check.Red[q] && j - 5 != check.position)
+                                        price--;
+                                    if (j - 7 == check.Red[q] && j - 7 != check.position)
+                                        price--;
+                                    if (j - 6 == check.Red[q] && j - 6 != check.position)
+                                        price--;
+                                }
+                                if (j % 6 == 0 && j != 36 && j != 6)
+                                {
+                                    if (j - 6 == check.Red[q] && j - 6 != check.position)
+                                        price--;
+                                    if (j + 6 == check.Red[q] && j + 6 != check.position)
+                                        price--;
+                                    if (j - 1 == check.Red[q] && j - 1 != check.position)
+                                        price--;
+                                    if (j - 7 == check.Red[q] && j - 7 != check.position)
+                                        price--;
+                                    if (j + 5 == check.Red[q] && j + 5 != check.position)
+                                        price--;
+                                }
+                                if (j % 6 == 1 && j != 31 && j != 1)
+                                {
+                                    if (j - 6 == check.Red[q] && j - 6 != check.position)
+                                        price--;
+                                    if (j + 6 == check.Red[q] && j + 6 != check.position)
+                                        price--;
+                                    if (j + 1 == check.Red[q] && j + 1 != check.position)
+                                        price--;
+                                    if (j + 7 == check.Red[q] && j + 7 != check.position)
+                                        price--;
+                                    if (j - 5 == check.Red[q] && j - 5 != check.position)
+                                        price--;
+                                }
+                                if ((j >= 8 && j <= 11) || (j >= 14 && j <= 17) || (j >= 20 && j <= 23) || (j >= 26 && j <= 29))
+                                {
+                                    if (j - 6 == check.Red[q] && j - 6 != check.position)
+                                        price--;
+                                    if (j + 6 == check.Red[q] && j + 6 != check.position)
+                                        price--;
+                                    if (j + 1 == check.Red[q] && j + 1 != check.position)
+                                        price--;
+                                    if (j + 7 == check.Red[q] && j + 7 != check.position)
+                                        price--;
+                                    if (j - 5 == check.Red[q] && j - 5 != check.position)
+                                        price--;
+                                    if (j - 1 == check.Red[q] && j - 1 != check.position)
+                                        price--;
+                                    if (j - 7 == check.Red[q] && j - 7 != check.position)
+                                        price--;
+                                    if (j + 5 == check.Red[q] && j + 5 != check.position)
+                                        price--;
+                                }
+                            }
+                        }
+                        if (max < price)
+                        { max = price; move = j; Queen = check.position; }
+                        price = 0;
+                    }
+                }
+            }
+            check.position = Queen;
+            return move;
         }
         public void Moves(Button button, int number)
         {
@@ -327,7 +1069,7 @@ namespace Amazons
             {
                 if (Posible(number))
                 {
-                    Off(check.position);
+                    Off(check.position,0);
                     if(check.queue == 1)
                         button.BackgroundImage = Amazons.Properties.Resources._4;
                     if (check.queue == 2)
@@ -363,13 +1105,20 @@ namespace Amazons
                         }
                     }
                     if (check.queue == 1)
+                    {
                         check.queue = 2;
+                        textBox1.Text = "Blue Player Fire";
+                    }
                     else
+                    {
                         check.queue = 1;
+                        textBox1.Text = "Red Player Fire";
+                    }
                 }
                 else
                 {
                     check.select = false;
+                    textBox1.Text = "False move, choose Queen again!";
                 }
 
             }
@@ -380,12 +1129,14 @@ namespace Amazons
                     if (check.Blue[i] == number && check.queue == 1)
                     {
                         check.select = true;
+                        textBox1.Text = "Blue Queen selected";
                         check.position = number;
                         break;
                     }
                     if (check.Red[i] == number && check.queue == 2)
                     {
                         check.select = true;
+                        textBox1.Text = "Red Queen selected";
                         check.position = number;
                         break;
                     }
@@ -542,28 +1293,87 @@ namespace Amazons
         {
             Moves(button36, 36);
         }
-
+        int player = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
+            
             if (check.time <= 0)
             {
                 timer1.Enabled = false;
-                textBox1.Text = check.queue == 1 ? "First Player Losses" : "Second Player Losses";
+                check.queue = 0;
+                textBox1.Text = check.queue == 1 ? "Blue Player Losses" : "Red Player Losses";
             }
             else
             {
                 check.time--;
                 label1.Text = check.time.ToString();
             }
-        }
+            if (check.AI)
+            {
+                
+                if (player == 2 && check.queue == 1 && check.ban == false)
+                {
+                    int number = Cost(0);
+                    int select = check.position;
+                    if (select != 0 && number != 0)
+                    { Moves(Off(select,0), select); Moves(Off(number,0), number); }
+                }
 
+                if (player == 1 && check.queue == 2 && check.ban == false)
+                {
+                    int number = Cost(0);
+                    int select = check.position;
+                    if (select != 0 && number != 0)
+                    { Moves(Off(select,0), select); Moves(Off(number,0), number); }
+                }
+                if (player == 2 && check.queue == 2 && check.ban == true)
+                {
+                    check.queue = 1;
+                    int number = Cost(check.position);
+                    int select = check.position;
+                    check.queue = 2;
+                    if (select != 0 && number != 0)
+                    { Moves(Off(select, 1), select); Moves(Off(number, 1), number); }
+                }
+                if (player == 1 && check.queue == 1 && check.ban == true)
+                {
+                    check.queue = 2;
+                    int number = Cost(check.position);
+                    int select = check.position;
+                    check.queue = 1;
+                    if (select != 0 && number != 0)
+                    { Moves(Off(select, 1), select); Moves(Off(number, 1), number); }
+                }
+ 
+            }
+        }
+        int count = 0;
         private void button37_Click(object sender, EventArgs e)
         {
-            timer1.Enabled = true; 
+            if (count == 0)
+            {
+                timer1.Enabled = true;
+                if (radioButton1.Checked)
+                {
+                    check.queue = 1;
+                    player = 1;
+                    textBox1.Text = "Blue Player Turn";
+                }
+                else
+                {
+                    check.queue = 2;
+                    player = 2;
+                    textBox1.Text = "Red Player Turn";
+                }
+                if (checkBox1.Checked)
+                    check.AI = true;
+                count++;
+            }
         }
 
         private void button38_Click(object sender, EventArgs e)
         {
+            
             this.Close();
         }
     }
@@ -574,11 +1384,12 @@ namespace Amazons
         public int[] Blue = { 2, 5, 7, 12 };
         public int[] Baned = new int[28];
         public int time = 30;
-        public int queue = 1;
+        public int queue = 0;
         public int position = 0;
         public bool select = false;
         public bool ban = false;
         public int banPos = 0;
+        public bool AI = false;
         
     }
 }
