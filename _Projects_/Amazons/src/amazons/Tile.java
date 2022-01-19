@@ -156,14 +156,14 @@ public class Tile extends StackPane {
 
         setOnMousePressed(e -> {
             if(this.hasPiece()) {
-                this.oldX = (int) (e.getSceneX() / 50);
-                this.oldY = (int) (e.getSceneY() / 50);
+                this.oldX = (int) (e.getSceneX() / Tile.TILE_SIZE);
+                this.oldY = (int) (e.getSceneY() / Tile.TILE_SIZE);
             }
         });
         setOnMouseReleased(e -> {
             if(e.getSceneX() < 0 || e.getSceneY() < 0) return; //top bar / left side bugfix
-            int newX = (int) (e.getSceneX() / 50);
-            int newY = (int) (e.getSceneY() / 50);
+            int newX = (int) (e.getSceneX() / Tile.TILE_SIZE);
+            int newY = (int) (e.getSceneY() / Tile.TILE_SIZE);
             if(newX == oldX && newY == oldY) return; //not moved
             if(newX < 0 || newY < 0 || newX >= b.length || newY >= b.length) return; //mouse released out of window
             //checkIfLegalMove TEMPORARY

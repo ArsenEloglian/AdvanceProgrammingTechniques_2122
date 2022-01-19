@@ -154,8 +154,8 @@ public class AmazonsGame {
 
         int x = (int) e.getSceneX();
         int y = (int) e.getSceneY();
-        x/=50;
-        y/=50;
+        x/=Tile.TILE_SIZE;
+        y/=Tile.TILE_SIZE;
         if (b[x][y].hasPiece()) {
             oldX = x;
             oldY = y;
@@ -168,8 +168,8 @@ public class AmazonsGame {
     public void getNewCords(MouseEvent e) {
         int x = (int) e.getSceneX();
         int y = (int) e.getSceneY();
-        x/=50;
-        y/=50;
+        x/=Tile.TILE_SIZE;
+        y/=Tile.TILE_SIZE;
         if (move == true && shot == false) {  // check if movemement was made
             newX = x;
             newY = y;
@@ -209,8 +209,8 @@ public class AmazonsGame {
 
         int x = (int) e.getSceneX();
         int y = (int) e.getSceneY();
-        x/=50;
-        y/=50;
+        x/=Tile.TILE_SIZE;
+        y/=Tile.TILE_SIZE;
         targetY = y;
         targetX = x;
 
@@ -267,8 +267,8 @@ public class AmazonsGame {
     public void getHover(MouseEvent e) {
         int x = (int) e.getSceneX();
         int y = (int) e.getSceneY();
-        x/=50;
-        y/=50;
+        x/=Tile.TILE_SIZE;
+        y/=Tile.TILE_SIZE;
         cord.setText((char)(x + 97) + "" + y);
     }
     public void backToMenu(ActionEvent actionEvent) {

@@ -167,8 +167,8 @@ public class AmazonsGameAi {
 
         int x = (int) e.getSceneX();
         int y = (int) e.getSceneY();
-        x/=50;
-        y/=50;
+        x/=Tile.TILE_SIZE;
+        y/=Tile.TILE_SIZE;
         // Piece piece = b[oldX][oldY].getPiece();
         if (b[x][y].hasPiece()) {
             oldX = x;
@@ -183,8 +183,8 @@ public class AmazonsGameAi {
     public void getNewCords(MouseEvent e) throws InterruptedException {
         int x = (int) e.getSceneX();
         int y = (int) e.getSceneY();
-        x/=50;
-        y/=50;
+        x/=Tile.TILE_SIZE;
+        y/=Tile.TILE_SIZE;
         if (move == true && shot == false) {  // check if movemement was made
             newX = x;
             newY = y;
@@ -226,8 +226,8 @@ public class AmazonsGameAi {
 
         int x = (int) e.getSceneX();
         int y = (int) e.getSceneY();
-        x/=50;
-        y/=50;
+        x/=Tile.TILE_SIZE;
+        y/=Tile.TILE_SIZE;
         targetY = y;
         targetX = x;
         //b[newX][oldY].shootIfLegal(b,x,y);
@@ -296,7 +296,8 @@ public class AmazonsGameAi {
     }
 
     public void moveAi() {
-
+        game.newTurn();
+        turn.setText(game.getTurns());
         List<Pair<Integer, Integer>> blackPieces = new ArrayList<>();   // selecting available black pieces
         for(int y = 0; y < HEIGHT; y++) {
             for(int x = 0; x < WIDTH; x++) {
@@ -323,6 +324,7 @@ public class AmazonsGameAi {
             int destY = randomDestination.getValue();
 
             b[pieceToMove.getKey()][pieceToMove.getValue()].movePiece(b,destX,destY);
+            list.getItems().add(0,(char)(pieceToMove.getKey() + 97) + "" + pieceToMove.getValue() + "" + (char)(destX + 97) + "" + destY);
 
             List<Pair<Integer, Integer>> possibleShots = drawPossibleMoves(randomDestination); // same thing as above for shooting
             if (possibleShots.size()== 0) return;
@@ -332,7 +334,9 @@ public class AmazonsGameAi {
             Pair<Integer,Integer> randomShot = possibleShots.get(shot);
 
             b[destX][destY].shootAt(b,randomShot.getKey(),randomShot.getValue());
-
+            String temp = list.getItems().get(0) + " -> " + (char) (randomShot.getKey() + 97) + "" + randomShot.getValue();
+            list.getItems().set(0, temp);
+            checkMovesAi();
     }
 
     private List<Pair<Integer, Integer>> drawPossibleMoves(Pair<Integer, Integer> pieceToMove) {
@@ -414,8 +418,8 @@ public class AmazonsGameAi {
     public void getHover(MouseEvent e) {
         int x = (int) e.getSceneX();
         int y = (int) e.getSceneY();
-        x/=50;
-        y/=50;
+        x/=Tile.TILE_SIZE;
+        y/=Tile.TILE_SIZE;
         cord.setText((char)(x + 97) + "" + y);
     }
     public void backToMenu(ActionEvent actionEvent) {
@@ -488,6 +492,33 @@ public class AmazonsGameAi {
                 exitButton.fireEvent(new ActionEvent());
             }
         }
+        if(!canPlayerMove(blackPieces)) {
+            animationTimer.stop();
+            dialog.setHeaderText("White won!");
+            dialog.setGraphic(new ImageView(new Image("file:res/pieceW.png")));
+            Optional<ButtonType> result = dialog.showAndWait();
+            if(result.isPresent() && result.get() == restart) {
+                restartButton.fireEvent(new ActionEvent());
+            }
+            else {
+                exitButton.fireEvent(new ActionEvent());
+            }
+        }
+    }
+
+    public void checkMovesAi() {
+        List<Pair<Integer, Integer>> blackPieces = new ArrayList<>();
+        for(int y = 0; y < HEIGHT; y++) {
+            for(int x = 0; x < WIDTH; x++) {
+                if(b[x][y].getPiece() == null) {
+                    continue;
+                }
+                else if(b[x][y].getPiece().type == 1){
+                    blackPieces.add(new Pair<>(x, y));
+                }
+            }
+        }
+
         if(!canPlayerMove(blackPieces)) {
             animationTimer.stop();
             dialog.setHeaderText("White won!");
