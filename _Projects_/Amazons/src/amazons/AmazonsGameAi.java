@@ -31,8 +31,9 @@ import javafx.util.Pair;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Random;
 
-public class AmazonsGame {
+public class AmazonsGameAi {
 
     public String mode;
     public String difficult;
@@ -49,9 +50,11 @@ public class AmazonsGame {
     public Label xandy;
     public Label gameModeLabel;
     public Label gameDifficultLabel;
+    public int randomMoves;
+    public int movesDone;
     private Group tileGroup = new Group();
 
-    public int player;
+    public int player; // player 0 is human player, 1 is AI
     int oldX;       // old piece positions
     int oldY;
 
@@ -66,6 +69,9 @@ public class AmazonsGame {
 
     boolean shot = false;
     boolean move = false;
+
+    boolean aiMoved = false;
+    boolean aiShoot = false;
 
     GameLogic game = new GameLogic();
 
@@ -134,15 +140,22 @@ public class AmazonsGame {
         b[0][6].setPiece(new Piece(0));
         b[9][6].setPiece(new Piece(0));
 
+        Piece bialy=b[9][6].getPiece();
+        Piece czarny=b[3][0].getPiece();
+
+//        System.out.println("Niby bialy " + bialy.type);
+//        System.out.println("Niby czarny " + czarny.type);
+        //if (b[3][0].hasPiece()) System.out.println("[3][0] contains a piece!");
+        //b[3][0].getPiece() System.out.println("Maybe this will be useful!");
+//        b[3][0].movePiece(b, 9, 9);
+//        b[3][0].shootAt(b, 8, 8);
+//        b[3][0].shootAt(b, 7, 7);
 
         turn.setText(game.getTurns());
 
-       // gameLoop();
         player = 0;
         //shot = false;
-
-
-
+        movesDone = 0;
     }
 
     public void startTimer() {
@@ -156,6 +169,7 @@ public class AmazonsGame {
         int y = (int) e.getSceneY();
         x/=50;
         y/=50;
+        // Piece piece = b[oldX][oldY].getPiece();
         if (b[x][y].hasPiece()) {
             oldX = x;
             oldY = y;
@@ -163,9 +177,10 @@ public class AmazonsGame {
         else {
             return;
         }
+        // System.out.println(x + " " + y);
     }
 
-    public void getNewCords(MouseEvent e) {
+    public void getNewCords(MouseEvent e) throws InterruptedException {
         int x = (int) e.getSceneX();
         int y = (int) e.getSceneY();
         x/=50;
@@ -175,32 +190,34 @@ public class AmazonsGame {
             newY = y;
 
             Piece piece = b[oldX][oldY].getPiece();
-            if (player != piece.type) return;
+            if (player != piece.type || piece == null) return;
 
             shoot();    // shooting
             if (shot == true) {
 
                 shot = false; // setting flags for new turn and swap players
                 move = false;
-
                 game.newTurn();
                 turn.setText(game.getTurns());
-                if (player == 0) player = 1;
-                else player = 0;
+                    moveAi();
+
+                movesDone++;
+                aiMoved = false;
+                aiShoot = false;
             }
 
         };
 
         Piece piece = b[oldX][oldY].getPiece(); //  making movement
         if (piece == null) return;
-        if (player != piece.type) return;
-                if (move == true) return;
-                //if (shot == false) return;
-                newX = x;
-                newY = y;
-                movePiece();
-                activePieceX = newX;
-                activePieceY = newY;
+        if (piece.type == 1) return;
+        if (move == true) return;
+        //if (shot == false) return;
+        newX = x;
+        newY = y;
+        movePiece();
+        activePieceX = newX;
+        activePieceY = newY;
     }
 
     public void shootDestination(MouseEvent e) {
@@ -213,6 +230,10 @@ public class AmazonsGame {
         y/=50;
         targetY = y;
         targetX = x;
+        //b[newX][oldY].shootIfLegal(b,x,y);
+        //shoot();
+        //shoot = true;
+        //System.out.println("Piece position: " + newX + " " + newY);
 
         b[newX][newY].shootIfLegal(b,targetX,targetY);
         System.out.println("costam");
@@ -231,6 +252,7 @@ public class AmazonsGame {
             return;
         }
         else {                                                 // if ok move piece
+            //list.getItems().add(0,"[" + oldX + "][" + oldY + "] movedTo [" + newX + "][" + newY + "]");
             list.getItems().add(0,(char)(oldX + 97) + "" + oldY + "" + (char)(newX + 97) + "" + newY);
             whatDo.setText("Shoot");
             move = true;
@@ -238,32 +260,157 @@ public class AmazonsGame {
             checkMoves(); //temporary
         }
     }
+
     public void shoot() {
 
-        Piece piece = b[oldX][oldY].getPiece();
-        if (player != piece.type) return;
+        //if (shot == true) return;
+       // if (player == 0) {
+            // System.out.println("Piece position: " + newX + " " + newY);
+            Piece piece = b[oldX][oldY].getPiece();
+            if (player != piece.type) return;
 
-        if (shot == true) return;
+            if (shot == true) return;
 
-        if (activePieceX != oldX || activePieceY != oldY){
-            System.out.println("Old X: " + oldX + " Y: " + oldY);
-            System.out.println("Act X: " + activePieceX + " Y: " + activePieceY);
-            return;
-        }
+            if (activePieceX != oldX || activePieceY != oldY) {
+                System.out.println("Old X: " + oldX + " Y: " + oldY);
+                System.out.println("Act X: " + activePieceX + " Y: " + activePieceY);
+                return;
+            }
 
-        if (b[oldX][oldY].shootIfLegal(b,newX,newY) == false) { // checking shooting restrictions
-            return;
-        }
-
-        else {                                                  // if ok shoot
-            String temp = list.getItems().get(0) + " -> " + (char)(newX + 97) + "" + newY;;
-            list.getItems().set(0, temp);
-            whatDo.setText("Move");
-            shot = true;
-            move = false;
-            checkMoves(); //temporary
-        }
+            if (b[oldX][oldY].shootIfLegal(b, newX, newY) == false) { // checking shooting restrictions
+                //System.out.println("Nope");
+                return;
+            } else {                                                  // if ok shoot
+                //shot = true;
+                //list.getItems().add(0,"[" + oldX + "][" + oldY + "] shotAt [" + newX + "][" + newY + "]");
+                String temp = list.getItems().get(0) + " -> " + (char) (newX + 97) + "" + newY;
+                ;
+                list.getItems().set(0, temp);
+                whatDo.setText("Move");
+                shot = true;
+                move = false;
+                // System.out.println("Strzelił");
+                checkMoves(); //temporary
+            }
+       // }
     }
+
+    public void moveAi() {
+
+        List<Pair<Integer, Integer>> blackPieces = new ArrayList<>();   // selecting available black pieces
+        for(int y = 0; y < HEIGHT; y++) {
+            for(int x = 0; x < WIDTH; x++) {
+                if(b[x][y].getPiece() == null) {
+                    continue;
+                }
+                else if(b[x][y].getPiece().type == 1){
+                    if (canPieceMove(x,y))
+                        blackPieces.add(new Pair<>(x, y));
+                }
+            }
+        }
+        Random random = new Random();
+        Pair<Integer,Integer> pieceToMove = blackPieces.get(random.nextInt(blackPieces.size()));    // selecting one piece
+
+
+            List<Pair<Integer, Integer>> possibleMoves = drawPossibleMoves(pieceToMove);    // creating list of possible moves
+            if (possibleMoves.size() == 0) return;
+            int place = random.nextInt(possibleMoves.size());
+            System.out.println("Move: " + place + " Rozmiar: " + possibleMoves.size());
+            Pair<Integer,Integer> randomDestination = possibleMoves.get(place);             // selecting move destination
+
+            int destX = randomDestination.getKey();
+            int destY = randomDestination.getValue();
+
+            b[pieceToMove.getKey()][pieceToMove.getValue()].movePiece(b,destX,destY);
+
+            List<Pair<Integer, Integer>> possibleShots = drawPossibleMoves(randomDestination); // same thing as above for shooting
+            if (possibleShots.size()== 0) return;
+            int shot = random.nextInt(possibleShots.size());
+            System.out.println("Shoot: " + shot + " Rozmiar: " + possibleShots.size());
+
+            Pair<Integer,Integer> randomShot = possibleShots.get(shot);
+
+            b[destX][destY].shootAt(b,randomShot.getKey(),randomShot.getValue());
+
+    }
+
+    private List<Pair<Integer, Integer>> drawPossibleMoves(Pair<Integer, Integer> pieceToMove) {
+        boolean isLegal = false;
+        Random random = new Random();
+        List<Pair<Integer, Integer>> possibleMoves = new ArrayList<>();
+//        while (isLegal == false) {
+//
+//        }
+
+        int oldX = pieceToMove.getKey();
+        int oldY = pieceToMove.getValue();
+
+                                    //checkIfStraightLine
+                        //moveUp
+                for(int i = oldY - 1; i >=0; i--) {
+                    if (b[oldX][i].isEmpty()) possibleMoves.add(new Pair<>(oldX, i));
+                    else break;     //path blocked by wall/amazon
+                }
+
+                for(int i = oldY + 1; i < HEIGHT; i++) {
+                    if (b[oldX][i].isEmpty()) possibleMoves.add(new Pair<>(oldX, i));
+                    else break;//path blocked by wall/amazon
+                }
+
+
+                                  //moveLeft
+                for(int i = oldX - 1; i >=0; i--) {
+                    if (b[i][oldY].isEmpty()) possibleMoves.add(new Pair<>(i, oldY));
+                    else break;//path blocked by wall/amazon
+                }
+                                 //moveRight
+                for(int i = oldX + 1; i < WIDTH; i++) {
+                    if (b[i][oldY].isEmpty()) possibleMoves.add(new Pair<>(i, oldY));
+                    else break;//path blocked by wall/amazon
+                }
+                                // check top left
+                int x = oldX-1;
+                int y = oldY-1;
+                while (x>=0 && y>=0) {
+                    if (b[x][y].isEmpty()) possibleMoves.add(new Pair<>(x, y));
+                    else break;     //path blocked by wall/amazon
+                    x--;
+                    y--;
+                }
+
+                                // check bottom right
+                 x = oldX+1;
+                 y = oldY+1;
+                while (x<WIDTH && y<HEIGHT) {
+                    if (b[x][y].isEmpty()) possibleMoves.add(new Pair<>(x, y));
+                    else break;     //path blocked by wall/amazon
+                    x++;
+                    y++;
+                }
+
+                               // check top right
+                 x = oldX+1;
+                 y = oldY-1;
+                while (x<WIDTH && y>=0) {
+                    if (b[x][y].isEmpty()) possibleMoves.add(new Pair<>(x, y));
+                    else break;     //path blocked by wall/amazon
+                    x++;
+                    y--;
+                }
+
+                                // check bottom left
+                x = oldX-1;
+                y = oldY+1;
+                while (x>=0 && y<HEIGHT) {
+                    if (b[x][y].isEmpty()) possibleMoves.add(new Pair<>(x, y));
+                    else break;     //path blocked by wall/amazon
+                    x--;
+                    y++;
+                }
+        return possibleMoves;
+    }
+
     public void getHover(MouseEvent e) {
         int x = (int) e.getSceneX();
         int y = (int) e.getSceneY();
@@ -288,13 +435,13 @@ public class AmazonsGame {
 
         }
         catch (Exception e) {
-            //System.out.println("Can't open new window");
+            System.out.println("Can't open new window");
         }
 
     }
     public void restart(ActionEvent actionEvent) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Amazons_game.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Amazons_game_ai.fxml"));
             Parent root1 = (Parent) loader.load();
             Stage stage = new Stage();
             stage.setTitle("Game of the Amazons");
@@ -307,7 +454,7 @@ public class AmazonsGame {
             stage1.close();
         }
         catch (Exception e) {
-            System.out.println("Can't open new window");
+            //System.out.println("Can't open new window");
             e.printStackTrace();
         }
     }
@@ -372,15 +519,22 @@ public class AmazonsGame {
         return canMove;
     }
 
-    public int numberOfPossibleMoves() {
-        int counter = 0;
-        //
-        return counter;
+    boolean canPieceMove(int x, int y) {
+        boolean canMove = false;
+            for(int i = x-1; i <= x+1; i++) {
+                for(int j = y-1; j <= y+1; j++) {
+                    if((i != x || j != y) && i >= 0 && j >= 0 && i < WIDTH && j < HEIGHT) { //ignore the center tile and out of bounds elements
+                        if(b[i][j].isEmpty()) canMove = true;
+                    }
+                }
+            }
+
+        return canMove;
     }
 
     public void setGameParameters(String mode, String difficult) {
-       // this.mode = mode;
-       // this.difficult = difficult;
+        // this.mode = mode;
+        // this.difficult = difficult;
 
 //        gameDifficultLabel.setText(difficult);
 //        gameModeLabel.setText(mode);

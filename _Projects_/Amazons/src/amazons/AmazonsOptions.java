@@ -9,18 +9,26 @@ import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class AmazonsOptions {
 
-    public ComboBox<String> difficultSelect;
+    public ComboBox modeSelect;
 
+    String mode;
+    Parent root;
+    Stage stage;
+    Scene scene;
     @FXML
     public void initialize() {
 
-        difficultSelect.getItems().add("Easy");
-        difficultSelect.getItems().add("Medium");
-        difficultSelect.getItems().add("Hard");
 
-        difficultSelect.setValue("Easy");
+        modeSelect.getItems().add("HotSeat");
+        modeSelect.getItems().add("vs AI");
+
+        modeSelect.setValue("HotSeat");
+
+        mode = "vs AI";
 
     }
 
@@ -47,11 +55,37 @@ public class AmazonsOptions {
 
     }
 
-    public void applyChanges(ActionEvent actionEvent) {
+    public void applyChanges(ActionEvent event) throws IOException {
 
         // save all settings
 
-        backToMenu(actionEvent);
+        mode = (String) modeSelect.getValue();
+
+       // System.out.println(mode + " " + difficult);
+
+       // String [] gameParameters = {mode,difficult};
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Amazons_menu.fxml"));
+        root = loader.load();
+
+        AmazonsMenu menuController = loader.getController();
+        menuController.setGameParameters(mode,"");
+//        FXMLLoader gameLoader = new FXMLLoader(getClass().getResource("AmazonsGame.fxml"));
+//        AmazonsGame gameController = gameLoader.getController();
+//        gameController.setGameParameters(mode,difficult);
+
+
+
+        stage = new Stage();
+        scene = new Scene(root);
+        stage.setTitle("Game of the Amazons");
+        stage.setScene(scene);
+
+        stage.show();
+        final Node source = (Node) event.getSource();
+        final Stage stage1 = (Stage) source.getScene().getWindow();
+        stage1.close();
+        //backToMenu(actionEvent);
 
     }
 }

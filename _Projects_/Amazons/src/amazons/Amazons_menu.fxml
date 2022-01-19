@@ -18,5 +18,7 @@
             </Label>
          </children>
       </Pane>
+      <Label fx:id="labelDifficult" layoutX="541.0" layoutY="120.0" />
+      <Label fx:id="labelMode" layoutX="541.0" layoutY="165.0" />
    </children>
 </AnchorPane>
