@@ -11,13 +11,13 @@ public class Piece extends StackPane {
     public Piece(int type) {
         this.type = type;
         if (type == 0) {
-            this.image = new ImageView(new Image("file:res/pieceW.png"));
+            this.image = new ImageView(new Image(this.getClass().getResourceAsStream("res/pieceW.png")));
         }
         else if (type == 1) {
-            this.image = new ImageView(new Image("file:res/pieceB.png"));
+            this.image = new ImageView(new Image(this.getClass().getResourceAsStream("res/pieceB.png")));
         }
         else if (type == 2) {
-            this.image = new ImageView(new Image("file:res/wall.png"));
+            this.image = new ImageView(new Image(this.getClass().getResourceAsStream("res/wall.png")));
         }
 
         getChildren().addAll(image);

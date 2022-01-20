@@ -7,7 +7,6 @@ import javafx.scene.shape.Rectangle;
 public class Tile extends StackPane {
     private Piece piece;
     int oldX, oldY;
-    static int test = 0;
     private Tile[][] b;
     public static final int TILE_SIZE = 50;
 
@@ -56,7 +55,6 @@ public class Tile extends StackPane {
                     }
                 }
                 b[oldX][oldY].movePiece(b, newX, newY);
-              //  System.out.println("poszło");
                 return true;
             }
             else if(newX != oldX && newY == oldY) {
@@ -71,7 +69,6 @@ public class Tile extends StackPane {
                     }
                 }
                 b[oldX][oldY].movePiece(b, newX, newY);
-               // System.out.println("poszło");
                 return true;
             }
             else if(Math.abs(newX-oldX) == Math.abs(newY-oldY)) {//checkIfDiagonal
@@ -89,7 +86,6 @@ public class Tile extends StackPane {
                     j += yd;
                 }
                 b[oldX][oldY].movePiece(b, newX, newY);
-               // System.out.println("poszło");
                 return true;
             }
         } return false;
@@ -166,15 +162,6 @@ public class Tile extends StackPane {
             int newY = (int) (e.getSceneY() / Tile.TILE_SIZE);
             if(newX == oldX && newY == oldY) return; //not moved
             if(newX < 0 || newY < 0 || newX >= b.length || newY >= b.length) return; //mouse released out of window
-            //checkIfLegalMove TEMPORARY
-//            if(test % 2 == 0) {
-//                moveIfLegal(b, newX, newY);
-//                test++;
-//            }
-//            else {
-//                shootIfLegal(b, newX, newY);
-//                test++;
-//            }
         });
     }
 

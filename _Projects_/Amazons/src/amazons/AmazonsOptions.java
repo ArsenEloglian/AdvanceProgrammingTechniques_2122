@@ -22,7 +22,6 @@ public class AmazonsOptions {
     @FXML
     public void initialize() {
 
-
         modeSelect.getItems().add("HotSeat");
         modeSelect.getItems().add("vs AI");
 
@@ -37,7 +36,7 @@ public class AmazonsOptions {
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Amazons_menu.fxml"));
-            Parent root1 = (Parent) loader.load();
+            Parent root1 = loader.load();
             Stage stage = new Stage();
             stage.setTitle("Game of the Amazons");
             Scene scene = new Scene(root1);
@@ -50,7 +49,7 @@ public class AmazonsOptions {
 
         }
         catch (Exception e) {
-            System.out.println("Can't open new window");
+            e.printStackTrace();
         }
 
     }
@@ -61,20 +60,11 @@ public class AmazonsOptions {
 
         mode = (String) modeSelect.getValue();
 
-       // System.out.println(mode + " " + difficult);
-
-       // String [] gameParameters = {mode,difficult};
-
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Amazons_menu.fxml"));
         root = loader.load();
 
         AmazonsMenu menuController = loader.getController();
         menuController.setGameParameters(mode,"");
-//        FXMLLoader gameLoader = new FXMLLoader(getClass().getResource("AmazonsGame.fxml"));
-//        AmazonsGame gameController = gameLoader.getController();
-//        gameController.setGameParameters(mode,difficult);
-
-
 
         stage = new Stage();
         scene = new Scene(root);
@@ -85,7 +75,5 @@ public class AmazonsOptions {
         final Node source = (Node) event.getSource();
         final Stage stage1 = (Stage) source.getScene().getWindow();
         stage1.close();
-        //backToMenu(actionEvent);
-
     }
 }

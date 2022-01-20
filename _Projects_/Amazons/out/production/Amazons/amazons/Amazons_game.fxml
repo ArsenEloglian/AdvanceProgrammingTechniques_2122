@@ -20,6 +20,6 @@
             <Button fx:id="restartButton" layoutX="122.0" layoutY="375.0" mnemonicParsing="false" onAction="#restart" text="Restart" />
 
          </children></Pane>
-      <Label fx:id="cord" layoutX="658.0" layoutY="469.0" text="Label" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+      <Label fx:id="cord" layoutX="658.0" layoutY="469.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" />
     </children>
 </AnchorPane>
