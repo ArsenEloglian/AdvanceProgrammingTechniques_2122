@@ -12,3 +12,8 @@ The application has been divided into 4 activities:
 
 When we create a new game, a code is generated that the other player must enter in the FindGameActivity activity.
 
+![Screenshot](KornelMotyka/screenMenu.png)
+![Screenshot](KornelMotyka/screenLogin.png)
+![Screenshot](KornelMotyka/screenshotGame.png)
+![Screenshot](KornelMotyka/screenFindGame.png)
+
