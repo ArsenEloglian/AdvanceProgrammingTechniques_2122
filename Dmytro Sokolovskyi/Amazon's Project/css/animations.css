@@ -1,0 +1,31 @@
+.item-disappear {
+    animation: dissapear 0.5s linear;
+    animation-fill-mode: forwards;
+}
+
+.item-appear {
+    animation: appear 0.5s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes dissapear {
+    0% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+}
+
+@keyframes appear {
+    0% {
+        display: initial;
+        visibility: visible;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
