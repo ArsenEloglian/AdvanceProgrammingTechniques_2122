@@ -335,45 +335,7 @@ public class AmazonsGame {
         }
         return canMove;
     }
-
-    /*public void undo() {
-        if(game.getTurnsInt() == 1 && !move) {//before first move
-            return;
-        }
-        else if(move) {//after moving, during shooting phase
-            String listEntry = list.getItems().get(0);
-            int xOld = listEntry.charAt(0) - 97;//x old
-            int yOld = Character.getNumericValue(listEntry.charAt(1));//y old
-            int xNew = listEntry.charAt(2) - 97;//x new
-            int yNew = Character.getNumericValue(listEntry.charAt(3));//y new
-            b[xNew][yNew].movePiece(b, xOld, yOld);
-            move = false;
-            shot = false;
-            list.getItems().remove(0);
-            whatDo.setText("Move");
-        }
-        else {//before moving
-            String listEntry = list.getItems().get(0);
-            int xOld = listEntry.charAt(0) - 97;//x old
-            int yOld = Character.getNumericValue(listEntry.charAt(1));//y old
-            int xNew = listEntry.charAt(2) - 97;//x new
-            int yNew = Character.getNumericValue(listEntry.charAt(3));//y new
-
-
-            int xShot = listEntry.charAt(8) - 97;//x shot
-            int yShot = Character.getNumericValue(listEntry.charAt(9));//y shot
-            b[xShot][yShot].removePiece(b, xShot, yShot);
-            b[xNew][yNew].movePiece(b, xOld, yOld);
-            move = false;
-            shot = false;
-            if (player == 0) player = 1;
-            else player = 0;
-            game.rewindTurn();
-            turn.setText(game.getTurns());
-            list.getItems().remove(0);
-            whatDo.setText("Move");
-        }
-    }*/
+    
     public void undo() {
         if(game.getTurnsInt() == 1 && !move) {//before first move
             return;
