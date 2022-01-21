@@ -19,6 +19,10 @@ public class GameLogic {
         turns++;
     }
 
+    public void rewindTurn() {
+        turns--;
+    }
+
     public long getTime() {
         return time;
     }

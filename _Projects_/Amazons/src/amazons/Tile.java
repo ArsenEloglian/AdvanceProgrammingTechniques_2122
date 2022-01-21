@@ -15,6 +15,12 @@ public class Tile extends StackPane {
         this.getChildren().addAll(this.piece);
     }
 
+    public void removePiece(Tile[][] b, int targetX, int targetY) {
+        if (this.piece == null) return;
+        b[targetX][targetY].piece.image.setImage(null);
+        b[targetX][targetY].piece = null;
+    }
+
     public void movePiece(Tile[][] b, int targetX, int targetY) {
         if (this.piece == null) return; //bugfix on wall drag
         Piece p = this.piece;
