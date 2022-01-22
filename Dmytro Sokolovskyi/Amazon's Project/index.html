@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/animations.css">
+        <script type="text/javascript" src="./js/gameController.js"></script>
+        <script type="text/javascript" src="./js/interfaceController.js"></script>
+    </head>
+    <body onload="setStage(UIStage.STAGE_PLAYERS)">
+        <div class="main-game-page">
+            <div class="game-column">
+                <h2 class="game-title">Amazon's game</h2>
+                <div class="main-selector non-shown" id="mainSelector" >
+                    <h3 class="main-selector-title">Select game type</h3>
+                    <button class="game-select-button button-green" id="button_choice_player" onclick="selectGameMode(GameMode.PLAYER)" >Player VS Player</button>
+                    <button class="game-select-button" id="button_choice_ai" onclick="selectGameMode(GameMode.AI)" >Player VS AI</button>
+                </div>
+                <div class="main-selector non-shown" id="gamePropertiesSelector">
+                    <h3 class="main-selector-title">Select game type</h3>
+                    <form method="dialog" name="gameChoiceForm" style="display: contents;">
+                        <ul class="main-selector-list">
+                            <li><input type="radio" value="2" name="gameMode" ><label>2 vs 2</label></li>
+                            <li><input type="radio" value="3" name="gameMode" checked><label>3 vs 3</label></li>
+                            <li><input type="radio" value="4" name="gameMode" ><label>4 vs 4</label></li>
+                        </ul>
+                        <button class="game-select-button" id="startGameButton" onclick="startGame()" >Start game</button>
+                    </form>
+                </div>
+                <div class="non-shown" id="gameBlock">
+                    <h2 class="current-team-text" id="currentTeamText"></h2>
+                    <div class="game-container " id="gameContainer">
+                        <div class="game-controls-container"  >
+                            <div class="game-controls-buttons-container">
+                                <button class="game-controls-button button-red" style="margin: 0px 2px 0px 0px;" onclick="startGame()" >Restart game</button>
+                                <button class="game-controls-button button-neutral" style="margin: 0px 0px 0px 2px;">Cancel move</button>
+                            </div>
+                            <div class="game-log-container">
+                                <textarea class="game-log" id="gameLog" readonly></textarea>
+                            </div>
+                        </div>
+                        <div class="game-table-container" >
+                            <div class="game-table" id="gameTable">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
