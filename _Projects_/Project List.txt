@@ -3,4 +3,5 @@ Weronika Demich, Kamil Gajewski : Game Of Amazons (SFML + C++)
 Mateusz Gowin, Michał Plewa : Amazon Game - Java
 Dominik Leśniewski, Kuba Kern : Game of the Amazons (JavaFX PC game, AI + hot-seat)
 Kornel Motyka : theAmazonsGame (Android online game - Java + Android SDK + firebase)
+Segeda Oleksandr, Artur Oliferuk : Game of the Amazons(.NET c#)
 Paweł Kumorowski : Amazons - Unity, C#
