@@ -171,6 +171,7 @@ Michal Plewa
 	02.12.2021
 	16.12.2021
 	13.01.2022
+	21.01.2022
 }
 
 Pawel Kumorowski
