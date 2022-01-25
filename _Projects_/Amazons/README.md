@@ -12,6 +12,9 @@ Game can be played by two players on the same computer (HotSeat) or vs AI.
 
 ## 2. How to start.
 
+First of all, you will need to download and install Java JDK15 from Oracle's website:
+[Oracle] (https://www.oracle.com/java/technologies/javase/jdk15-archive-downloads.html)
+
 To open the game you need to execute one of the following:
 * **exe/Amazons.exe**
 * **jar/Amazons.bat** 
