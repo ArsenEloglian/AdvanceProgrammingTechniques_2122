@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="dynamicPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="amazons.AmazonsMenu">
+   <children>
+      <Pane layoutX="114.0" layoutY="52.0" prefHeight="292.0" prefWidth="382.0">
+         <children>
+            <Button layoutX="146.0" layoutY="70.0" mnemonicParsing="false" onAction="#startGame" text="New game" />
+            <Button layoutX="153.0" layoutY="134.0" mnemonicParsing="false" onAction="#openOptions" text="Options" />
+            <Button layoutX="164.0" layoutY="204.0" mnemonicParsing="false" onAction="#exitGame" text="Exit" />
+            <Label layoutX="99.0" layoutY="-29.0" text="Amazons">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label fx:id="labelDifficult" layoutX="541.0" layoutY="120.0" />
+      <Label fx:id="labelMode" layoutX="541.0" layoutY="165.0" />
+   </children>
+</AnchorPane>

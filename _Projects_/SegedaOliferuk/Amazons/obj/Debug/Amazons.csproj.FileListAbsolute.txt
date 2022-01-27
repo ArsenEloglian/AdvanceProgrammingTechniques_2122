@@ -1,0 +1,9 @@
+c:\users\olife\documents\visual studio 2012\Projects\Amazons\Amazons\bin\Debug\Amazons.exe.config
+c:\users\olife\documents\visual studio 2012\Projects\Amazons\Amazons\bin\Debug\Amazons.exe
+c:\users\olife\documents\visual studio 2012\Projects\Amazons\Amazons\bin\Debug\Amazons.pdb
+c:\users\olife\documents\visual studio 2012\Projects\Amazons\Amazons\obj\Debug\Amazons.csprojResolveAssemblyReference.cache
+c:\users\olife\documents\visual studio 2012\Projects\Amazons\Amazons\obj\Debug\Amazons.Properties.Resources.resources
+c:\users\olife\documents\visual studio 2012\Projects\Amazons\Amazons\obj\Debug\Amazons.csproj.GenerateResource.Cache
+c:\users\olife\documents\visual studio 2012\Projects\Amazons\Amazons\obj\Debug\Amazons.exe
+c:\users\olife\documents\visual studio 2012\Projects\Amazons\Amazons\obj\Debug\Amazons.pdb
+C:\Users\olife\documents\visual studio 2012\Projects\Amazons\Amazons\obj\Debug\Amazons.Form1.resources
