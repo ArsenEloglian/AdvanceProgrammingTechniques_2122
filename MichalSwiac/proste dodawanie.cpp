@@ -1,18 +1,22 @@
 #include <iostream>
+
 using namespace std;
+
 int main()
 {
-    int t, n, a, suma;
-    cin>>t;
-    for(int i = 0; i<t; i++)
+    int a, b, c, d, e, f;
+    cin >> a ;
+    for (e=0; e<a; e++)
     {
-        cin>>n;
-        suma = 0;
-        for(int j = 0; j<n; j++)
+        c = 0;
+        d = 0;
+        cin>>b;
+        for (f=0; f<b; f++)
         {
-            cin>>a;
-            suma += a;
+            cin>>d;
+            c=c+d;
         }
-        cout<<suma<<endl;
+        cout << c << endl;
     }
+    return 0;
 }
