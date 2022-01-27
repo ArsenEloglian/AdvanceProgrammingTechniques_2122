@@ -4,19 +4,19 @@ using namespace std;
 
 int main()
 {
-    int a, b, c, d, e, f;
-    cin >> a ;
-    for (e=0; e<a; e++)
+    int liczbaTestow, a, suma, b ,c,d ;
+    cin >> liczbaTestow ;
+    for (a=0; c<liczbaTestow; c++)
     {
-        c = 0;
-        d = 0;
-        cin>>b;
-        for (f=0; f<b; f++)
+        suma = 0;
+        b = 0;
+        cin>>a;
+        for (d=0; d<a; d++)
         {
-            cin>>d;
-            c=c+d;
+            cin>>b;
+            suma=suma+b;
         }
-        cout << c << endl;
+        cout << suma << endl;
     }
     return 0;
 }
