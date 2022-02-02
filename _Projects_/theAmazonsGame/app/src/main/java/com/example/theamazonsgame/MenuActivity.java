@@ -68,6 +68,8 @@ public class MenuActivity extends AppCompatActivity {
                 .code(getRandomKey())
                 .date(date)
                 .id(gameId)
+                .time1("100000")
+                .time2("100000")
                 .result(ResultEnum.waitingForPlayer)
                 .board(Board.createNewBoard())
                 .build();

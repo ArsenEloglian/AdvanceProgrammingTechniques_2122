@@ -20,5 +20,7 @@ public class Game {
     private String code;
     private ResultEnum result;
     private Board board;
+    private String time1;
+    private String time2;
 
 }
