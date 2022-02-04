@@ -12,8 +12,12 @@ The application has been divided into 4 activities:
 
 When we create a new game, a code is generated that the other player must enter in the FindGameActivity activity.
 
-![Screenshot](KornelMotyka/screenMenu.png)
-![Screenshot](KornelMotyka/screenLogin.png)
-![Screenshot](KornelMotyka/screenshotGame.png)
-![Screenshot](KornelMotyka/screenFindGame.png)
+To run application :
+
+- open project in android studio
+- configure environment (download and install jdk)
+- create android emulator in Tools - Tools -> AVD manager (pixel 3a + API 30 + Android 11.0 + CPU x86)
+- select your emulator from the list at the top
+- run application (shift + F10)
+- have fun :)
 

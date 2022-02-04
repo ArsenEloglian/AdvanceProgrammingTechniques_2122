@@ -4,12 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.util.Pair;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.theamazonsgame.entities.Board;
 import com.example.theamazonsgame.entities.Game;
@@ -27,17 +30,23 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 public class GameActivity extends AppCompatActivity {
 
     private ProgressDialog progressDialog;
-    private TextView turnTextView;
+    private TextView turnTextView, timerWhite, timerBlack;
     FirebaseAuth mAuth;
     FirebaseUser firebaseUser;
     FirebaseDatabase database;
+    Long time1 = 100000L,time2 = 100000L;
+    CountDownTimer countDownTimer;
     Game game;
     private boolean isFirstPlayer = false;
     private boolean isYourTurn = false;
+    private boolean firstChange = true;
+    private boolean secondChange = true;
     ImageButton buttonA1, buttonA2, buttonA3, buttonA4, buttonA5, buttonB1, buttonB2, buttonB3, buttonB4, buttonB5,
             buttonC1, buttonC2, buttonC3, buttonC4, buttonC5, buttonD1, buttonD2, buttonD3, buttonD4, buttonD5,
             buttonE1, buttonE2, buttonE3, buttonE4, buttonE5;
@@ -53,6 +62,8 @@ public class GameActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         firebaseUser = mAuth.getCurrentUser();
         turnTextView = findViewById(R.id.gameActivity_turnTextView);
+        timerBlack = findViewById(R.id.black_time);
+        timerWhite = findViewById(R.id.white_time);
         getButtonsFromLayout();
 
         showProgressDialog(extras.getString("code"));
@@ -65,12 +76,24 @@ public class GameActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 game = dataSnapshot.getValue(Game.class);
                 getIsFirstPlayer(game);
+                if((!firstChange && !secondChange) || (!isFirstPlayer && !firstChange)){
+                    countDownTimer.cancel();
+                }
+
                 if (game.getResult().value.equalsIgnoreCase(ResultEnum.firstMove.value)) {
                     progressDialog.dismiss();
                 }
                 setIsYourTurn(game);
                 fields = getFieldsFromDB(game);
                 setImagesToButtons();
+                setTimers();
+                if(!firstChange && isFirstPlayer){
+                    manageTimer();
+                    secondChange = false;
+                }else if(!isFirstPlayer) {
+                    manageTimer();
+                }
+                firstChange = false;
             }
 
             @Override
@@ -81,310 +104,370 @@ public class GameActivity extends AppCompatActivity {
         myRef.addValueEventListener(postListener);
     }
 
-    private Board fromButtonsToNewBoard(){
+    private void setTimers() {
+        String firstDuration = String.format(Locale.ENGLISH, "%02d : %02d",
+                TimeUnit.MILLISECONDS.toMinutes(Long.parseLong(game.getTime1()))
+                , TimeUnit.MILLISECONDS.toSeconds(Long.parseLong(game.getTime1())) -
+                        TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(Long.parseLong(game.getTime1()))));
+        String secondDuration = String.format(Locale.ENGLISH, "%02d : %02d",
+                TimeUnit.MILLISECONDS.toMinutes(Long.parseLong(game.getTime2()))
+                , TimeUnit.MILLISECONDS.toSeconds(Long.parseLong(game.getTime2())) -
+                        TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(Long.parseLong(game.getTime2()))));
+        timerWhite.setText(firstDuration);
+        timerBlack.setText(secondDuration);
+    }
+
+    private void manageTimer() {
+        if ((isYourTurn && isFirstPlayer) || (!isFirstPlayer && !isYourTurn)) {
+            startWhiteTimer();
+        } else {
+            startBlackTimer();
+        }
+    }
+
+    private void startBlackTimer() {
+        long duration = TimeUnit.MILLISECONDS.toMillis(Long.parseLong(game.getTime2()));
+        startCountdown(duration, timerBlack);
+    }
+
+    private void startWhiteTimer() {
+        long duration = TimeUnit.MILLISECONDS.toMillis(Long.parseLong(game.getTime1()));
+        startCountdown(duration, timerWhite);
+    }
+
+    private void startCountdown(long duration, TextView textView) {
+        countDownTimer = new CountDownTimer(duration, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                String sDuration = String.format(Locale.ENGLISH, "%02d : %02d",
+                        TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)
+                        , TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) -
+                        TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)));
+                if(isYourTurn && isFirstPlayer || !isYourTurn && !isFirstPlayer){
+                    time1 = millisUntilFinished;
+                }else{
+                    time2 = millisUntilFinished;
+                }
+                textView.setText(sDuration);
+            }
+
+            @Override
+            public void onFinish() {
+                if(isYourTurn){
+                    Toast.makeText(getApplicationContext(),"You Lost!", Toast.LENGTH_LONG).show();
+                }else{
+                    Toast.makeText(getApplicationContext(),"You Won!", Toast.LENGTH_LONG).show();
+                }
+                Intent intent = new Intent(GameActivity.this, MenuActivity.class);
+                startActivity(intent);
+            }
+        }.start();
+    }
+
+    private Board fromButtonsToNewBoard() {
         List<ImageButton> listOfButtons = getListOfButtons();
         Board board = new Board();
         ImageButton buttonInCase;
-        for(ImageButton button : listOfButtons){
+        for (ImageButton button : listOfButtons) {
             String id = getResources().getResourceEntryName(button.getId());
-            switch (id){
+            switch (id) {
                 case "A1":
-                     buttonInCase = buttonA1;
-                    if(buttonInCase.getTag().equals(R.drawable.fired)){
+                    buttonInCase = buttonA1;
+                    if (buttonInCase.getTag().equals(R.drawable.fired)) {
                         board.setA1(FieldStateEnum.fired);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn_white)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn_white)) {
                         board.setA1(FieldStateEnum.firstPlayerPawn);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn)) {
                         board.setA1(FieldStateEnum.secondPlayerPawn);
-                    }else{
+                    } else {
                         board.setA1(FieldStateEnum.empty);
                     }
                     break;
                 case "A2":
                     buttonInCase = buttonA2;
-                    if(buttonInCase.getTag().equals(R.drawable.fired)){
+                    if (buttonInCase.getTag().equals(R.drawable.fired)) {
                         board.setA2(FieldStateEnum.fired);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn_white)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn_white)) {
                         board.setA2(FieldStateEnum.firstPlayerPawn);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn)) {
                         board.setA2(FieldStateEnum.secondPlayerPawn);
-                    }else{
+                    } else {
                         board.setA2(FieldStateEnum.empty);
                     }
                     break;
                 case "A3":
                     buttonInCase = buttonA3;
-                    if(buttonInCase.getTag().equals(R.drawable.fired)){
+                    if (buttonInCase.getTag().equals(R.drawable.fired)) {
                         board.setA3(FieldStateEnum.fired);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn_white)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn_white)) {
                         board.setA3(FieldStateEnum.firstPlayerPawn);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn)) {
                         board.setA3(FieldStateEnum.secondPlayerPawn);
-                    }else{
+                    } else {
                         board.setA3(FieldStateEnum.empty);
                     }
                     break;
                 case "A4":
                     buttonInCase = buttonA4;
-                    if(buttonInCase.getTag().equals(R.drawable.fired)){
+                    if (buttonInCase.getTag().equals(R.drawable.fired)) {
                         board.setA4(FieldStateEnum.fired);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn_white)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn_white)) {
                         board.setA4(FieldStateEnum.firstPlayerPawn);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn)) {
                         board.setA4(FieldStateEnum.secondPlayerPawn);
-                    }else{
+                    } else {
                         board.setA4(FieldStateEnum.empty);
                     }
                     break;
                 case "A5":
                     buttonInCase = buttonA5;
-                    if(buttonInCase.getTag().equals(R.drawable.fired)){
+                    if (buttonInCase.getTag().equals(R.drawable.fired)) {
                         board.setA5(FieldStateEnum.fired);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn_white)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn_white)) {
                         board.setA5(FieldStateEnum.firstPlayerPawn);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn)) {
                         board.setA5(FieldStateEnum.secondPlayerPawn);
-                    }else{
+                    } else {
                         board.setA5(FieldStateEnum.empty);
                     }
                     break;
                 case "B1":
                     buttonInCase = buttonB1;
-                    if(buttonInCase.getTag().equals(R.drawable.fired)){
+                    if (buttonInCase.getTag().equals(R.drawable.fired)) {
                         board.setB1(FieldStateEnum.fired);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn_white)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn_white)) {
                         board.setB1(FieldStateEnum.firstPlayerPawn);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn)) {
                         board.setB1(FieldStateEnum.secondPlayerPawn);
-                    }else{
+                    } else {
                         board.setB1(FieldStateEnum.empty);
                     }
                     break;
                 case "B2":
                     buttonInCase = buttonB2;
-                    if(buttonInCase.getTag().equals(R.drawable.fired)){
+                    if (buttonInCase.getTag().equals(R.drawable.fired)) {
                         board.setB2(FieldStateEnum.fired);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn_white)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn_white)) {
                         board.setB2(FieldStateEnum.firstPlayerPawn);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn)) {
                         board.setB2(FieldStateEnum.secondPlayerPawn);
-                    }else{
+                    } else {
                         board.setB2(FieldStateEnum.empty);
                     }
                     break;
                 case "B3":
                     buttonInCase = buttonB3;
-                    if(buttonInCase.getTag().equals(R.drawable.fired)){
+                    if (buttonInCase.getTag().equals(R.drawable.fired)) {
                         board.setB3(FieldStateEnum.fired);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn_white)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn_white)) {
                         board.setB3(FieldStateEnum.firstPlayerPawn);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn)) {
                         board.setB3(FieldStateEnum.secondPlayerPawn);
-                    }else{
+                    } else {
                         board.setB3(FieldStateEnum.empty);
                     }
                     break;
                 case "B4":
                     buttonInCase = buttonB4;
-                    if(buttonInCase.getTag().equals(R.drawable.fired)){
+                    if (buttonInCase.getTag().equals(R.drawable.fired)) {
                         board.setB4(FieldStateEnum.fired);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn_white)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn_white)) {
                         board.setB4(FieldStateEnum.firstPlayerPawn);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn)) {
                         board.setB4(FieldStateEnum.secondPlayerPawn);
-                    }else{
+                    } else {
                         board.setB4(FieldStateEnum.empty);
                     }
                     break;
                 case "B5":
                     buttonInCase = buttonB5;
-                    if(buttonInCase.getTag().equals(R.drawable.fired)){
+                    if (buttonInCase.getTag().equals(R.drawable.fired)) {
                         board.setB5(FieldStateEnum.fired);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn_white)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn_white)) {
                         board.setB5(FieldStateEnum.firstPlayerPawn);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn)) {
                         board.setB5(FieldStateEnum.secondPlayerPawn);
-                    }else{
+                    } else {
                         board.setB5(FieldStateEnum.empty);
                     }
                     break;
                 case "C1":
                     buttonInCase = buttonC1;
-                    if(buttonInCase.getTag().equals(R.drawable.fired)){
+                    if (buttonInCase.getTag().equals(R.drawable.fired)) {
                         board.setC1(FieldStateEnum.fired);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn_white)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn_white)) {
                         board.setC1(FieldStateEnum.firstPlayerPawn);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn)) {
                         board.setC1(FieldStateEnum.secondPlayerPawn);
-                    }else{
+                    } else {
                         board.setC1(FieldStateEnum.empty);
                     }
                     break;
                 case "C2":
                     buttonInCase = buttonC2;
-                    if(buttonInCase.getTag().equals(R.drawable.fired)){
+                    if (buttonInCase.getTag().equals(R.drawable.fired)) {
                         board.setC2(FieldStateEnum.fired);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn_white)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn_white)) {
                         board.setC2(FieldStateEnum.firstPlayerPawn);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn)) {
                         board.setC2(FieldStateEnum.secondPlayerPawn);
-                    }else{
-                    board.setC2(FieldStateEnum.empty);
-                }
+                    } else {
+                        board.setC2(FieldStateEnum.empty);
+                    }
                     break;
                 case "C3":
                     buttonInCase = buttonC3;
-                    if(buttonInCase.getTag().equals(R.drawable.fired)){
+                    if (buttonInCase.getTag().equals(R.drawable.fired)) {
                         board.setC3(FieldStateEnum.fired);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn_white)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn_white)) {
                         board.setC3(FieldStateEnum.firstPlayerPawn);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn)) {
                         board.setC3(FieldStateEnum.secondPlayerPawn);
-                    }else{
+                    } else {
                         board.setC3(FieldStateEnum.empty);
                     }
                     break;
                 case "C4":
                     buttonInCase = buttonC4;
-                    if(buttonInCase.getTag().equals(R.drawable.fired)){
+                    if (buttonInCase.getTag().equals(R.drawable.fired)) {
                         board.setC4(FieldStateEnum.fired);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn_white)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn_white)) {
                         board.setC4(FieldStateEnum.firstPlayerPawn);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn)) {
                         board.setC4(FieldStateEnum.secondPlayerPawn);
-                    }else{
+                    } else {
                         board.setC4(FieldStateEnum.empty);
                     }
                     break;
                 case "C5":
                     buttonInCase = buttonC5;
-                    if(buttonInCase.getTag().equals(R.drawable.fired)){
+                    if (buttonInCase.getTag().equals(R.drawable.fired)) {
                         board.setC5(FieldStateEnum.fired);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn_white)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn_white)) {
                         board.setC5(FieldStateEnum.firstPlayerPawn);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn)) {
                         board.setC5(FieldStateEnum.secondPlayerPawn);
-                    }else{
+                    } else {
                         board.setC5(FieldStateEnum.empty);
                     }
                     break;
                 case "D1":
                     buttonInCase = buttonD1;
-                    if(buttonInCase.getTag().equals(R.drawable.fired)){
+                    if (buttonInCase.getTag().equals(R.drawable.fired)) {
                         board.setD1(FieldStateEnum.fired);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn_white)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn_white)) {
                         board.setD1(FieldStateEnum.firstPlayerPawn);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn)) {
                         board.setD1(FieldStateEnum.secondPlayerPawn);
-                    }else{
+                    } else {
                         board.setD1(FieldStateEnum.empty);
                     }
                     break;
                 case "D2":
                     buttonInCase = buttonD2;
-                    if(buttonInCase.getTag().equals(R.drawable.fired)){
+                    if (buttonInCase.getTag().equals(R.drawable.fired)) {
                         board.setD2(FieldStateEnum.fired);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn_white)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn_white)) {
                         board.setD2(FieldStateEnum.firstPlayerPawn);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn)) {
                         board.setD2(FieldStateEnum.secondPlayerPawn);
-                    }else{
+                    } else {
                         board.setD2(FieldStateEnum.empty);
                     }
                     break;
                 case "D3":
                     buttonInCase = buttonD3;
-                    if(buttonInCase.getTag().equals(R.drawable.fired)){
+                    if (buttonInCase.getTag().equals(R.drawable.fired)) {
                         board.setD3(FieldStateEnum.fired);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn_white)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn_white)) {
                         board.setD3(FieldStateEnum.firstPlayerPawn);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn)) {
                         board.setD3(FieldStateEnum.secondPlayerPawn);
-                    }else{
+                    } else {
                         board.setD3(FieldStateEnum.empty);
                     }
                     break;
                 case "D4":
                     buttonInCase = buttonD4;
-                    if(buttonInCase.getTag().equals(R.drawable.fired)){
+                    if (buttonInCase.getTag().equals(R.drawable.fired)) {
                         board.setD4(FieldStateEnum.fired);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn_white)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn_white)) {
                         board.setD4(FieldStateEnum.firstPlayerPawn);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn)) {
                         board.setD4(FieldStateEnum.secondPlayerPawn);
-                    }else{
+                    } else {
                         board.setD4(FieldStateEnum.empty);
                     }
                     break;
                 case "D5":
                     buttonInCase = buttonD5;
-                    if(buttonInCase.getTag().equals(R.drawable.fired)){
+                    if (buttonInCase.getTag().equals(R.drawable.fired)) {
                         board.setD5(FieldStateEnum.fired);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn_white)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn_white)) {
                         board.setD5(FieldStateEnum.firstPlayerPawn);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn)) {
                         board.setD5(FieldStateEnum.secondPlayerPawn);
-                    }else{
+                    } else {
                         board.setD5(FieldStateEnum.empty);
                     }
                     break;
                 case "E1":
                     buttonInCase = buttonE1;
-                    if(buttonInCase.getTag().equals(R.drawable.fired)){
+                    if (buttonInCase.getTag().equals(R.drawable.fired)) {
                         board.setE1(FieldStateEnum.fired);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn_white)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn_white)) {
                         board.setE1(FieldStateEnum.firstPlayerPawn);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn)) {
                         board.setE1(FieldStateEnum.secondPlayerPawn);
-                    }else{
+                    } else {
                         board.setE1(FieldStateEnum.empty);
                     }
                     break;
                 case "E2":
                     buttonInCase = buttonE2;
-                    if(buttonInCase.getTag().equals(R.drawable.fired)){
+                    if (buttonInCase.getTag().equals(R.drawable.fired)) {
                         board.setE2(FieldStateEnum.fired);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn_white)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn_white)) {
                         board.setE2(FieldStateEnum.firstPlayerPawn);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn)) {
                         board.setE2(FieldStateEnum.secondPlayerPawn);
-                    }else{
+                    } else {
                         board.setE2(FieldStateEnum.empty);
                     }
                     break;
                 case "E3":
                     buttonInCase = buttonE3;
-                    if(buttonInCase.getTag().equals(R.drawable.fired)){
+                    if (buttonInCase.getTag().equals(R.drawable.fired)) {
                         board.setE3(FieldStateEnum.fired);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn_white)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn_white)) {
                         board.setE3(FieldStateEnum.firstPlayerPawn);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn)) {
                         board.setE3(FieldStateEnum.secondPlayerPawn);
-                    }else{
+                    } else {
                         board.setE3(FieldStateEnum.empty);
                     }
                     break;
                 case "E4":
                     buttonInCase = buttonE4;
-                    if(buttonInCase.getTag().equals(R.drawable.fired)){
+                    if (buttonInCase.getTag().equals(R.drawable.fired)) {
                         board.setE4(FieldStateEnum.fired);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn_white)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn_white)) {
                         board.setE4(FieldStateEnum.firstPlayerPawn);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn)) {
                         board.setE4(FieldStateEnum.secondPlayerPawn);
-                    }else{
+                    } else {
                         board.setE4(FieldStateEnum.empty);
                     }
                     break;
                 case "E5":
                     buttonInCase = buttonE5;
-                    if(buttonInCase.getTag().equals(R.drawable.fired)){
+                    if (buttonInCase.getTag().equals(R.drawable.fired)) {
                         board.setE5(FieldStateEnum.fired);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn_white)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn_white)) {
                         board.setE5(FieldStateEnum.firstPlayerPawn);
-                    }else if(buttonInCase.getTag().equals(R.drawable.pawn)){
+                    } else if (buttonInCase.getTag().equals(R.drawable.pawn)) {
                         board.setE5(FieldStateEnum.secondPlayerPawn);
-                    }else{
+                    } else {
                         board.setE5(FieldStateEnum.empty);
                     }
                     break;
@@ -393,9 +476,9 @@ public class GameActivity extends AppCompatActivity {
         return board;
     }
 
-    private List<ImageButton> getListOfButtons(){
+    private List<ImageButton> getListOfButtons() {
         List<ImageButton> list = new ArrayList<>();
-        for(Pair<BoardFieldEnum, Pair<ImageButton, FieldStateEnum>> field : fields){
+        for (Pair<BoardFieldEnum, Pair<ImageButton, FieldStateEnum>> field : fields) {
             list.add(field.second.first);
         }
         return list;
@@ -549,42 +632,54 @@ public class GameActivity extends AppCompatActivity {
             }
             disableAllFields();
             //pokazywanie kropek dla strzalu
-            int firstEdgeE = (int)'E';
-            int firstEdgeA = (int)'A';
+            int firstEdgeE = (int) 'E';
+            int firstEdgeA = (int) 'A';
             int secondEdge1 = 1;
             int secondEdge5 = 5;
             List<String> fieldsToDot = new ArrayList<>();
+            boolean firstBlocked = false;
+            boolean secondBlocked = false;
+            boolean thirdBlocked = false;
+            boolean fourthBlocked = false;
             for (int i = 1; i <= 4; i++) {
                 int firstC = fieldFromList.first.firstValue.charAt(0) + i;
                 int secondC = Integer.parseInt(fieldFromList.first.secondValue) + i;
-                String firstAndSecondC = String.valueOf((char)firstC) + secondC;
-                if(firstC >= firstEdgeA && firstC <= firstEdgeE && secondC >= secondEdge1 && secondC <= secondEdge5){
-                    if(getFieldFromList(firstAndSecondC).second.first.getTag().equals("empty")){
+                String firstAndSecondC = String.valueOf((char) firstC) + secondC;
+                if (firstC >= firstEdgeA && firstC <= firstEdgeE && secondC >= secondEdge1 && secondC <= secondEdge5) {
+                    if (getFieldFromList(firstAndSecondC).second.first.getTag().equals("empty") && !firstBlocked) {
                         fieldsToDot.add(firstAndSecondC);
+                    }else{
+                        firstBlocked = true;
                     }
                 }
                 firstC = fieldFromList.first.firstValue.charAt(0) - i;
                 secondC = Integer.parseInt(fieldFromList.first.secondValue) - i;
-                firstAndSecondC = String.valueOf((char)firstC) + secondC;
-                if(firstC >= firstEdgeA && firstC <= firstEdgeE && secondC >= secondEdge1 && secondC <= secondEdge5){
-                    if(getFieldFromList(firstAndSecondC).second.first.getTag().equals("empty")){
+                firstAndSecondC = String.valueOf((char) firstC) + secondC;
+                if (firstC >= firstEdgeA && firstC <= firstEdgeE && secondC >= secondEdge1 && secondC <= secondEdge5) {
+                    if (getFieldFromList(firstAndSecondC).second.first.getTag().equals("empty") && !secondBlocked) {
                         fieldsToDot.add(firstAndSecondC);
+                    }else{
+                        secondBlocked = true;
                     }
                 }
                 firstC = fieldFromList.first.firstValue.charAt(0) - i;
                 secondC = Integer.parseInt(fieldFromList.first.secondValue) + i;
-                firstAndSecondC = String.valueOf((char)firstC) + secondC;
-                if(firstC >= firstEdgeA && firstC <= firstEdgeE && secondC >= secondEdge1 && secondC <= secondEdge5){
-                    if(getFieldFromList(firstAndSecondC).second.first.getTag().equals("empty")){
+                firstAndSecondC = String.valueOf((char) firstC) + secondC;
+                if (firstC >= firstEdgeA && firstC <= firstEdgeE && secondC >= secondEdge1 && secondC <= secondEdge5) {
+                    if (getFieldFromList(firstAndSecondC).second.first.getTag().equals("empty") && !thirdBlocked) {
                         fieldsToDot.add(firstAndSecondC);
+                    }else{
+                        thirdBlocked = true;
                     }
                 }
                 firstC = fieldFromList.first.firstValue.charAt(0) + i;
                 secondC = Integer.parseInt(fieldFromList.first.secondValue) - i;
-                firstAndSecondC = String.valueOf((char)firstC) + secondC;
-                if(firstC >= firstEdgeA && firstC <= firstEdgeE && secondC >= secondEdge1 && secondC <= secondEdge5){
-                    if(getFieldFromList(firstAndSecondC).second.first.getTag().equals("empty")){
+                firstAndSecondC = String.valueOf((char) firstC) + secondC;
+                if (firstC >= firstEdgeA && firstC <= firstEdgeE && secondC >= secondEdge1 && secondC <= secondEdge5) {
+                    if (getFieldFromList(firstAndSecondC).second.first.getTag().equals("empty") && !fourthBlocked) {
                         fieldsToDot.add(firstAndSecondC);
+                    }else{
+                        fourthBlocked = true;
                     }
                 }
             }
@@ -599,11 +694,11 @@ public class GameActivity extends AppCompatActivity {
                 }
             }
 
-            if(fieldsToDot.isEmpty()){
-                setBoardToDatabase();
+            if (fieldsToDot.isEmpty()) {
+                SetBoardAndTimeToDatabase();
             }
 
-        }else if (turnState.equals(TurnStateEnum.chooseFire)){
+        } else if (turnState.equals(TurnStateEnum.chooseFire)) {
             for (Pair<BoardFieldEnum, Pair<ImageButton, FieldStateEnum>> f : fields) {
                 if ((f.first.firstValue + f.first.secondValue).equalsIgnoreCase(field)) {
                     f.second.first.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.fired));
@@ -611,45 +706,78 @@ public class GameActivity extends AppCompatActivity {
                     f.second.first.setEnabled(false);
                 }
             }
-            setBoardToDatabase();
+            SetBoardAndTimeToDatabase();
         }
     }
 
-    private void setBoardToDatabase(){
+    private void SetBoardAndTimeToDatabase() {
         DatabaseReference myRef = database.getReference("Games").child(game.getId());
-        if(isFirstPlayer){
+        if (isFirstPlayer) {
             game.setResult(ResultEnum.secondMove);
-        }else{
+        } else {
             game.setResult(ResultEnum.firstMove);
         }
+        game.setTime1(String.valueOf(time1));
+        game.setTime2(String.valueOf(time2));
         game.setBoard(fromButtonsToNewBoard());
         myRef.setValue(game);
         turnState = TurnStateEnum.choosePawn;
     }
 
     private void disableAllFields() {
-        for(Pair<BoardFieldEnum, Pair<ImageButton, FieldStateEnum>> field : fields){
+        for (Pair<BoardFieldEnum, Pair<ImageButton, FieldStateEnum>> field : fields) {
             field.second.first.setEnabled(false);
         }
     }
 
     private void choosePawn(String field, char firstCondition, char secondCondition) {
         List<String> fieldsToChange = new ArrayList<>();
-        for (char alph = 'A'; alph <= 'E'; alph++) {
+
+        for (char alph = firstCondition; alph <= 'E'; alph++) {
             String f = alph + String.valueOf(secondCondition);
             Pair<BoardFieldEnum, Pair<ImageButton, FieldStateEnum>> fieldFromList = getFieldFromList(f);
             if (!(fieldFromList.first.firstValue + fieldFromList.first.secondValue).equalsIgnoreCase(field) &&
                     (fieldFromList.second.first.getTag().equals("empty") || fieldFromList.second.first.getTag().equals(R.drawable.dot))) {
                 fieldsToChange.add(f);
+            }else if(!(fieldFromList.first.firstValue + fieldFromList.first.secondValue).equalsIgnoreCase(field) &&
+                    !(fieldFromList.second.first.getTag().equals("empty") || fieldFromList.second.first.getTag().equals(R.drawable.dot))){
+                break;
             }
         }
 
-        for (int i = 1; i <= 5; i++) {
-            String f = firstCondition + String.valueOf(i);
+        for (char alph = firstCondition; alph >= 'A'; alph--) {
+            String f = alph + String.valueOf(secondCondition);
             Pair<BoardFieldEnum, Pair<ImageButton, FieldStateEnum>> fieldFromList = getFieldFromList(f);
             if (!(fieldFromList.first.firstValue + fieldFromList.first.secondValue).equalsIgnoreCase(field) &&
                     (fieldFromList.second.first.getTag().equals("empty") || fieldFromList.second.first.getTag().equals(R.drawable.dot))) {
                 fieldsToChange.add(f);
+            }else if(!(fieldFromList.first.firstValue + fieldFromList.first.secondValue).equalsIgnoreCase(field) &&
+                    !(fieldFromList.second.first.getTag().equals("empty") || fieldFromList.second.first.getTag().equals(R.drawable.dot))){
+                break;
+            }
+        }
+
+        for (int alph = Integer.parseInt(String.valueOf(secondCondition)); alph <= 5; alph++) {
+            String f = String.valueOf(firstCondition) + alph;
+            Pair<BoardFieldEnum, Pair<ImageButton, FieldStateEnum>> fieldFromList = getFieldFromList(f);
+            if (!(fieldFromList.first.firstValue + fieldFromList.first.secondValue).equalsIgnoreCase(field) &&
+                    (fieldFromList.second.first.getTag().equals("empty") || fieldFromList.second.first.getTag().equals(R.drawable.dot))) {
+                fieldsToChange.add(f);
+            }else if(!(fieldFromList.first.firstValue + fieldFromList.first.secondValue).equalsIgnoreCase(field) &&
+                    !(fieldFromList.second.first.getTag().equals("empty") || fieldFromList.second.first.getTag().equals(R.drawable.dot))){
+                break;
+            }
+        }
+
+        for (int alph = Integer.parseInt(String.valueOf(secondCondition)); alph >= 1; alph--) {
+            String f = String.valueOf(firstCondition) + alph;
+            Pair<BoardFieldEnum, Pair<ImageButton, FieldStateEnum>> fieldFromList = getFieldFromList(f);
+            if (!(fieldFromList.first.firstValue + fieldFromList.first.secondValue).equalsIgnoreCase(field) &&
+                    (fieldFromList.second.first.getTag().equals("empty") || fieldFromList.second.first.getTag().equals(R.drawable.dot))) {
+                fieldsToChange.add(f);
+            }else if(!(fieldFromList.first.firstValue + fieldFromList.first.secondValue).equalsIgnoreCase(field) &&
+                    !(fieldFromList.second.first.getTag().equals("empty") || fieldFromList.second.first.getTag().equals(R.drawable.dot))){
+                break;
             }
         }
 
