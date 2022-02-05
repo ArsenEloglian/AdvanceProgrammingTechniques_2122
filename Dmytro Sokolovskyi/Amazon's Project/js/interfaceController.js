@@ -12,9 +12,13 @@ function aimateUIElements(stageFrom, stageTo) {
     let appearElement = document.getElementById(stageTo);
     disappearElement.classList.remove('item-appear');
     disappearElement.classList.add('item-disappear');
-    appearElement.classList.remove('item-disappear');
-    appearElement.classList.remove('non-shown');
-    appearElement.classList.add('item-appear');
+    let timeout = 200;
+    if (stageFrom == stageTo) timeout = 0;
+    setTimeout(() => { // for smoother animation
+        appearElement.classList.remove('item-disappear');
+        appearElement.classList.remove('non-shown');
+        appearElement.classList.add('item-appear');
+    }, timeout);
 }
 
 function mapJToLetters(i) {
@@ -45,4 +49,25 @@ function drawFieldMarks(boardHeight, boardWidth) {
         let cell = document.getElementById('tb' + i + '_0');
         cell.dataset.number = mapIToNumbers(i);
     }
+}
+
+function displayResults(teamName, whiteScore, blackScore) {
+    let resultBlock = document.getElementById('resultBlock');
+    let resultTeam = document.getElementById('resultTeam');
+    resultTeam.innerHTML = teamName;
+    let whitePoints = document.getElementById('whitePoints');
+    whitePoints.innerHTML = whiteScore;
+    let blackPoints = document.getElementById('blackPoints');
+    blackPoints.innerHTML = blackScore;
+    resultBlock.classList.remove('non-shown');
+}
+
+function hideScoreBoard() {
+    let resultBlock = document.getElementById('resultBlock');
+    resultBlock.classList.add('non-shown');
+}
+
+function goToMainMenu() {
+    hideScoreBoard();
+    setStage(UIStage.STAGE_PLAYERS);
 }
