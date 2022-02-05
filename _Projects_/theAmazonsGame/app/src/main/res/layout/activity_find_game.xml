@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FindGameActivity">
+
+    <TextView
+        android:id="@+id/findGame_Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/findGame_EnterCodeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/TextView_enterCode"
+        android:layout_below="@+id/findGame_Title"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        />
+    <EditText
+        android:id="@+id/findGame_enterCodeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_below="@+id/findGame_EnterCodeTextView"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/findGame_enterCodeEditText"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/button_Enter"
+
+        android:onClick="findGame"
+        />
+
+
+
+</RelativeLayout>

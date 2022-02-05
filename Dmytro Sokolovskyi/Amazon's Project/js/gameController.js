@@ -8,6 +8,7 @@ const BLACK_LOG = '&#x265C;';
 
 const CellState = Object.freeze({ EMPTY: -1, ARROW: 1, QUEEN: 2 , CAPTURE: 3});
 const GameMode = Object.freeze({ PLAYER: 0, AI: 1});
+
 let selectedGameMode;
 
 const INVALID = 0;
