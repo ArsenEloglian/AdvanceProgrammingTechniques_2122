@@ -27,6 +27,7 @@ let blackVictories;
 
 let isMove;
 let isShoot;
+let isBotMove;
 let currX;
 let currY;
 let currentTeam;
@@ -49,23 +50,39 @@ let boardHeight;
 let boardWidth;
 let gameFinished;
 
+let boardSnapshots;
+let currentTurnNumber;
+let firstCancel;
+
 function selectGameMode(mode) {
     selectedGameMode = mode;
     setStage(UIStage.STAGE_PROPERTIES);
 }
 
+function getBoardHeight() {
+    return boardHeight;
+}
+
+function getBoardWidth() {
+    return boardWidth;
+}
+
 function startGame() {
     isMove = false;
     isShoot = false;
+    isBotMove = false;
     gameFinished = false;
     currentPossibleWays = 0;
     whiteCaptured = 0;
     blackCaptured = 0;
     currentTeam = TEAMWHITE;
+    boardSnapshots = [];
+    currentTurnNumber = 0;
+    firstCancel = true;
     currentTeamText = document.getElementById("currentTeamText");
     currentTeamText.textContent = "White's turn";
     gameTable = document.getElementById("gameTable");
-    gameTable.classList.add('tabble-white-turn');
+    document.body.classList.add('table-white-turn');
     gameLog = document.getElementById('gameLog');
     gameLog.value = "";
     gameType = document.gameChoiceForm.gameMode.value;
@@ -99,6 +116,12 @@ function startGame() {
     }
     drawFieldMarks(boardHeight, boardWidth);
     setStage(UIStage.STAGE_GAME);
+    saveCurrentBoard();
+}
+
+function restartGame() {
+    hideScoreBoard();
+    startGame();
 }
 
 function createField(width, height) {
@@ -137,17 +160,17 @@ function placeFigure(i, j, className) {
     tableCell.dataset.state = CellState.QUEEN;
 }
 
-function replaceFigure(i, j) { 
+function replaceFigure(i, j, currX1, currY1) { 
     let tableCellTo = document.getElementById('tb' + i + '_' + j);
-    let tableCellFrom = document.getElementById('tb' + currX + '_' + currY);
-    if(isMove){
+    let tableCellFrom = document.getElementById('tb' + currX1 + '_' + currY1);
+    if(isMove || isBotMove){
         tableCellTo.innerHTML = tableCellFrom.innerHTML;
         tableCellTo.dataset.state = CellState.QUEEN;
         tableCellFrom.innerHTML = "";
         tableCellFrom.dataset.state = CellState.EMPTY;
         isMove = false;
         isShoot = true;
-        logMove(currX, currY, i, j);
+        logMove(currX1, currY1, i, j);
         currX = i;
         currY = j;
         highlightCurrentFigure();
@@ -167,6 +190,7 @@ function makeShoot(i, j){
     logShot(i, j);
     changeCurrentTeam();
     checkForSeparatedTeamsFigures();
+    saveCurrentBoard();
 }
 
 function onCellClicked(i, j) {
@@ -187,37 +211,38 @@ function onCellClicked(i, j) {
             else blackCaptured++;
         }
     }
-    if(tableCell.dataset.state == CellState.EMPTY && isMove == true && isShoot == false && checkValidMovement(i, j)){
-        replaceFigure(i, j);
+    if (tableCell.dataset.state == CellState.EMPTY && isMove == true && isShoot == false && checkValidMovement(i, j, currX, currY)) {
+        replaceFigure(i, j, currX, currY);
     }
-    if(tableCell.dataset.state == CellState.EMPTY && isShoot == true  && checkValidMovement(i, j)){
+    if (tableCell.dataset.state == CellState.EMPTY && isShoot == true  && checkValidMovement(i, j, currX, currY)) {
         makeShoot(i, j);
     }
 }
 
-function checkValidMovement(i, j){ 
-    if(isShoot == true || isMove == true) {
+function checkValidMovement(i, j, currX1, currY1){ 
+    if(isShoot == true || isMove == true || isBotMove == true) {
         //vertical/horizontal
-        if(currX == i || currY == j) {
-            if(currX == i) {
-                getStartStopMovement(currY, j);
+
+        if(currX1 == i || currY1 == j) {
+            if(currX1 == i){
+                getStartStopMovement(currY1, j);
                 return validHorVerMovement(i, null);
-            } else if (currY == j) {
-                getStartStopMovement(currX, i);
+            }else if(currY1 == j){
+                getStartStopMovement(currX1, i);
                 return validHorVerMovement(null, j);
             }
         }//cross up right
-        else if(currX > i && currY < j) {
-            return validCrossMovement(i, j, true, false, true);
+        else if(currX1 > i && currY1 < j) {
+            return validCrossMovement(i, j, true, false, true, currX1, currY1);
         //cross up left
-        }else if(currX > i && currY > j){
-            return validCrossMovement(i, j, true, false, false);
+        }else if(currX1 > i && currY1 > j){
+            return validCrossMovement(i, j, true, false, false, currX1, currY1);
         //cross down right    
-        }else if(currX < i && currY < j){
-            return validCrossMovement(i, j, false, true, true);
+        }else if(currX1 < i && currY1 < j){
+            return validCrossMovement(i, j, false, true, true, currX1, currY1);
         //cross down left
-        }else if(currX < i && currY > j) {
-            return validCrossMovement(i, j, false, true, false);
+        }else if(currX1 < i && currY1 > j) {
+            return validCrossMovement(i, j, false, true, false, currX1, currY1);
         }
     }
     return false;
@@ -231,18 +256,11 @@ function checkForSeparatedTeamsFigures() {
     let finishGame =  false;
     let queens = Array.from(document.getElementsByClassName(WHITE));
     Array.from(document.getElementsByClassName(BLACK)).forEach(elem => queens.push(elem));
-    //document.getElementsByClassName(BLACK).forEach((elem) => queens.push(elem));
     for (let l = 0; l < queens.length; l++) {
-        //console.log(queens[i]);
         let p = queens[l].parentElement;
         let queenI = getQueenI(p);
         let queenJ = getQueenJ(p);
-        console.log( 'Queen on position ' + mapJToLetters(queenJ) + mapIToNumbers(queenI) + ' is lonely: ' + checkFigureLoneliness(queens[l].className, queenI, queenJ));
-        if (isQueenCaptured(queenI, queenJ)) {
-            console.log("queen " + queenI + ' ' + queenJ + ' is captured');
-            finishGame = true;
-        } 
-        else if (checkFigureLoneliness(queens[l].className, queenI, queenJ)) finishGame = true;
+        if (checkFigureLoneliness(queens[l].className, queenI, queenJ) || isQueenCaptured(queenI, queenJ)) finishGame = true;
         else return;
     }
     if (finishGame) {
@@ -262,7 +280,7 @@ function checkFigureLoneliness(queenClassName, queenI, queenJ) {
     // to compare queen teams just compare their classList
     //let queenI = getQueenI(queen);
     //let queenJ = getQueenJ(queen);
-    let currentFieldMatrix = getFieldMatrix();
+    let currMatrix = getFieldMatrix();
     let visited = new Array(boardHeight);
     for (let k = 0; k < boardHeight; k++) {
         visited[k] = new Array(boardWidth);
@@ -284,76 +302,18 @@ function checkFigureLoneliness(queenClassName, queenI, queenJ) {
 
         queue.shift();
 
-        // up
-        if (isValidCoord(i - 1, j, boardHeight, boardWidth) && visited[i - 1][j] == false) {
-            if (currentFieldMatrix[i - 1][j].state == CellState.EMPTY) {
-                queue.push({ i: i - 1 , j: j });
-                visited[i - 1][j] = true;
+        for (let nI = i - 1; nI <= i + 1; nI++) {
+            for (let nJ = j - 1; nJ <= j + 1; nJ++) {
+                if (isValidCoord(nI, nJ, boardHeight, boardWidth) && visited[nI][nJ] == false) {
+                    if (currMatrix[nI][nJ].state == CellState.EMPTY) {
+                        queue.push({ i: nI , j: nJ });
+                        visited[nI][nJ] = true;
+                    }
+                    else if (currMatrix[nI][nJ].state == CellState.QUEEN && queenClassName != currMatrix[nI][nJ].queenTeam) {
+                        return false;
+                    }
+                }
             }
-            else if (currentFieldMatrix[i - 1][j].state == CellState.QUEEN && queenClassName != currentFieldMatrix[i - 1][j].queenTeam) return false;
-        }
-
-        // up left
-        if (isValidCoord(i - 1, j - 1, boardHeight, boardWidth) && visited[i - 1][j - 1] == false) {
-            if (currentFieldMatrix[i - 1][j - 1].state == CellState.EMPTY) {
-                queue.push({ i: i - 1 , j: j - 1 });
-                visited[i - 1][j - 1] = true;
-            }
-            else if (currentFieldMatrix[i - 1][j - 1].state == CellState.QUEEN && queenClassName != currentFieldMatrix[i - 1][j - 1].queenTeam) return false;
-        }
-
-        // up right
-        if (isValidCoord(i - 1, j + 1, boardHeight, boardWidth) && visited[i - 1][j + 1] == false) {
-            if (currentFieldMatrix[i - 1][j + 1].state == CellState.EMPTY) {
-                queue.push({ i: i - 1 , j: j + 1 });
-                visited[i - 1][ j + 1] = true;
-            }
-            else if (currentFieldMatrix[i - 1][j + 1].state == CellState.QUEEN && queenClassName != currentFieldMatrix[i - 1][j + 1].queenTeam) return false;
-        }
-
-        // left
-        if (isValidCoord(i, j - 1, boardHeight, boardWidth) && visited[i][j - 1] == false) {
-            if (currentFieldMatrix[i][j - 1].state == CellState.EMPTY) {
-                queue.push({ i: i , j: j - 1 });
-                visited[i][ j - 1] = true;
-            }
-            else if (currentFieldMatrix[i][j - 1].state == CellState.QUEEN && queenClassName != currentFieldMatrix[i][j - 1].queenTeam) return false;
-        }
-
-        // right
-        if (isValidCoord(i, j + 1, boardHeight, boardWidth) && visited[i][j + 1] == false) {
-            if (currentFieldMatrix[i][j + 1].state == CellState.EMPTY) {
-                queue.push({ i: i , j: j + 1 });
-                visited[i][ j + 1] = true;
-            }
-            else if (currentFieldMatrix[i][j + 1].state == CellState.QUEEN && queenClassName != currentFieldMatrix[i][j + 1].queenTeam) return false;
-        }
-
-        // down
-        if (isValidCoord(i + 1, j, boardHeight, boardWidth) && visited[i + 1][j] == false) {
-            if (currentFieldMatrix[i + 1][j].state == CellState.EMPTY) {
-                queue.push({ i: i + 1 , j: j });
-                visited[i + 1][ j] = true;
-            }
-            else if (currentFieldMatrix[i + 1][j].state == CellState.QUEEN && queenClassName != currentFieldMatrix[i + 1][j].queenTeam) return false;
-        }
-
-        // down left
-        if (isValidCoord(i + 1, j - 1, boardHeight, boardWidth) && visited[i + 1][j - 1] == false) {
-            if (currentFieldMatrix[i + 1][j - 1].state == CellState.EMPTY) {
-                queue.push({ i: i + 1 , j: j - 1 });
-                visited[i + 1][ j - 1] = true;
-            }
-            else if (currentFieldMatrix[i + 1][j - 1].state == CellState.QUEEN && queenClassName != currentFieldMatrix[i + 1][j - 1].queenTeam) return false;
-        }
-
-        // down right
-        if (isValidCoord(i + 1, j + 1, boardHeight, boardWidth) && visited[i + 1][j + 1] == false) {
-            if (currentFieldMatrix[i + 1][j + 1].state == CellState.EMPTY) {
-                queue.push({ i: i + 1 , j: j + 1 });
-                visited[i + 1][ j + 1] = true;
-            }
-            else if (currentFieldMatrix[i + 1][j + 1].state == CellState.QUEEN && queenClassName != currentFieldMatrix[i + 1][j + 1].queenTeam) return false;
         }
 
     }
@@ -365,13 +325,151 @@ function finishGameAndDisplayResults() {
     gameFinished = true;
     currentTeamText.textContent = "Game finished!";
     gameLog.value += "Game finished!"
+    calculatePoints();
 }
 
-function calculateTeamPoints() {
-    let whitePoints = 0;
-    let blackPoints = 0;
-    let whiteQueens = Array.from(document.getElementsByClassName(WHITE));
-    let blackQueens = Array.from(document.getElementsByClassName(BLACK));
+function calculatePoints() {
+    //let blackQueens = Array.from(document.getElementsByClassName(BLACK));
+    let visited = new Array(boardHeight);
+    let whiteQueens = [];
+    let blackQueens = [];
+    let currMatrix = getFieldMatrix();
+    for (let i = 0; i < currMatrix.length; i++) {
+        visited[i] = new Array(boardWidth);
+        for (let j = 0; j < currMatrix[i].length; j++) {
+            visited[i][j] = false;
+            if (currMatrix[i][j].state == CellState.QUEEN) {
+                if (currMatrix[i][j].queenTeam == WHITE) {
+                    whiteQueens.push({ queenI: i, queenJ: j, queenTeam: WHITE, visited: false });
+                }
+                else if (currMatrix[i][j].queenTeam == BLACK) {
+                    blackQueens.push({ queenI: i, queenJ: j, queenTeam: BLACK, visited: false });
+                }
+            }
+        }
+    }
+
+    //calculate white
+    let whitePoints = calculateTeamPoints(currMatrix, whiteQueens);
+    let blackPoints = calculateTeamPoints(currMatrix, blackQueens);
+
+    if (whitePoints > blackPoints) displayResults('White won!', whitePoints, blackPoints);
+    else if (blackPoints > whitePoints) displayResults('Black won!', whitePoints, blackPoints);
+    else displayResults('Draw!', whitePoints, blackPoints);
+}
+
+function calculateTeamPoints(currMatrix, queensArray) {
+    let teamPoints = 0;
+
+    let visited = new Array(currMatrix.length);
+    for (let i = 0; i < currMatrix.length; i++) {
+        visited[i] = new Array(boardWidth);
+        for (let j = 0; j < currMatrix[i].length; j++) {
+            visited[i][j] = false;
+        }
+    }
+
+    for (let q = 0; q < queensArray.length; q++) {
+        if (!isQueenCaptured(queensArray[q].queenI, queensArray[q].queenJ) && queensArray[q].visited != true) {
+            let queue = [];
+            queue.push({i: queensArray[q].queenI, j: queensArray[q].queenJ});
+            visited[queensArray[q].queenI][queensArray[q].queenJ] = true;
+            queensArray[q].visited = true;
+        
+            while (queue.length > 0) {
+        
+                let coord = queue[0];
+                let i = coord.i;
+                let j = coord.j;
+        
+                queue.shift();
+
+                for (let nI = i - 1; nI <= i + 1; nI++) {
+                    for (let nJ = j - 1; nJ <= j + 1; nJ++) {
+                        if (isValidCoord(nI, nJ, boardHeight, boardWidth) && visited[nI][nJ] == false) {
+                            if (currMatrix[nI][nJ].state == CellState.EMPTY) {
+                                queue.push({ i: nI , j: nJ });
+                                visited[nI][nJ] = true;
+                                teamPoints++;
+                            }
+                            else if (currMatrix[nI][nJ].state == CellState.QUEEN) {
+                                for (let it = 0; it < queensArray.length; it++){
+                                    if (queensArray[it].queenI == nI && queensArray[it].queenJ == nJ) {
+                                        queensArray.visited = true;
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    return teamPoints;
+}
+
+function cancelLastMove() {
+    isShoot = false;
+    isMove = false;
+    deHighlightFigure();
+    stopShowPossibleFigureMoves();
+    tmpLog = '';
+    if (selectedGameMode == GameMode.AI) currentTurnNumber -= 1;
+    if (firstCancel) {
+        currentTurnNumber -= 2;
+        firstCancel = false;
+    } 
+    else currentTurnNumber -= 1;
+    let lastSnapshot = boardSnapshots[currentTurnNumber];
+    if (lastSnapshot == undefined) alert("No moves were done");
+    else {
+        reviveBoardFormMatrix(lastSnapshot.snapshot);
+        setCurrentTeam(lastSnapshot.teamTurn);
+    }
+}
+
+function reviveBoardFormMatrix(snapshot) {
+    for (let i = 0; i < boardHeight; i++) {
+        for (let j = 0; j < boardWidth; j++) {
+            let tableCell = document.getElementById('tb' + i + '_' + j);
+            if (parseInt(tableCell.dataset.state) != snapshot[i][j].state) {
+                tableCell.dataset.state = snapshot[i][j].state;
+                switch(snapshot[i][j].state) {
+                    case -1: { // Empty
+                        tableCell.innerHTML = '';
+                        break;
+                    }
+                    case 1: { // Arrow
+                        let arrowFigure = document.createElement('div');
+                        arrowFigure.className = 'figure figure-arrow';
+                        tableCell.append(arrowFigure);
+                        break;
+                    }
+                    case 2: { // Queen
+                        placeFigure(i, j, snapshot[i][j].queenTeam);
+                        break;
+                    }
+                    default: {
+                        alert("Error");
+                        break;
+                    }
+                }
+            }
+        }
+    }
+}
+
+function saveCurrentBoard() {
+    console.log(boardSnapshots, currentTurnNumber);
+    let moveObj = { snapshot: getFieldMatrix(), teamTurn: currentTeam}
+    if (!firstCancel) {
+        firstCancel = true;
+        currentTurnNumber += 1;
+    } 
+    boardSnapshots[currentTurnNumber] = moveObj;
+    currentTurnNumber += 1;
 }
 
 function isValidCoord(i, j, height, width) {
@@ -380,17 +478,17 @@ function isValidCoord(i, j, height, width) {
     else return true;
 }
 
-function validCrossMovement(i, j, isBigger, opX, opY){
+function validCrossMovement(i, j, isBigger, opX, opY, currX1, currY1){
     var x;
-    if(isBigger) x = currX - i; //diff
-    else x = i - currX;
+    if(isBigger) x = currX1 - i; //diff
+    else x = i - currX1;
     
     for(let b = 1; b < x; b++){
         let tableCell;
-        if(!opX && opY) tableCell = document.getElementById('tb' + (currX-b) + '_' + (currY+b));
-        else if(!opX && !opY) tableCell = document.getElementById('tb' + (currX-b) + '_' + (currY-b));
-        else if(opX && opY) tableCell = document.getElementById('tb' + (currX+b) + '_' + (currY+b));
-        else if(opX && !opY) tableCell = document.getElementById('tb' + (currX+b) + '_' + (currY-b));
+        if(!opX && opY) tableCell = document.getElementById('tb' + (currX1-b) + '_' + (currY1+b));
+        else if(!opX && !opY) tableCell = document.getElementById('tb' + (currX1-b) + '_' + (currY1-b));
+        else if(opX && opY) tableCell = document.getElementById('tb' + (currX1+b) + '_' + (currY1+b));
+        else if(opX && !opY) tableCell = document.getElementById('tb' + (currX1+b) + '_' + (currY1-b));
         else return false;
 
         if(tableCell == null){
@@ -401,7 +499,7 @@ function validCrossMovement(i, j, isBigger, opX, opY){
             return false;
         }
     }
-    if(currY + x == j || currY - x == j) return true;
+    if(currY1 + x == j || currY1 - x == j) return true;
 }
 
 function validHorVerMovement(i , j){
@@ -438,15 +536,17 @@ function highlightCurrentFigure() {
 }
 
 function deHighlightFigure() {
-    highlightedCell.classList.remove('block-highlight');
-    highlightedCell = undefined;
+    if (highlightedCell != undefined) {
+        highlightedCell.classList.remove('block-highlight');
+        highlightedCell = undefined;
+    }
 }
 
 function showPossibleFigureMoves() {
     for (let i = 0; i < boardHeight; i++) {
         for (let j = 0; j < boardWidth; j++) {
             let tableCell = document.getElementById('tb' + i + '_' + j);
-            if(checkValidMovement(i, j) && tableCell.dataset.state != CellState.QUEEN && tableCell.dataset.state != CellState.ARROW){
+            if(checkValidMovement(i, j, currX, currY) && tableCell.dataset.state != CellState.QUEEN && tableCell.dataset.state != CellState.ARROW){
                 let possibleWay = document.createElement('div');
                 possibleWay.className = 'possible-way'
                 tableCell.append(possibleWay);
@@ -465,15 +565,35 @@ function stopShowPossibleFigureMoves() {
 }
 
 function changeCurrentTeam() {
-    if (currentTeam === TEAMWHITE) {
+    if (currentTeam == TEAMWHITE) {
         currentTeamText.textContent = "Black's turn";
-        gameTable.classList.remove('tabble-white-turn');
-        gameTable.classList.add('table-black-turn');
+        document.body.classList.remove('table-white-turn');
+        document.body.classList.add('table-black-turn');
         currentTeam = TEAMBLACK;
+        isBotMove = true;
+        if (selectedGameMode == GameMode.AI) bot();
+        isBotMove = false;
     } else {
         currentTeamText.textContent = "White's turn";
-        gameTable.classList.remove('table-black-turn');
-        gameTable.classList.add('tabble-white-turn');
+        document.body.classList.remove('table-black-turn');
+        document.body.classList.add('table-white-turn');
+        currentTeam = TEAMWHITE;
+    }
+}
+
+function setCurrentTeam(team) {
+    if (team == TEAMBLACK) {
+        currentTeamText.textContent = "Black's turn";
+        document.body.classList.remove('table-white-turn');
+        document.body.classList.add('table-black-turn');
+        currentTeam = TEAMBLACK;
+        isBotMove = true;
+        if (selectedGameMode == GameMode.AI) bot();
+        isBotMove = false;
+    } else {
+        currentTeamText.textContent = "White's turn";
+        document.body.classList.remove('table-black-turn');
+        document.body.classList.add('table-white-turn');
         currentTeam = TEAMWHITE;
     }
 }
@@ -495,14 +615,13 @@ function getQueenJ(queen) {
     return parseInt(queen.id[4]);
 }
 
-function isCurrentCapture(){
-    if(currentPossibleWays == 0) return true;
+function isCurrentCapture() {
+    if (currentPossibleWays == 0) return true;
     return false;
 }
 
 function isQueenCaptured(queenI, queenJ) {
     let currMatrix = getFieldMatrix();
-    //let currQeenOnMatrix = currMatrix[queenI][queenJ];
     for (let i = queenI - 1; i <= queenI + 1; i++) {
         for (let j = queenJ - 1; j <= queenJ + 1; j++) {
             if (isValidCoord(i , j, boardHeight, boardWidth) && currMatrix[i][j].state == CellState.EMPTY) {
@@ -530,20 +649,24 @@ function getFieldMatrix() {
     return matrix;
 }
 
+let tmpLog = '';
+
 function logMove(fromI, fromJ, toI, toJ) {
     let symbol;
     if (currentTeam == TEAMWHITE) symbol = WHITE_LOG;
     else if (currentTeam == TEAMBLACK) symbol = BLACK_LOG;
 
-    // другого способа нету
     let tmp = document.createElement('span');
     tmp.innerHTML = symbol;
 
-    gameLog.value += tmp.innerHTML + ': ' + '(' +  mapJToLetters(fromJ) + mapIToNumbers(fromI) + ')->(' + mapJToLetters(toJ) + mapIToNumbers(toI) + ')'; 
+    gameLog.scrollTop = gameLog.scrollHeight;
+    tmpLog = tmp.innerHTML + ': ' + '(' +  mapJToLetters(fromJ) + mapIToNumbers(fromI) + ')->(' + mapJToLetters(toJ) + mapIToNumbers(toI) + ')'; 
 }
 
 function logShot(i, j) {
     let tmp = document.createElement('span');
     tmp.innerHTML = "&#x1F525";
-    gameLog.value += '->' + tmp.innerHTML + '(' + mapJToLetters(j) + mapIToNumbers(i) + ')\n';
+    gameLog.value += tmpLog + tmp.innerHTML + '->' + '(' + mapJToLetters(j) + mapIToNumbers(i) + ')\n';
+    gameLog.scrollTop = gameLog.scrollHeight;
+    tmpLog = '';
 }
