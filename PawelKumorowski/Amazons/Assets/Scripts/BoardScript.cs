@@ -18,6 +18,8 @@ public class BoardScript : MonoBehaviour
     public MouseScript mouseScript;
     GameObject[] pawns;
     List<GameObject> arrows;
+    List<Vector2Int[]> movesHistory;
+    Vector2Int[] currentMoveHistory;
     Fields[,] board;
     [HideInInspector]
     bool round;
@@ -62,9 +64,11 @@ public class BoardScript : MonoBehaviour
         }
 
         mouseScript.Restart();
-        uiScript.setRound(!round);
+        uiScript.SetRound(!round);
 
         GenerateAllLegalMoves();
+
+        movesHistory = new List<Vector2Int[]>();
     }
 
     void GenerateAllLegalMoves()
@@ -83,9 +87,9 @@ public class BoardScript : MonoBehaviour
         }
 
         if (!playerAHasMoves)
-            uiScript.setWinner(true);
+            uiScript.SetWinner(true);
         else if (!playerBHasMoves)
-            uiScript.setWinner(false);
+            uiScript.SetWinner(false);
     }
 
     public bool IsActionLegal(Vector2Int position)
@@ -116,6 +120,10 @@ public class BoardScript : MonoBehaviour
         board[currentPos.x, currentPos.y] = Fields.Empty;
         board[destinationPos.x, destinationPos.y] = pawnScript.player ? Fields.PawnB : Fields.PawnA;
         pawnScript.MovePawn(destinationScenePos);
+
+        currentMoveHistory = new Vector2Int[3];
+        currentMoveHistory[0] = currentPos;
+        currentMoveHistory[1] = destinationPos;
     }
 
     public void Shoot(GameObject pawn, Vector2 coords)
@@ -128,7 +136,40 @@ public class BoardScript : MonoBehaviour
         round = !round;
 
         GenerateAllLegalMoves();
-        uiScript.setRound(!round);
+        uiScript.SetRound(!round);
+
+        currentMoveHistory[2] = arrowPos;
+        movesHistory.Add(currentMoveHistory);
+    }
+
+    public void UndoMove()
+    {
+        if (movesHistory.Count > 0 && !mouseScript.lockUndo)
+        {
+            Vector2Int[] lastMove = movesHistory[movesHistory.Count - 1];
+
+            board[lastMove[2].x, lastMove[2].y] = Fields.Empty;
+            Destroy(arrows[arrows.Count - 1]);
+            arrows.RemoveAt(arrows.Count - 1);
+
+            Vector2 pawnPos = GetScenePosition(lastMove[1]);
+            GameObject pawnToMove = null;
+
+            for(int i = 0; i < pawns.Length; i++)
+            {
+                if (pawns[i].transform.position.x == pawnPos.x
+                    && pawns[i].transform.position.y == pawnPos.y)
+                {
+                    pawnToMove = pawns[i];
+                }
+            }
+
+            MovePawn(pawnToMove, GetScenePosition(lastMove[0]));
+            pawnToMove.GetComponent<PawnScript>().HideLegalMoves();
+            movesHistory.RemoveAt(movesHistory.Count - 1);
+
+            round = !round;
+        }
     }
 
     public bool GetRound()

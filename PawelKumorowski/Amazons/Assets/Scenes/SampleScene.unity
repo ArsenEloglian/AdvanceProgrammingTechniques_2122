@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 1110963976}
   - component: {fileID: 1110963975}
   m_Layer: 5
-  m_Name: QuickRestartBtn
+  m_Name: UndoBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -754,6 +754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boardScript: {fileID: 1355205912}
+  lockUndo: 0
 --- !u!1 &1485424968
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,7 +1075,7 @@ MonoBehaviour:
   endScreen: {fileID: 1189687377}
   roundImg: {fileID: 2080691214}
   startBtn: {fileID: 1491862703}
-  quickRestartBtn: {fileID: 1110963975}
+  undoBtn: {fileID: 1110963975}
   playerSprites:
   - {fileID: 21300000, guid: 7f74a7d10e88e454583c507b66441a8e, type: 3}
   - {fileID: 21300000, guid: 3da2e5c5da31d1c4d9283f5a8ccaeab7, type: 3}
