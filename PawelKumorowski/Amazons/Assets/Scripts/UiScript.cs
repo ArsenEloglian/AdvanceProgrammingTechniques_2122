@@ -10,23 +10,28 @@ public class UiScript : MonoBehaviour
     public GameObject endScreen;
     public Image roundImg;
     public Button startBtn;
-    public Button quickRestartBtn;
+    public Button undoBtn;
     public Sprite[] playerSprites;
 
     private void Start()
     {
-        startBtn.onClick.AddListener(startGame);
-        quickRestartBtn.onClick.AddListener(startGame);
+        startBtn.onClick.AddListener(StartGame);
+        undoBtn.onClick.AddListener(UndoMove);
         endScreen.SetActive(false);
     }
 
-    private void startGame()
+    private void StartGame()
     {
         endScreen.SetActive(false);
         boardScript.SetUpBoard();
     }
 
-    public void setWinner(bool player)
+    private void UndoMove()
+    {
+        boardScript.UndoMove();
+    }
+
+    public void SetWinner(bool player)
     {
         if (player)
             gameResultTxt.text = "PLAYER B WINS";
@@ -36,7 +41,7 @@ public class UiScript : MonoBehaviour
         endScreen.SetActive(true);
     }
 
-    public void setRound(bool player)
+    public void SetRound(bool player)
     {
         if (player)
         {

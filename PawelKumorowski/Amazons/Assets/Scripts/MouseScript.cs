@@ -8,6 +8,7 @@ public class MouseScript : MonoBehaviour
     GameObject previousPawn;
     PawnScript pawnScript;
     bool hasMoved;
+    public bool lockUndo;
 
     void Update()
     {
@@ -31,7 +32,10 @@ public class MouseScript : MonoBehaviour
                         pawnScript = previousPawn.GetComponent<PawnScript>();
 
                         if (!pawnScript.isBlocked)
+                        {
                             pawnScript.ShowLegalMoves();
+                            lockUndo = true;
+                        }
                     }
                     else if (hit.collider.gameObject.tag == "LegalField")
                     {
@@ -45,6 +49,7 @@ public class MouseScript : MonoBehaviour
                     {
                         boardScript.Shoot(previousPawn, hit.collider.gameObject.transform.position);
                         hasMoved = false;
+                        lockUndo = false;
                     }
                 }
             }
